@@ -1,9 +1,11 @@
 # ADAN
 
 **Spanish**
+
 Algoritmo de Descubrimiento Avanzado Neuronal
 
 **English**
+
 Advanced Discovering Algorithm for Neural networks
 
 ## Main goal
@@ -80,6 +82,7 @@ License
 
 ## Authors
 [PhD. Maria-del-P. Pozos P.](http://dblp.org/pers/p/Parra:Maria_del_Pilar_Pozos)
+
 [MSc. Edgar-D. Ramirez de-L.](https://github.com/edario333)
 
 ## Colaborators
