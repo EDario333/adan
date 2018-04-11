@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><script type="text/javascript">
 //<![CDATA[
-window.__cfRocketOptions = {byc:0,p:0,petok:"11133cd29cf545c144fcefded0202a4664ebf789-1523480650-1800"};
+window.__cfRocketOptions = {byc:0,p:0,petok:"131fd107f67de2dc177e81345b7667d6617f2bf0-1523482282-1800"};
 //]]>
 </script>
 <script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/935cb224/cloudflare-static/rocket.min.js"></script>
@@ -28,14 +28,17 @@ window.__cfRocketOptions = {byc:0,p:0,petok:"11133cd29cf545c144fcefded0202a4664e
 <pre><code class="language-sh">$ git <span class="hljs-built_in">clone</span> https://github.com/EDario333/adan.git
 </code></pre>
 <h4><a id="Troubleshooting_35"></a>Troubleshooting</h4>
-<p>Known issues are:</p>
-<ul>
-<li><em>fatal: Unable to find remote helper for ‘https’</em><br>
-Solution: try <code>git clone git://github.com/EDario333/adan.git</code></li>
-</ul>
-<h4><a id="Building_for_source_40"></a>Building for source</h4>
+<p>Known issues are:<br>
+<em>fatal: Unable to find remote helper for ‘https’</em></p>
+<p>Solution:<br>
+If you built Git from source make sure that you’ve installed <code>libcurl4-openssl-dev</code> (on Debian systems) first. So, try:<br>
+<code>apt-get install libcurl4-openssl-dev</code></p>
+<p>And then re-install Git.</p>
+<p>If the problem persist and you only want to try ADAN locally (highly probabadly you won’t make any remote operation) you can:<br>
+<code>git clone git://github.com/EDario333/adan.git</code></p>
+<h4><a id="Building_for_source_48"></a>Building for source</h4>
 <p><em><strong>To-Do</strong></em></p>
-<h3><a id="Docker_43"></a>Docker</h3>
+<h3><a id="Docker_51"></a>Docker</h3>
 <p><strong>Important:</strong> This section is still under construction…</p>
 <p>ADAN is very easy to install and deploy in a Docker container.</p>
 <p>By default, the Docker will expose port 8000, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.</p>
@@ -49,7 +52,7 @@ docker build -t xyz/<span class="hljs-number">123</span>:<span class="hljs-varia
 <p>Verify the deployment by navigating to your server address in your preferred browser.</p>
 <pre><code class="language-sh"><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8000</span>
 </code></pre>
-<h2><a id="Todos_67"></a>Todos</h2>
+<h2><a id="Todos_75"></a>Todos</h2>
 <p>A lot of things :)</p>
 <p>In the priority order:</p>
 <ul>
@@ -59,16 +62,16 @@ docker build -t xyz/<span class="hljs-number">123</span>:<span class="hljs-varia
 <li>Start to work with the <a href="#building-for-source">Building for source section</a></li>
 <li>Improve the <a href="#docker">Docker section</a></li>
 </ul>
-<h2><a id="License_78"></a>License</h2>
+<h2><a id="License_86"></a>License</h2>
 <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a></p>
-<h2><a id="Authors_82"></a>Authors</h2>
+<h2><a id="Authors_90"></a>Authors</h2>
 <p><a href="http://dblp.org/pers/p/Parra:Maria_del_Pilar_Pozos">PhD. Maria-del-P. Pozos P.</a></p>
 <p><a href="https://github.com/edario333">MSc. Edgar-D. Ramirez de-L.</a></p>
-<h2><a id="Colaborators_87"></a>Colaborators</h2>
+<h2><a id="Colaborators_95"></a>Colaborators</h2>
 <p>Anyone?</p>
-<h2><a id="Sponsors__Partially_funded_by_90"></a>Sponsors / Partially funded by</h2>
+<h2><a id="Sponsors__Partially_funded_by_98"></a>Sponsors / Partially funded by</h2>
 <p>Anyone?</p>
-<h2><a id="Supported_by_93"></a>Supported by</h2>
+<h2><a id="Supported_by_101"></a>Supported by</h2>
 <p>Anyone?</p>
 
 </body></html>

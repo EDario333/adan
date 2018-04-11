@@ -35,8 +35,16 @@ $ git clone https://github.com/EDario333/adan.git
 ```
 #### Troubleshooting
 Known issues are:
-* _fatal: Unable to find remote helper for 'https'_
-Solution: try `git clone git://github.com/EDario333/adan.git`
+_fatal: Unable to find remote helper for 'https'_
+
+Solution: 
+If you built Git from source make sure that you've installed `libcurl4-openssl-dev` (on Debian systems) first. So, try:
+`apt-get install libcurl4-openssl-dev`
+
+And then re-install Git.
+
+If the problem persist and you only want to try ADAN locally (highly probabadly you won't make any remote operation) you can:
+`git clone git://github.com/EDario333/adan.git`
 
 #### Building for source
 _**To-Do**_
