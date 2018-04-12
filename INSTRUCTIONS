@@ -1,0 +1,7 @@
+Note: Our recommendation is run all this in a Python virtual environment (don't forget to activate it). If you don't do this, then your current python installation (libraries, mainly) will be affected, and we are not responsible for any damage or undesired behaviour in your device. Please read the License for more details.
+
+1. Run first: 
+install-tensor-flow.sh
+
+2. Get the models. Run:
+install-models-tensor-flow.sh

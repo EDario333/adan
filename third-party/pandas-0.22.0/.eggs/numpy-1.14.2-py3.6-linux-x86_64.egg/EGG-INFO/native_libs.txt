@@ -1,0 +1,12 @@
+numpy/core/_dummy.cpython-36m-x86_64-linux-gnu.so
+numpy/core/multiarray.cpython-36m-x86_64-linux-gnu.so
+numpy/core/umath.cpython-36m-x86_64-linux-gnu.so
+numpy/core/umath_tests.cpython-36m-x86_64-linux-gnu.so
+numpy/core/test_rational.cpython-36m-x86_64-linux-gnu.so
+numpy/core/struct_ufunc_test.cpython-36m-x86_64-linux-gnu.so
+numpy/core/multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+numpy/core/operand_flag_tests.cpython-36m-x86_64-linux-gnu.so
+numpy/fft/fftpack_lite.cpython-36m-x86_64-linux-gnu.so
+numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
