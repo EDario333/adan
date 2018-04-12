@@ -87,7 +87,7 @@ def __run_tests__():
   print('Total elapsed time: ' + str(finished_total_time-started_total_time))
 
 def main(*args):
-  #__install_pynput__()
+  __install_pynput__()
   __parse_args__()
   __run_tests__()
 
