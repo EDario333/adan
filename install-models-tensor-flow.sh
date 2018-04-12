@@ -4,6 +4,6 @@
 # TensorFlow: 1.8
 
 cd third-party/tensorflow
-# git clone https://github.com/tensorflow/models.git
+git clone https://github.com/tensorflow/models.git
 cd models
 git checkout v1.8.0
