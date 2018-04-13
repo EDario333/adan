@@ -51,24 +51,28 @@ def __parse_args__():
   #return args.data_set, args.label, args.batch_size, args.train_steps
   return args
 
-def __print_params__(args=None):
+def __print_params__(args=None, ds_train_x=None, ds_test_y=None, ds_predict_y=None):
   assert args is not None, 'You missed some argument'
+  assert ds_train_x is not None, 'You missed ds_train_x argument'
+  assert ds_test_y is not None, 'You missed ds_test_y argument'
+  assert ds_predict_y is not None, 'You missed ds_predict_y argument'
+  
   print('Trying with:\n')
 
   # Args from ADAN
-  print('Starting percent training: ' + str(args.starting_percent_training))
+  print('Starting percent training: ' + str(args.starting_percent_training) + ' (rows = ' + str(len(ds_train_x)) + ')')
 
-  print('Step percent training: ' + str(args.step_percent_training))
+  print('Step percent training: ' + str(args.step_percent_training) + '\n')
 
-  print('Starting percent features: ' + str(args.starting_percent_features))
+  print('Starting percent features: ' + str(args.starting_percent_features) + ' (features = ' + str(len(ds_train_x.columns)) + ')')
 
-  print('Step percent features: ' + str(args.step_percent_features))
+  print('Step percent features: ' + str(args.step_percent_features) + '\n')
 
-  print('Starting percent test: ' + str(args.starting_percent_test))
+  #print('Starting percent test: ' + str(args.starting_percent_test) + '\n')
 
-  print('Starting percent prediction: ' + str(args.starting_percent_prediction))
+  print('Starting percent prediction: ' + str(args.starting_percent_prediction) + ' (rows = ' + str(len(ds_predict_y)) + ')' + '\n')
 
-  print('Precision test accuracy: ' + str(args.precision_test_accuracy))
+  print('Precision test accuracy: ' + str(args.precision_test_accuracy) + ' decimals')
 
   print('Number of hidden layers: ' + str(args.hidden_layers_number))
 
@@ -106,10 +110,10 @@ def __run_with_tensorflow__(argv):
 
   while tsac < tsta:
     try:
-      __print_params__(args)
-
       # Fetch the data
       (train_x, train_y), (test_x, test_y), expected, predict_x = data.generate_data(args)
+
+      __print_params__(args, train_x, test_y, expected)
 
       # Feature columns describe how to use the input.
       my_feature_columns = []
