@@ -35,7 +35,9 @@ def __parse_args__():
 
   parser.add_argument('-hlan', '--hidden-layers-number', help='The number of hidden layers', type=int, default=1)
 
-  parser.add_argument('-nplas', '--neurons-per-layer', help='Number of neurons for each hidden layer', type=int, default=1)
+  parser.add_argument('-npla', '--neurons-per-layer', help='Number of neurons for each hidden layer', type=int, default=1)
+
+  parser.add_argument('-ltst', '--limit-train-steps', help='Limit the train steps number', type=int, default=1000)
 
   # Args from tensor flow
   parser.add_argument('-bs', '--batch-size', default=BATCH_SIZE, type=int, help='batch size')
@@ -72,6 +74,8 @@ def __print_params__(args=None):
 
   print('Number of neurons for each hidden layer: ' + str(args.neurons_per_layer))
 
+  print('Limit of the train steps: ' + str(args.limit_train_steps))
+
   # Args from tensor flow
   print('Batch size: ' + str(args.batch_size))
   print('Train steps: ' + str(args.train_steps))
@@ -98,79 +102,92 @@ def __run_with_tensorflow__(argv):
 
   tsac = 0.0
   tsta = args.test_set_target_accuracy
+  sptr = args.starting_percent_training
 
   while tsac < tsta:
-    __print_params__(args)
+    try:
+      __print_params__(args)
 
-    # Fetch the data
-    (train_x, train_y), (test_x, test_y) = data.generate_data(args)
+      # Fetch the data
+      (train_x, train_y), (test_x, test_y), expected, predict_x = data.generate_data(args)
 
-    # Feature columns describe how to use the input.
-    my_feature_columns = []
-    for key in train_x.keys():
-      my_feature_columns.append(tf.feature_column.numeric_column(key=key))
+      # Feature columns describe how to use the input.
+      my_feature_columns = []
+      for key in train_x.keys():
+        my_feature_columns.append(tf.feature_column.numeric_column(key=key))
 
-    # Build the hidden layers DNN with its units respectively
-    hidden_units = [10, 10]
+      # Build the hidden layers DNN with its units respectively
+      hidden_units = [10, 10]
 
-    classifier = tf.estimator.DNNClassifier(
-        feature_columns=my_feature_columns,
-        # Two hidden layers of 10 nodes each.
-        hidden_units=hidden_units,
-        # The model must choose between 3 classes.
-        n_classes=3)
+      classifier = tf.estimator.DNNClassifier(
+          feature_columns=my_feature_columns,
+          # Two hidden layers of 10 nodes each.
+          hidden_units=hidden_units,
+          # The model must choose between 3 classes.
+          n_classes=3)
 
-    # Train the Model.
-    classifier.train(
-        input_fn=lambda:data.train_input_fn(train_x, train_y,
-                                                  args.batch_size),
-        steps=args.train_steps)
+      # Train the Model.
+      classifier.train(
+          input_fn=lambda:data.train_input_fn(train_x, train_y,
+                                                    args.batch_size),
+          steps=args.train_steps)
 
-    # Evaluate the model.
-    eval_result = classifier.evaluate(
-        input_fn=lambda:data.eval_input_fn(test_x, test_y,
-                                                args.batch_size))
+      # Evaluate the model.
+      eval_result = classifier.evaluate(
+          input_fn=lambda:data.eval_input_fn(test_x, test_y,
+                                                  args.batch_size))
 
-    #test_accuracy = '{accuracy:0.3f}'.format(**eval_result)
-    test_accuracy = '{accuracy}'.format(**eval_result)
-    test_accuracy = ('{0:.' + str(args.precision_test_accuracy) + 'f}').format(float(test_accuracy))
+      #test_accuracy = '{accuracy:0.3f}'.format(**eval_result)
+      test_accuracy = '{accuracy}'.format(**eval_result)
+      test_accuracy = ('{0:.' + str(args.precision_test_accuracy) + 'f}').format(float(test_accuracy))
 
-    print('\nTest set accuracy: {}\n'.format(test_accuracy))
+      print('\nTest set accuracy: {}\n'.format(test_accuracy))
 
-    # Generate predictions from the model
-    expected = ['Setosa', 'Versicolor', 'Virginica']
-    #predict_x = {
-        #'SepalLength': [5.1, 5.9, 6.9],
-        #'SepalWidth': [3.3, 3.0, 3.1],
-        #'PetalLength': [1.7, 4.2, 5.4],
-        #'PetalWidth': [0.5, 1.5, 2.1],
-    #}
-    predict_x = {
-        'SepalLength': [4.9, 5, 6.4],
-        'SepalWidth': [3.1, 2.3, 2.8],
-        'PetalLength': [1.5, 3.3, 5.6],
-        'PetalWidth': [0.1, 3.1, 2.2],
-    }
+      # Generate predictions from the model
+      #expected = ['Setosa', 'Versicolor', 'Virginica']
+      #predict_x = {
+          #'SepalLength': [4.9, 5, 6.4],
+          #'SepalWidth': [3.1, 2.3, 2.8],
+          #'PetalLength': [1.5, 3.3, 5.6],
+          #'PetalWidth': [0.1, 3.1, 2.2],
+      #}
+      ##predict_x = {
+          ##'SepalLength': [5.1, 5.9, 6.9],
+          ##'SepalWidth': [3.3, 3.0, 3.1],
+          ##'PetalLength': [1.7, 4.2, 5.4],
+          ##'PetalWidth': [0.5, 1.5, 2.1],
+      ##}
+      #expected, predict_x = data.get_data_to_predict(args)
 
-    predictions = classifier.predict(
-        input_fn=lambda:data.eval_input_fn(predict_x,
-                                                labels=None,
-                                                batch_size=args.batch_size))
+      predictions = classifier.predict(
+          input_fn=lambda:data.eval_input_fn(predict_x,
+                                                  labels=None,
+                                                  batch_size=args.batch_size))
 
-    template = ('\nPrediction is "{}" ({:.1f}%), expected "{}"')
+      template = ('\nPrediction is "{}" ({:.1f}%), expected "{}"')
 
-    for pred_dict, expec in zip(predictions, expected):
-      class_id = pred_dict['class_ids'][0]
-      probability = pred_dict['probabilities'][class_id]
+      for pred_dict, expec in zip(predictions, expected):
+        class_id = pred_dict['class_ids'][0]
+        probability = pred_dict['probabilities'][class_id]
 
-      print(template.format(data.LABELS[class_id],
-                            100 * probability, expec))
+        print(template.format(data.LABELS[class_id],
+                              100 * probability, expec))
 
-    tsac = float(test_accuracy)
+      tsac = float(test_accuracy)
 
-    #print(args.starting_percent_training)
-    args.starting_percent_training += args.step_percent_training
-    #print(args.starting_percent_training)
+      #print(args.starting_percent_training)
+      args.starting_percent_training += args.step_percent_training
+      #print(args.starting_percent_training)
+    except ValueError:
+      print(':)   FUNNY!')
+      args.starting_percent_training = sptr
+      args.train_steps += 1
+
+    if args.train_steps > args.limit_train_steps:
+      print(':D   FUNNY 2')
+      args.starting_percent_training = sptr
+      args.train_steps = 1
+      args.starting_percent_features += args.step_percent_features
 
 def main(*args):
   args = __parse_args__()

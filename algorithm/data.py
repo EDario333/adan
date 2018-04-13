@@ -34,22 +34,22 @@ def __choose_random_features__(args=None, ds=None, label_serie=None):
   assert ds is not None, 'Please specify the dataset'
   assert label_serie is not None, 'Please specify the label\'s serie'
 
-  n_series = len(ds.columns)
-  ssfe = int(n_series * args.starting_percent_features)
+  tsfe = len(ds.columns)
+  ssfe = int(tsfe * args.starting_percent_features)
 
   series = []
   processed = []
   new_x = pd.DataFrame()
 
-  x = random.randint(0, n_series-1)
+  x = random.randint(0, tsfe-1)
 
   while len(new_x.columns) < ssfe:
     while x in processed:
-      x = random.randint(0, n_series-1)
+      x = random.randint(0, tsfe-1)
     processed.append(x)
     serie = ds[ds.columns[x]]
     new_x = pd.concat([new_x, serie], 'columns')
-    x = random.randint(0, n_series-1)
+    x = random.randint(0, tsfe-1)
 
   new_x = pd.concat([new_x, label_serie], 'columns')
 
@@ -69,8 +69,8 @@ def __choose_random_data__(args=None, x=None, y=None):
   ds = pd.DataFrame(x)
   tsda = len(ds)
 
-  n_series = len(ds.columns)
-  ssfe = int(n_series * args.starting_percent_features)
+  tsfe = len(ds.columns)
+  ssfe = int(tsfe * args.starting_percent_features)
   
   sstr = int(tsda * args.starting_percent_training)
   ds_training = ds.sample(sstr)
@@ -85,14 +85,28 @@ def __choose_random_data__(args=None, x=None, y=None):
   file_name += str(tsda-sstr) + '-rows.csv'
   ds_test.to_csv(file_name, index=False)
 
+  ds_predict = ds.sample(int(tsda * args.starting_percent_prediction))
+  file_name = file_name_ + '-' + str(ssfe) + 'features-predict-data-'
+  file_name += str(tsda-sstr) + '-rows.csv'
+  ds_predict.to_csv(file_name, index=False)
+  
   train_y = ds_training.pop(args.label)
   train_x = ds_training
   
   test_y = ds_test.pop(args.label)
   test_x = ds_test
-  #ds = pd.concat([ds, x], 'columns')
 
-  return (train_x, train_y), (test_x, test_y)
+  predict_y = ds_predict.pop(args.label)
+  predict_x = ds_predict
+  expected = []
+
+  for row_index in predict_y:
+    expected.append(LABELS[row_index])
+
+  return (train_x, train_y), (test_x, test_y), expected, predict_x
+
+def get_data_to_predict(args=None):
+  pass
 
 def generate_data(args=None):
   assert args is not None, 'You missed some argument'
@@ -102,9 +116,9 @@ def generate_data(args=None):
   train_y = ds.pop(args.label)
   train_x = __choose_random_features__(args, ds, train_y)
 
-  (train_x, train_y), (test_x, test_y) = __choose_random_data__(args, train_x, train_y)
+  (train_x, train_y), (test_x, test_y), expected, predict_x = __choose_random_data__(args, train_x, train_y)
 
-  return (train_x, train_y), (test_x, test_y)
+  return (train_x, train_y), (test_x, test_y), expected, predict_x
   
 def train_input_fn(features, labels, batch_size):
   """An input function for training"""
