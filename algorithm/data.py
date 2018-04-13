@@ -29,10 +29,9 @@ def __get_file_name_without_extension__(args=None):
 
   return file_name
 
-def __choose_random_features__(args=None, ds=None, label_serie=None):
+def __choose_random_features__(args=None, ds=None):
   assert args is not None, 'You missed some argument'
   assert ds is not None, 'Please specify the dataset'
-  assert label_serie is not None, 'Please specify the label\'s serie'
 
   tsfe = len(ds.columns)
   ssfe = int(tsfe * args.starting_percent_features)
@@ -41,17 +40,15 @@ def __choose_random_features__(args=None, ds=None, label_serie=None):
   processed = []
   new_x = pd.DataFrame()
 
-  x = random.randint(0, tsfe-1)
+  x = random.randint(0, ssfe-1)
 
   while len(new_x.columns) < ssfe:
     while x in processed:
-      x = random.randint(0, tsfe-1)
+      x = random.randint(0, ssfe-1)
     processed.append(x)
     serie = ds[ds.columns[x]]
     new_x = pd.concat([new_x, serie], 'columns')
-    x = random.randint(0, tsfe-1)
-
-  new_x = pd.concat([new_x, label_serie], 'columns')
+    x = random.randint(0, ssfe-1)
 
   #file_name = args.data_set[args.data_set.rfind('/') + 1:]
   #file_name = file_name[0:file_name.find('.')]
@@ -61,17 +58,16 @@ def __choose_random_features__(args=None, ds=None, label_serie=None):
 
   return new_x
 
-def __choose_random_data__(args=None, x=None, y=None):
+def __choose_random_data__(args=None, randomized_ds=None):
   assert args is not None, 'You missed some argument'
-  assert x is not None, 'Please specify the x dataset'
-  assert y is not None, 'Please specify the y dataset'
+  assert randomized_ds is not None, 'Please specify the randomized dataset'
 
-  ds = pd.DataFrame(x)
+  ds = pd.DataFrame(randomized_ds)
   tsda = len(ds)
 
   tsfe = len(ds.columns)
   ssfe = int(tsfe * args.starting_percent_features)
-  
+
   sstr = int(tsda * args.starting_percent_training)
   ds_training = ds.sample(sstr)
 
@@ -85,11 +81,12 @@ def __choose_random_data__(args=None, x=None, y=None):
   file_name += str(tsda-sstr) + '-rows.csv'
   ds_test.to_csv(file_name, index=False)
 
-  ds_predict = ds.sample(int(tsda * args.starting_percent_prediction))
+  n_rows_for_prediction = int(tsda * args.starting_percent_prediction) 
+  ds_predict = ds.sample(n_rows_for_prediction)
   file_name = file_name_ + '-' + str(ssfe) + 'features-predict-data-'
-  file_name += str(tsda-sstr) + '-rows.csv'
+  file_name += str(n_rows_for_prediction) + '-rows.csv'
   ds_predict.to_csv(file_name, index=False)
-  
+
   train_y = ds_training.pop(args.label)
   train_x = ds_training
   
@@ -105,18 +102,15 @@ def __choose_random_data__(args=None, x=None, y=None):
 
   return (train_x, train_y), (test_x, test_y), expected, predict_x
 
-def get_data_to_predict(args=None):
-  pass
-
 def generate_data(args=None):
   assert args is not None, 'You missed some argument'
   assert args.data_set is not None, 'Please specify the dataset'
 
   ds = load_data(args.data_set, args.label)
-  train_y = ds.pop(args.label)
-  train_x = __choose_random_features__(args, ds, train_y)
+  randomized_ds = __choose_random_features__(args, ds)
+  randomized_ds = pd.concat([randomized_ds, ds.pop(args.label)], 'columns')
 
-  (train_x, train_y), (test_x, test_y), expected, predict_x = __choose_random_data__(args, train_x, train_y)
+  (train_x, train_y), (test_x, test_y), expected, predict_x = __choose_random_data__(args, randomized_ds)
 
   return (train_x, train_y), (test_x, test_y), expected, predict_x
   
