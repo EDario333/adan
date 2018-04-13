@@ -118,7 +118,7 @@ def __run_with_tensorflow__(argv):
       class_id = pred_dict['class_ids'][0]
       probability = pred_dict['probabilities'][class_id]
 
-      print(template.format(data.SPECIES[class_id],
+      print(template.format(data.LABELS[class_id],
                             100 * probability, expec))
 
     tsac = float(test_accuracy)

@@ -7,7 +7,7 @@ import os
 
 CSV_COLUMN_NAMES = ['Sepal_length', 'Sepal_width',
                     'Petal_length', 'Petal_width', 'Specie']
-SPECIES = ['Setosa', 'Versicolor', 'Virginica']
+LABELS = ['Setosa', 'Versicolor', 'Virginica']
 
 def load_data(ds=None, label=None):
   assert ds is not None, 'Please specify the dataset path'
