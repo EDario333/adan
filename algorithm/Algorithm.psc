@@ -1,7 +1,3 @@
-Funcion variable_de_retorno <- Nombre ( Argumentos )
-	
-Fin Funcion
-
 Algoritmo ADAN
 	Definir tsda, tsfe, ssfe, sstr, sste Como Entero
 	Definir tsac, tsta, sptr, stpt, spfe, stpf, sptt, sppr Como Real
