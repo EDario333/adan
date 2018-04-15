@@ -105,10 +105,7 @@ Funcion DataFrame <- read_source_and_return_randomized_df(args)
 	return randomized_df
 Fin Funcion
 
-// The next one is implemented on 
-//__choose_random_data__(args=None, randomized_ds=None)
-
-Algoritmo ADAN
+Funcion ADAN(data_source, label, hlan, npla)
 	//	tsac = test_set_accuracy | Current test set accuracy
 	tsac <- 0.00
 	
@@ -138,6 +135,12 @@ Algoritmo ADAN
 	initial_ts <- ts
 	
 	LABELS = ['Class1', 'Class2', ..., 'Class_n']
+	
+	// Build the hidden layers with its units respectively
+	hidden_units = []
+	Para x<-0 Hasta hlan Hacer
+		hidden_units.insert(npla[x])
+	Fin Para
 
 	Mientras tsac < tsta Hacer
 		randomized_df = read_source_and_return_randomized_df(args)
@@ -185,7 +188,7 @@ Algoritmo ADAN
 
 		top = len(predict_y)
 
-		Para x<-0 Hasta top Con Paso 1 Hacer
+		Para x<-0 Hasta top Hacer
 			expected_labels.insert(LABELS[predict_y[x]])
 		Fin Para
 		
@@ -193,11 +196,10 @@ Algoritmo ADAN
 		
 		top = len(df_training.columns)
 		
-		Para x<-0 Hasta top Con Paso 1 Hacer
+		Para x<-0 Hasta top Hacer
 			features.insert(df_training.columns[x].name)
 		Fin Para
 
-		hidden_units = [10, 10]
 		classifier = new Classifier(features=features, hidden_units=hidden_units, n_classes=len(LABELS))
 		classifier.train(input_function=train_input_fn(df_training, train_y, bs), steps=ts)
 
@@ -222,4 +224,4 @@ Algoritmo ADAN
 			spfe = spfe + stpf
 		FinSi
 	FinMientras
-FinAlgoritmo
+Fin Funcion

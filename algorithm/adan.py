@@ -13,9 +13,9 @@ def __parse_args__():
   global parser
 
   # Global args (for any tool)
-  parser.add_argument('-ds', '--data-source', help='The data source [at this point we only tried with CSV files]', type=str)
-  parser.add_argument('-l', '--label', help='The label name', type=str)
-  
+  parser.add_argument('-ds', '--data-source', help='The data source [at this point we only tried with CSV files]', type=str, required=True)
+  parser.add_argument('-l', '--label', help='The label name', type=str, required=True)
+
   # Args from ADAN
   parser.add_argument('-tsta', '--test-set-target-accuracy', help='The desired accuracy for the test set [default: 0.95]', type=float, default=0.95)
 
@@ -33,9 +33,9 @@ def __parse_args__():
 
   parser.add_argument('-psac', '--precision_test_accuracy', help='Number of decimals to consider for the tsac value', type=int, default=2)
 
-  parser.add_argument('-hlan', '--hidden-layers-number', help='The number of hidden layers', type=int, default=1)
+  parser.add_argument('-hlan', '--hidden-layers-number', help='The number of hidden layers', type=int, default=1, required=True)
 
-  parser.add_argument('-npla', '--neurons-per-layer', help='Number of neurons for each hidden layer', type=int, default=1)
+  parser.add_argument('-npla', '--neurons-per-layer', help='Number of neurons for each hidden layer', default=[1], type=int, nargs='+', required=True)
 
   parser.add_argument('-ltst', '--limit-train-steps', help='Limit the train steps number', type=int, default=1000)
 
@@ -47,6 +47,12 @@ def __parse_args__():
 
   assert args.data_source is not None, 'Please specify the data source'
   assert args.label is not None, 'Please specify the label name'
+
+  hlan = args.hidden_layers_number
+  npla = args.neurons_per_layer
+
+  msg = 'Missed the neurons number for layer(s): {} to {}'.format((len(npla) + 1), hlan)
+  assert len(npla) >= hlan, msg
 
   #return args.data_set, args.label, args.batch_size, args.train_steps
   return args
@@ -108,6 +114,13 @@ def __run_with_tensorflow__(argv):
   tsta = args.test_set_target_accuracy
   sptr = args.starting_percent_training
 
+  # Build the hidden layers DNN with its units respectively
+  hlan = args.hidden_layers_number
+  npla = args.neurons_per_layer
+  hidden_units = []
+  for x in range(hlan):
+    hidden_units.append(npla[x])
+
   while tsac < tsta:
     try:
       # Fetch the data
@@ -120,20 +133,14 @@ def __run_with_tensorflow__(argv):
       for key in df_training.keys():
         features.append(tf.feature_column.numeric_column(key=key))
 
-      # Build the hidden layers DNN with its units respectively
-      hidden_units = [10, 10]
-
-      print(tf.estimator)
-      quit()
       classifier = tf.estimator.DNNClassifier(
           feature_columns=features,
-          # Two hidden layers of 10 nodes each.
           hidden_units=hidden_units,
-          # The model must choose between 3 classes.
+          # The model must choose between n classes.
           n_classes=len(data.LABELS))
 
-      print(classifier)
-      quit()
+      #print(classifier)
+      #quit()
 
       # Train the Model.
       classifier.train(
