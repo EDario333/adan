@@ -2,6 +2,11 @@
 
 import tensorflow as tf
 import data
+import random
+import time
+import datetime
+
+from utils import utils as adan_utils
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -39,6 +44,8 @@ def __parse_args__():
 
   parser.add_argument('-ltst', '--limit-train-steps', help='Limit the train steps number', type=int, default=1000)
 
+  parser.add_argument('-nste', '--number-successful-tests', help='The number of times that we require reach the tsta', type=int, default=10)
+
   # Args from tensor flow
   parser.add_argument('-bs', '--batch-size', default=BATCH_SIZE, type=int, help='batch size')
   parser.add_argument('-ts', '--train-steps', default=TRAIN_STEPS, type=int, help='number of training steps')
@@ -57,13 +64,13 @@ def __parse_args__():
   #return args.data_set, args.label, args.batch_size, args.train_steps
   return args
 
-def __print_params__(args=None, ds_train_x=None, ds_test_y=None, ds_predict_y=None):
+def __print_params__(n_test, args=None, ds_train_x=None, ds_test_y=None, ds_predict_y=None):
   assert args is not None, 'You missed some argument'
   assert ds_train_x is not None, 'You missed ds_train_x argument'
   assert ds_test_y is not None, 'You missed ds_test_y argument'
   assert ds_predict_y is not None, 'You missed ds_predict_y argument'
   
-  print('Trying with:\n')
+  print('Tests #{}, trying with:\n'.format(n_test))
 
   # Args from ADAN
   print('Starting percent training: ' + str(args.starting_percent_training) + ' (rows = ' + str(len(ds_train_x)) + ')')
@@ -86,6 +93,8 @@ def __print_params__(args=None, ds_train_x=None, ds_test_y=None, ds_predict_y=No
 
   print('Limit of the train steps: ' + str(args.limit_train_steps))
 
+  print('Number of times that we require reach the tsta: ' + str(args.number_successful_tests))
+
   # Args from tensor flow
   print('Batch size: ' + str(args.batch_size))
   print('Train steps: ' + str(args.train_steps))
@@ -95,17 +104,8 @@ def __algorithm__(args=None):
   assert args.data_source is not None, 'Please specify the data source'
   assert args.label is not None, 'Please specify the label name'
 
-  tsac = 0.0
-  #tsta = args.test_set_target_accuracy
-  #sptr = args.starting_percent_training
-  #stpt = args.step_percent_training
-  #spfe = args.starting_percent_features
-  #stpf = args.step_percent_features
-  #sptt = args.starting_percent_test
-  #sppr = args.starting_percent_prediction
-
   tf.app.run(__run_with_tensorflow__)
-  
+
 def __run_with_tensorflow__(argv):
   #global parser
   args = parser.parse_args(argv[1:])
@@ -113,6 +113,12 @@ def __run_with_tensorflow__(argv):
   tsac = 0.0
   tsta = args.test_set_target_accuracy
   sptr = args.starting_percent_training
+  
+  #News *********************************
+  nste = args.number_successful_tests
+  current_successful_tests = 0
+  n_test = 1
+  # ************************************
 
   # Build the hidden layers DNN with its units respectively
   hlan = args.hidden_layers_number
@@ -121,23 +127,45 @@ def __run_with_tensorflow__(argv):
   for x in range(hlan):
     hidden_units.append(npla[x])
 
-  while tsac < tsta:
+  started_total_time = datetime.datetime.now()
+  print('Starting the tests at: ' + started_total_time.strftime('%Y-%m-%d %H:%M:%S'))
+
+  while tsac < tsta or current_successful_tests < nste:
     try:
+      time.sleep(0.5)
+      adan_utils.clean_screen()
+      started = datetime.datetime.now()
+      print('Starting at: ' + started.strftime('%Y-%m-%d %H:%M:%S'))
+
       # Fetch the data
       (df_training, train_y), (df_testing, test_y), df_predict, expected = data.read_source(args)
 
-      __print_params__(args, df_training, test_y, expected)
+      __print_params__(n_test, args, df_training, test_y, expected)
 
       # Feature columns describe how to use the input.
       features = []
+      weights = []
+
+      #a = tf.feature_column.numeric_column(key='none', shape=(1))
       for key in df_training.keys():
         features.append(tf.feature_column.numeric_column(key=key))
+        #x = random.randint(1, len(train_y))
 
+      #a = tf.feature_column.numeric_column(key='SepalWidth', shape=(104))
+
+      #a.shape = [0, 1]
+      #print(a)
+      #quit()
+      #classifier = tf.estimator.DNNClassifier(
+          #feature_columns=features,
+          #hidden_units=hidden_units,
+          ## The model must choose between n classes.
+          #n_classes=len(data.LABELS), model_dir='/home/edario/virtualenvs/adan/adan/algorithm/models/')
       classifier = tf.estimator.DNNClassifier(
-          feature_columns=features,
-          hidden_units=hidden_units,
-          # The model must choose between n classes.
-          n_classes=len(data.LABELS))
+        feature_columns=features,
+        hidden_units=hidden_units,
+        # The model must choose between n classes.
+        n_classes=len(data.LABELS))
 
       #print(classifier)
       #quit()
@@ -194,6 +222,27 @@ def __run_with_tensorflow__(argv):
       #print(args.starting_percent_training)
       args.starting_percent_training += args.step_percent_training
       #print(args.starting_percent_training)
+      
+      #News *********************************
+      if tsac >= tsta:
+        print('************* Succesfully reached the tsta! *************')
+        print('*********************************************************')
+        current_successful_tests += 1
+      
+      n_test += 1
+      # ************************************
+
+      finished = datetime.datetime.now()
+      print('Finished at: ' + finished.strftime('%Y-%m-%d %H:%M:%S'))
+      print('Total elapsed time: ' + str(finished-started))
+      
+      adan_utils.open_dlg_save_output_as()
+      time.sleep(0.5)
+      if tsac >= tsta:
+        adan_utils.save_output('reached_tsta', n_test-1)
+      else:
+        adan_utils.save_output('tsta_not_reached', n_test-1)
+      #time.sleep(0.5)
     except ValueError:
       print(':)   FUNNY!')
       args.starting_percent_training = sptr
@@ -202,8 +251,11 @@ def __run_with_tensorflow__(argv):
     if args.train_steps > args.limit_train_steps:
       print(':D   FUNNY 2')
       args.starting_percent_training = sptr
-      args.train_steps = 1
+      args.train_steps = TRAIN_STEPS
       args.starting_percent_features += args.step_percent_features
+
+  finished_total_time = datetime.datetime.now()
+  print('Total elapsed time: ' + str(finished_total_time-started_total_time))
 
 def main(*args):
   args = __parse_args__()
