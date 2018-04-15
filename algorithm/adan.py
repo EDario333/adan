@@ -13,7 +13,7 @@ def __parse_args__():
   global parser
 
   # Global args (for any tool)
-  parser.add_argument('-sd', '--source-data', help='The source data [at this point we only tried with CSV files]', type=str)
+  parser.add_argument('-ds', '--data-source', help='The data source [at this point we only tried with CSV files]', type=str)
   parser.add_argument('-l', '--label', help='The label name', type=str)
   
   # Args from ADAN
@@ -45,7 +45,7 @@ def __parse_args__():
 
   args = parser.parse_args()
 
-  assert args.source_data is not None, 'Please specify the dataset'
+  assert args.data_source is not None, 'Please specify the data source'
   assert args.label is not None, 'Please specify the label name'
 
   #return args.data_set, args.label, args.batch_size, args.train_steps
@@ -86,7 +86,7 @@ def __print_params__(args=None, ds_train_x=None, ds_test_y=None, ds_predict_y=No
 
 def __algorithm__(args=None):
   assert args is not None, 'You missed some argument'
-  assert args.source_data is not None, 'Please specify the source data'
+  assert args.data_source is not None, 'Please specify the data source'
   assert args.label is not None, 'Please specify the label name'
 
   tsac = 0.0
@@ -123,12 +123,17 @@ def __run_with_tensorflow__(argv):
       # Build the hidden layers DNN with its units respectively
       hidden_units = [10, 10]
 
+      print(tf.estimator)
+      quit()
       classifier = tf.estimator.DNNClassifier(
           feature_columns=features,
           # Two hidden layers of 10 nodes each.
           hidden_units=hidden_units,
           # The model must choose between 3 classes.
           n_classes=len(data.LABELS))
+
+      print(classifier)
+      quit()
 
       # Train the Model.
       classifier.train(

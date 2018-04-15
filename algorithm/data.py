@@ -9,19 +9,19 @@ CSV_COLUMN_NAMES = ['Sepal_length', 'Sepal_width',
                     'Petal_length', 'Petal_width', 'Specie']
 LABELS = ['Setosa', 'Versicolor', 'Virginica']
 
-def load_data(source_data=None):
-  assert source_data is not None, 'Please specify the source data'
+def load_data(data_source=None):
+  assert data_source is not None, 'Please specify the data source'
 
   """Returns the dataset """
-  #path = tf.keras.utils.get_file(source_data.split('/')[-1], ds)
-  path = tf.keras.utils.get_file(source_data.split('/')[-1], source_data)
+  #path = tf.keras.utils.get_file(data_source.split('/')[-1], ds)
+  path = tf.keras.utils.get_file(data_source.split('/')[-1], data_source)
 
   df = pd.read_csv(path, header=1)
   return df
 
 def __get_file_name_without_extension__(args=None):
   assert args is not None, 'The args are missed!'
-  file_name = args.source_data[args.source_data.rfind('/') + 1:]
+  file_name = args.data_source[args.data_source.rfind('/') + 1:]
   file_name = file_name[0:file_name.find('.')]
 
   return file_name
@@ -101,9 +101,9 @@ def __choose_random_data__(args=None, randomized_df=None):
 
 def read_source(args=None):
   assert args is not None, 'You missed some argument'
-  assert args.source_data is not None, 'Please specify the source data'
+  assert args.data_source is not None, 'Please specify the data source'
 
-  df = load_data(args.source_data)
+  df = load_data(args.data_source)
   randomized_df = __choose_random_features__(args, df)
   randomized_df = pd.concat([randomized_df, df.pop(args.label)], 'columns')
 
