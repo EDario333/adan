@@ -9,110 +9,107 @@ CSV_COLUMN_NAMES = ['Sepal_length', 'Sepal_width',
                     'Petal_length', 'Petal_width', 'Specie']
 LABELS = ['Setosa', 'Versicolor', 'Virginica']
 
-def load_data(ds=None, label=None):
-  assert ds is not None, 'Please specify the dataset path'
-  assert label is not None, 'Please specify the feature (col) for the labels'
+def load_data(source_data=None):
+  assert source_data is not None, 'Please specify the source data'
 
   """Returns the dataset """
-  path = tf.keras.utils.get_file(ds.split('/')[-1], ds)
+  #path = tf.keras.utils.get_file(source_data.split('/')[-1], ds)
+  path = tf.keras.utils.get_file(source_data.split('/')[-1], source_data)
 
-  ds = pd.read_csv(path, header=1)
-  return ds
-  #data_x, data_y = ds, ds.pop(label)
-  
-  #return (data_x, data_y)
+  df = pd.read_csv(path, header=1)
+  return df
 
 def __get_file_name_without_extension__(args=None):
-  assert args is not None, 'You missed some argument'
-  file_name = args.data_set[args.data_set.rfind('/') + 1:]
+  assert args is not None, 'The args are missed!'
+  file_name = args.source_data[args.source_data.rfind('/') + 1:]
   file_name = file_name[0:file_name.find('.')]
 
   return file_name
 
-def __choose_random_features__(args=None, ds=None):
-  assert args is not None, 'You missed some argument'
-  assert ds is not None, 'Please specify the dataset'
+def __choose_random_features__(args=None, source_df=None):
+  assert args is not None, 'The args are missed'
+  assert source_df is not None, 'Please specify the source dataframe'
 
-  tsfe = len(ds.columns)
+  tsfe = len(source_df.columns)
   ssfe = int(tsfe * args.starting_percent_features)
 
   series = []
   processed = []
-  new_x = pd.DataFrame()
+  new_df = pd.DataFrame()
 
   x = random.randint(0, ssfe-1)
 
-  while len(new_x.columns) < ssfe:
+  while len(new_df.columns) < ssfe:
     while x in processed:
       x = random.randint(0, ssfe-1)
     processed.append(x)
-    serie = ds[ds.columns[x]]
-    new_x = pd.concat([new_x, serie], 'columns')
+    serie = source_df[source_df.columns[x]]
+    new_df = pd.concat([new_df, serie], 'columns')
     x = random.randint(0, ssfe-1)
 
   #file_name = args.data_set[args.data_set.rfind('/') + 1:]
   #file_name = file_name[0:file_name.find('.')]
-  file_name = __get_file_name_without_extension__(args)
-  file_name += '-' + str(ssfe) + 'features-all-data.csv'
-  new_x.to_csv(file_name, index=False)
+  filename = __get_file_name_without_extension__(args)
+  filename += '-' + str(ssfe) + 'features-all-data.csv'
+  new_df.to_csv(filename, index=False)
 
-  return new_x
+  return new_df
 
-def __choose_random_data__(args=None, randomized_ds=None):
-  assert args is not None, 'You missed some argument'
-  assert randomized_ds is not None, 'Please specify the randomized dataset'
+def __choose_random_data__(args=None, randomized_df=None):
+  assert args is not None, 'The args are missed'
+  assert randomized_df is not None, 'Please specify the randomized dataframe'
 
-  ds = pd.DataFrame(randomized_ds)
-  tsda = len(ds)
+  df = pd.DataFrame(randomized_df)
+  tsda = len(df)
 
-  tsfe = len(ds.columns)
+  tsfe = len(df.columns)
   ssfe = int(tsfe * args.starting_percent_features)
 
   sstr = int(tsda * args.starting_percent_training)
-  ds_training = ds.sample(sstr)
+  df_training = df.sample(sstr)
 
   file_name_ = __get_file_name_without_extension__(args)
   file_name = file_name_ + '-' + str(ssfe) + 'features-training-data-'
   file_name += str(sstr) + '-rows.csv'
-  ds_training.to_csv(file_name, index=False)
+  df_training.to_csv(file_name, index=False)
 
-  ds_test = ds[~ds.isin(ds_training).all(1)]
+  df_testing = df[~df.isin(df_training).all(1)]
   file_name = file_name_ + '-' + str(ssfe) + 'features-test-data-'
   file_name += str(tsda-sstr) + '-rows.csv'
-  ds_test.to_csv(file_name, index=False)
+  df_testing.to_csv(file_name, index=False)
 
   n_rows_for_prediction = int(tsda * args.starting_percent_prediction) 
-  ds_predict = ds.sample(n_rows_for_prediction)
+  df_predict = df.sample(n_rows_for_prediction)
   file_name = file_name_ + '-' + str(ssfe) + 'features-predict-data-'
   file_name += str(n_rows_for_prediction) + '-rows.csv'
-  ds_predict.to_csv(file_name, index=False)
+  df_predict.to_csv(file_name, index=False)
 
-  train_y = ds_training.pop(args.label)
-  train_x = ds_training
-  
-  test_y = ds_test.pop(args.label)
-  test_x = ds_test
+  train_y = df_training.pop(args.label)
+  #train_x = df_training
 
-  predict_y = ds_predict.pop(args.label)
-  predict_x = ds_predict
+  test_y = df_testing.pop(args.label)
+  #df_testing = df_testing
+
+  predict_y = df_predict.pop(args.label)
+  #predict_x = df_predict
   expected = []
 
   for row_index in predict_y:
     expected.append(LABELS[row_index])
 
-  return (train_x, train_y), (test_x, test_y), expected, predict_x
+  return (df_training, train_y), (df_testing, test_y), df_predict, expected
 
-def generate_data(args=None):
+def read_source(args=None):
   assert args is not None, 'You missed some argument'
-  assert args.data_set is not None, 'Please specify the dataset'
+  assert args.source_data is not None, 'Please specify the source data'
 
-  ds = load_data(args.data_set, args.label)
-  randomized_ds = __choose_random_features__(args, ds)
-  randomized_ds = pd.concat([randomized_ds, ds.pop(args.label)], 'columns')
+  df = load_data(args.source_data)
+  randomized_df = __choose_random_features__(args, df)
+  randomized_df = pd.concat([randomized_df, df.pop(args.label)], 'columns')
 
-  (train_x, train_y), (test_x, test_y), expected, predict_x = __choose_random_data__(args, randomized_ds)
+  (df_train, train_y), (df_testing, test_y), df_predict, expected = __choose_random_data__(args, randomized_df)
 
-  return (train_x, train_y), (test_x, test_y), expected, predict_x
+  return (df_train, train_y), (df_testing, test_y), df_predict, expected
   
 def train_input_fn(features, labels, batch_size):
   """An input function for training"""

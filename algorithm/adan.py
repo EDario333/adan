@@ -13,7 +13,7 @@ def __parse_args__():
   global parser
 
   # Global args (for any tool)
-  parser.add_argument('-ds', '--data-set', help='The dataset', type=str)
+  parser.add_argument('-sd', '--source-data', help='The source data [at this point we only tried with CSV files]', type=str)
   parser.add_argument('-l', '--label', help='The label name', type=str)
   
   # Args from ADAN
@@ -27,7 +27,7 @@ def __parse_args__():
 
   parser.add_argument('-stpf', '--step-percent-features', help='How much will increment the spfe for each iteration', type=float, default=0.10)
   
-  parser.add_argument('-sptt', '--starting-percent-test', help='The percent of records/rows to consider for the test set', type=float, default=0.10)
+  #parser.add_argument('-sptt', '--starting-percent-test', help='The percent of records/rows to consider for the test set', type=float, default=0.10)
 
   parser.add_argument('-sppr', '--starting-percent-prediction', help='The percent of records/rows to consider for the prediction set', type=float, default=0.10)
 
@@ -45,7 +45,7 @@ def __parse_args__():
 
   args = parser.parse_args()
 
-  assert args.data_set is not None, 'Please specify the dataset'
+  assert args.source_data is not None, 'Please specify the dataset'
   assert args.label is not None, 'Please specify the label name'
 
   #return args.data_set, args.label, args.batch_size, args.train_steps
@@ -86,7 +86,7 @@ def __print_params__(args=None, ds_train_x=None, ds_test_y=None, ds_predict_y=No
 
 def __algorithm__(args=None):
   assert args is not None, 'You missed some argument'
-  assert args.data_set is not None, 'Please specify the dataset path'
+  assert args.source_data is not None, 'Please specify the source data'
   assert args.label is not None, 'Please specify the label name'
 
   tsac = 0.0
@@ -111,38 +111,38 @@ def __run_with_tensorflow__(argv):
   while tsac < tsta:
     try:
       # Fetch the data
-      (train_x, train_y), (test_x, test_y), expected, predict_x = data.generate_data(args)
+      (df_training, train_y), (df_testing, test_y), df_predict, expected = data.read_source(args)
 
-      __print_params__(args, train_x, test_y, expected)
+      __print_params__(args, df_training, test_y, expected)
 
       # Feature columns describe how to use the input.
-      my_feature_columns = []
-      for key in train_x.keys():
-        my_feature_columns.append(tf.feature_column.numeric_column(key=key))
+      features = []
+      for key in df_training.keys():
+        features.append(tf.feature_column.numeric_column(key=key))
 
       # Build the hidden layers DNN with its units respectively
       hidden_units = [10, 10]
 
       classifier = tf.estimator.DNNClassifier(
-          feature_columns=my_feature_columns,
+          feature_columns=features,
           # Two hidden layers of 10 nodes each.
           hidden_units=hidden_units,
           # The model must choose between 3 classes.
-          n_classes=3)
+          n_classes=len(data.LABELS))
 
       # Train the Model.
       classifier.train(
-          input_fn=lambda:data.train_input_fn(train_x, train_y,
+          input_fn=lambda:data.train_input_fn(df_training, train_y,
                                                     args.batch_size),
           steps=args.train_steps)
 
       # Evaluate the model.
-      eval_result = classifier.evaluate(
-          input_fn=lambda:data.eval_input_fn(test_x, test_y,
+      results = classifier.evaluate(
+          input_fn=lambda:data.eval_input_fn(df_testing, test_y,
                                                   args.batch_size))
 
-      #test_accuracy = '{accuracy:0.3f}'.format(**eval_result)
-      test_accuracy = '{accuracy}'.format(**eval_result)
+      #test_accuracy = '{accuracy:0.3f}'.format(**results)
+      test_accuracy = '{accuracy}'.format(**results)
       test_accuracy = ('{0:.' + str(args.precision_test_accuracy) + 'f}').format(float(test_accuracy))
 
       print('\nTest set accuracy: {}\n'.format(test_accuracy))
@@ -164,7 +164,7 @@ def __run_with_tensorflow__(argv):
       #expected, predict_x = data.get_data_to_predict(args)
 
       predictions = classifier.predict(
-          input_fn=lambda:data.eval_input_fn(predict_x,
+          input_fn=lambda:data.eval_input_fn(df_predict,
                                                   labels=None,
                                                   batch_size=args.batch_size))
 
