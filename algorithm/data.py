@@ -5,9 +5,16 @@ import pandas as pd
 import random
 import os
 
+from pyspectator.processor import Cpu
+
+from utils import utils as adan_utils
+
 CSV_COLUMN_NAMES = ['Sepal_length', 'Sepal_width',
                     'Petal_length', 'Petal_width', 'Specie']
 LABELS = ['Setosa', 'Versicolor', 'Virginica']
+
+CPU = Cpu(monitoring_latency=1)
+TEMPLATE = ('CPU load {:.2f}%, temperature {:.2f}\n')
 
 def load_data(data_source=None):
   assert data_source is not None, 'Please specify the data source'
@@ -112,6 +119,11 @@ def read_source(args=None):
   return (df_train, train_y), (df_testing, test_y), df_predict, expected
   
 def train_input_fn(features, labels, batch_size):
+  print(adan_utils.bcolors.OKBLUE + '\nBefore train_input_fn: ' + adan_utils.bcolors.ENDC)
+
+  with CPU:
+    print(TEMPLATE.format(CPU.load, CPU.temperature))
+
   """An input function for training"""
   # Convert the inputs to a Dataset.
   dataset = tf.data.Dataset.from_tensor_slices((dict(features), labels))
@@ -119,10 +131,18 @@ def train_input_fn(features, labels, batch_size):
   # Shuffle, repeat, and batch the examples.
   dataset = dataset.shuffle(1000).repeat().batch(batch_size)
 
+  print(adan_utils.bcolors.OKGREEN + 'After train_input_fn: ' + adan_utils.bcolors.ENDC)
+  with CPU:
+    print(TEMPLATE.format(CPU.load, CPU.temperature))
+
   # Return the dataset.
   return dataset
 
 def eval_input_fn(features, labels, batch_size):
+  print(adan_utils.bcolors.OKBLUE + '\nBefore eval_input_fn: ' + adan_utils.bcolors.ENDC)
+  with CPU:
+    print(TEMPLATE.format(CPU.load, CPU.temperature))
+
   """An input function for evaluation or prediction"""
   features=dict(features)
   if labels is None:
@@ -137,6 +157,37 @@ def eval_input_fn(features, labels, batch_size):
   # Batch the examples
   assert batch_size is not None, "batch_size must not be None"
   dataset = dataset.batch(batch_size)
+
+  print(adan_utils.bcolors.OKGREEN + 'After eval_input_fn: ' + adan_utils.bcolors.ENDC)
+  with CPU:
+    print(TEMPLATE.format(CPU.load, CPU.temperature))
+
+  # Return the dataset.
+  return dataset
+
+def predict_input_fn(features, labels, batch_size):
+  """An input function for evaluation or prediction"""
+  print(adan_utils.bcolors.OKBLUE + '\nBefore predict_input_fn: ' + adan_utils.bcolors.ENDC)
+  with CPU:
+    print(TEMPLATE.format(CPU.load, CPU.temperature))
+
+  features=dict(features)
+  if labels is None:
+      # No labels, use only features.
+      inputs = features
+  else:
+      inputs = (features, labels)
+
+  # Convert the inputs to a Dataset.
+  dataset = tf.data.Dataset.from_tensor_slices(inputs)
+
+  # Batch the examples
+  assert batch_size is not None, "batch_size must not be None"
+  dataset = dataset.batch(batch_size)
+
+  print(adan_utils.bcolors.OKGREEN + 'After predict_input_fn: ' + adan_utils.bcolors.ENDC)
+  with CPU:
+    print(TEMPLATE.format(CPU.load, CPU.temperature))
 
   # Return the dataset.
   return dataset

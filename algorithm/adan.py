@@ -19,7 +19,12 @@ def __parse_args__():
 
   # Global args (for any tool)
   parser.add_argument('-ds', '--data-source', help='The data source [at this point we only tried with CSV files]', type=str, required=True)
+
   parser.add_argument('-l', '--label', help='The label name', type=str, required=True)
+
+  parser.add_argument('-sres', '--save-the-results', help='Do I have to save the output for each run?', action='store_true')
+
+  parser.add_argument('-resd', '--results-dir', help='Where Do I have to save the output for each run?', type=str)
 
   # Args from ADAN
   parser.add_argument('-tsta', '--test-set-target-accuracy', help='The desired accuracy for the test set [default: 0.95]', type=float, default=0.95)
@@ -48,6 +53,7 @@ def __parse_args__():
 
   # Args from tensor flow
   parser.add_argument('-bs', '--batch-size', default=BATCH_SIZE, type=int, help='batch size')
+
   parser.add_argument('-ts', '--train-steps', default=TRAIN_STEPS, type=int, help='number of training steps')
 
   args = parser.parse_args()
@@ -61,6 +67,11 @@ def __parse_args__():
   msg = 'Missed the neurons number for layer(s): {} to {}'.format((len(npla) + 1), hlan)
   assert len(npla) >= hlan, msg
 
+  if args.save_the_results:
+    assert args.results_dir and args.results_dir is not None, 'Please specify the results dir. Usage: python adan.py -arg1 val1 -arg2 val2 ... -sres -resd the_results_dir'
+
+  assert args.hidden_layers_number > 0, 'Please specify a valid hidden layers number'
+  
   #return args.data_set, args.label, args.batch_size, args.train_steps
   return args
 
@@ -204,7 +215,7 @@ def __run_with_tensorflow__(argv):
       #expected, predict_x = data.get_data_to_predict(args)
 
       predictions = classifier.predict(
-          input_fn=lambda:data.eval_input_fn(df_predict,
+          input_fn=lambda:data.predict_input_fn(df_predict,
                                                   labels=None,
                                                   batch_size=args.batch_size))
 
@@ -235,13 +246,14 @@ def __run_with_tensorflow__(argv):
       finished = datetime.datetime.now()
       print('Finished at: ' + finished.strftime('%Y-%m-%d %H:%M:%S'))
       print('Total elapsed time: ' + str(finished-started))
-      
-      adan_utils.open_dlg_save_output_as()
-      time.sleep(0.5)
-      if tsac >= tsta:
-        adan_utils.save_output('reached_tsta', n_test-1)
-      else:
-        adan_utils.save_output('tsta_not_reached', n_test-1)
+
+      if args.save_the_results:
+        adan_utils.open_dlg_save_output_as()
+        time.sleep(0.5)
+        if tsac >= tsta:
+          adan_utils.save_output(args.results_dir, 'reached_tsta', n_test-1)
+        else:
+          adan_utils.save_output(args.results_dir, 'tsta_not_reached', n_test-1)
       #time.sleep(0.5)
     except ValueError:
       print(':)   FUNNY!')
