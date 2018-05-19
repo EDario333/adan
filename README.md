@@ -2,11 +2,11 @@
 
 **Spanish**
 
-Algoritmo de Descubrimiento Avanzado Neuronal
+Algoritmo de Descubrimiento Adaptativo basado en redes Neuronales
 
 **English**
 
-Advanced Discovering Algorithm for Neural networks
+Adaptative Discovering Algorithm based on Neural networks
 
 ## Main goal
 
