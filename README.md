@@ -89,9 +89,9 @@ License
 [GNU General Public License v3.0]
 
 ## Authors
-[PhD. Maria-del-P. Pozos P.](http://dblp.org/pers/p/Parra:Maria_del_Pilar_Pozos)
+[PhD. Pilar Pozos-Parra](http://dblp.org/pers/p/Parra:Maria_del_Pilar_Pozos)
 
-[MSc. Edgar-D. Ramirez de-L.](https://github.com/edario333)
+[MSc. Edgar Ramirez-deLeon](https://github.com/edario333)
 
 ## Colaborators
 Anyone?
