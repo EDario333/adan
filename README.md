@@ -6,7 +6,7 @@ Algoritmo de Descubrimiento Adaptativo basado en redes Neuronales
 
 **English**
 
-Adaptative Discovering Algorithm based on Neural networks
+Adaptive Discovering Algorithm based on Neural networks
 
 ## Main goal
 
