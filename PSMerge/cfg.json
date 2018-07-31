@@ -1,0 +1,4 @@
+{
+  "datasource": "file://./CNForalcancer.csv",
+  "output_dir": "file:///home/edario/virtualenvs/adan/adan/PSMerge/out"
+}
