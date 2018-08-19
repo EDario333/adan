@@ -1,4 +1,4 @@
 {
-  "datasource": "file://./CNForalcancer.csv",
+  "datasource": "file:///home/edario/virtualenvs/adan/adan/PSMerge/CNForalcaADCSGE-GSTM.csv",
   "output_dir": "file:///home/edario/virtualenvs/adan/adan/PSMerge/out"
 }

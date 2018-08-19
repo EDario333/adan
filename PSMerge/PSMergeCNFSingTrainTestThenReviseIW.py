@@ -80,7 +80,7 @@ def __generate_training_data__(original_df_training=None):
   lst_col = df_training.columns.values[df_training.columns.size-1]
 
   #for i=1:N_Bases
-    
+
   #if mod(i,3)!=0
   #Literal_Aux_Training(1:N_Variables-1,N_Trainings)=num2str(abs(1-Literal_Matrix(1:N_Variables-1,i)));
 
@@ -203,13 +203,17 @@ def __generate_b01_file__(df_test=None, filename=None, output_dir=None):
   n_tests = len(df_test)
   
   row = ['B'] * len(df_test)
+
   nan = [np.NaN] * len(df_test)
 
   data = [row, row, nan]
 
   solution_test = pd.DataFrame(data)
+  
+  #solution_test.replace([np.NaN], [df_test.iloc[:, n_vars-1]], inplace=True)
 
-  solution_test = solution_test.replace([np.NaN], [df_test.iloc[:, n_vars-1]])
+  for idx, val in solution_test.iloc[2, :].iteritems():
+    solution_test.iloc[2, idx] = df_test.iloc[idx, n_vars-1]
 
   for i in range(n_tests):
     for j in range(l):
@@ -405,7 +409,7 @@ def __solve__(solution_test=None):
     elif solution_test.iat[i, 2] == 1:
       dw1 += 1
 
-  return [d1, dw1, d0, dw0, d_or]
+  return [d1, dw1, d0, dw0, d_or, d_not]
 
 def PSMergeCNFSingTrainTestThenReviseIW(args=None):
   global FN_WITHOUT_EXTENSION
@@ -423,10 +427,13 @@ def PSMergeCNFSingTrainTestThenReviseIW(args=None):
   n_bases = len(df)
   n_vars = df.columns.size
 
+  #original_df_training = pd.DataFrame()
+  #for x in range(len(df)):
+    #if x % 3 != 0:
+      #original_df_training = original_df_training.append(df.iloc[x-1, :])
+
   sptr = args.starting_percent_training
   original_df_training = df.sample(round(sptr * len(df)))
-
-  #original_df_training = pd.concat([df[df.index == 0], df[df.index == 1], df[df.index == 3], df[df.index == 4]])
 
   df_training = __generate_training_data__(original_df_training)
   filename = output_dir + '/' + fn_without_extension + '-tra.csv'
