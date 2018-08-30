@@ -152,3 +152,9 @@ def ps_merge_dnf_singletons_mu2(n_bases=None, n_vars=None, lm=None, n_constraint
   solution.dropna(inplace=True)
 
   return solution
+
+def get_dir(path=None):
+  assert path is not None, 'Please specify the dir path'
+  if 'file://' in path:
+    return path[6:]
+  return path

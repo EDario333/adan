@@ -12,7 +12,7 @@ import csv
 
 from utils import __get_tmp_dir__, get_file_name_without_extension
 
-from utils import ps_merge_dnf_singletons_mu2
+from utils import ps_merge_dnf_singletons_mu2, get_dir
 
 parser = argparse.ArgumentParser()
 
@@ -424,6 +424,13 @@ def PSMergeCNFSingTrainTestThenReviseIW(args=None):
   fn_without_extension = get_file_name_without_extension(conf['datasource'])
 
   df = __load_data__(conf['datasource'])
+
+  # We must to ensure that for each feature/attr/column the number of digits will be the same
+  from parsers.binary import BinToCSV
+  parser = BinToCSV(dataframe=df)
+  df = parser.parse()
+  df.to_csv(get_dir(conf['output_dir']) + '/' + fn_without_extension + '.csv', index=False)
+
   n_bases = len(df)
   n_vars = df.columns.size
 
