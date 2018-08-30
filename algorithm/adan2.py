@@ -1,7 +1,7 @@
 #!/usr/bin/env python 
 
 import tensorflow as tf
-import data
+import data2 as data
 import random
 import time
 import datetime
