@@ -1,0 +1,29 @@
+{% extends '../site/base.html' %}
+
+{% load i18n static %}
+
+{% block page_name %}
+  {% trans 'Privacy notice' context 'legals' %}
+{% endblock %}
+
+{% block content %}
+  <style type="text/css">
+    .navbar-fixed-top {
+      background-image: url("{% static 'site/img/bg-header-secondary-pages.jpg' %}");
+    }
+  </style>
+
+  {% include '../site/snippets/header-secondary-pages.html' %}
+
+  <div class="content-lg container">
+    <div class="row margin-t-40">
+      <div class="col-sm-12">
+        <h2 class="breadcumb-title">
+          {% trans 'Privacy notice' context 'legals' %}
+        </h2>
+
+        {% trans 'Privacy notice content' context 'privacy page' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

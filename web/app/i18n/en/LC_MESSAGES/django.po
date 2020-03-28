@@ -1,0 +1,671 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-19 18:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: catalogues/models.py:40
+msgid "Created by"
+msgstr ""
+
+#: catalogues/models.py:47
+msgid "Specify the reason to disable this product"
+msgstr ""
+
+#: catalogues/models.py:52
+msgid "Specify the reason to drop this object"
+msgstr ""
+
+#: catalogues/models.py:86 catalogues/models.py:94
+msgid "Description"
+msgstr ""
+
+#: catalogues/models.py:87 catalogues/models.py:101
+msgid "Notes"
+msgstr ""
+
+#: catalogues/models.py:88 catalogues/models.py:107 users/models.py:125
+msgid "Comments"
+msgstr ""
+
+#: catalogues/models.py:113
+msgctxt "person model"
+msgid "Last name"
+msgstr ""
+
+#: catalogues/models.py:114
+msgctxt "person model"
+msgid "Mothers last name"
+msgstr ""
+
+#: catalogues/models.py:115
+msgctxt "person model"
+msgid "First name"
+msgstr ""
+
+#: catalogues/models.py:116
+msgctxt "person model"
+msgid "Middle name"
+msgstr ""
+
+#: catalogues/models.py:118
+msgctxt "person model"
+msgid "Gender"
+msgstr ""
+
+#: catalogues/models.py:119
+msgctxt "person model"
+msgid "Date of birth"
+msgstr ""
+
+#: catalogues/models.py:121 catalogues/models.py:199
+msgid "Email"
+msgstr ""
+
+#: catalogues/models.py:124 catalogues/models.py:196
+msgid "Address line 1"
+msgstr ""
+
+#: catalogues/models.py:125 catalogues/models.py:197
+msgid "Address line 2"
+msgstr ""
+
+#: catalogues/models.py:127 catalogues/models.py:200
+msgid "Cell phone"
+msgstr ""
+
+#: catalogues/models.py:128 catalogues/models.py:201
+msgid "Home phone"
+msgstr ""
+
+#: catalogues/models.py:129 catalogues/models.py:202
+msgid "Other phone"
+msgstr ""
+
+#: catalogues/models.py:144 utils/utils.py:10
+msgid "Male"
+msgstr ""
+
+#: catalogues/models.py:145 utils/utils.py:11
+msgid "Female"
+msgstr ""
+
+#: catalogues/models.py:161
+msgctxt "person model"
+msgid "Age"
+msgstr ""
+
+#: templates/offline.html:8
+msgid "Default offline template"
+msgstr ""
+
+#: templates/offline.html:15
+msgid "You are currently not connected to any networks"
+msgstr ""
+
+#: templates/site/base.html:11 users/views.py:250 users/views.py:251
+msgid "App name"
+msgstr "ADAN"
+
+#: templates/site/base.html:15 templates/site/snippets/footer.html:13
+#: templates/site/snippets/header.html:85
+msgid "Home"
+msgstr ""
+
+#: templates/site/base.html:21
+msgid "App description"
+msgstr "Adaptive Discovering Algorithm based on Neural networks (ADAN)"
+
+#: templates/site/base.html:57
+msgid "Top"
+msgstr ""
+
+#: templates/site/snippets/about.html:12
+msgctxt "about section"
+msgid "About title 1"
+msgstr "Science for no scientists"
+
+#: templates/site/snippets/about.html:16
+msgctxt "about section"
+msgid "About content 1"
+msgstr ""
+"A great amount of technology and science advances, and not to mention the latest "
+"innovations not revealed yet for the human beings, are only reachables "
+"and understandable just for a few people, specially just for the scientists. "
+"The ADAN&reg;'s efforts tries to hide or encapsulate that scientific and  "
+"technology complexity, so any human being can use his platform, tool, software "
+"algorithms and everything related to him to analyze and predict outcomes "
+"from any input data."
+
+#: templates/site/snippets/about.html:29
+msgctxt "about section"
+msgid "About title 2"
+msgstr "Scientific and technology innovation"
+
+#: templates/site/snippets/about.html:33
+msgctxt "about section"
+msgid "About content 2"
+msgstr ""
+"ADAN&reg; is being designed and developed upon solid scientific "
+"and technology foundations. They are innovators, verified, "
+"validated, and of course, used "
+"by big and important companies and organizations in the world."
+
+#: templates/site/snippets/about.html:46
+msgctxt "about section"
+msgid "About title 3"
+msgstr "Verified and Validated"
+
+#: templates/site/snippets/about.html:50
+msgctxt "about section"
+msgid "About content 3"
+msgstr ""
+"ADAN&reg; has been verified and validated by an specialist committe, "
+"experts scientists and technologics on the field of Artificial Intelligence "
+"so we can say that ADAN is a solid, accepted and valid creation."
+
+#: templates/site/snippets/about.html:69
+msgctxt "about section"
+msgid "Why ADAN title"
+msgstr "Why ADAN?"
+
+#: templates/site/snippets/about.html:73
+msgctxt "about section"
+msgid "Why ADAN content"
+msgstr ""
+"ADAN&reg;, his philosophy and everything around him, including the company "
+"supporting him, are looking the golden mean or golden middle way principle, "
+"which, according to Aristotle is where the virtues live: between two extremes, "
+"called vices."
+
+#: templates/site/snippets/about.html:79
+msgid "Tech paper"
+msgstr ""
+
+#: templates/site/snippets/about.html:95
+msgctxt "about section"
+msgid "Experts Research title"
+msgstr "Experts in Research"
+
+#: templates/site/snippets/about.html:103
+msgctxt "about section"
+msgid "Experts Research content"
+msgstr ""
+"Conceived, designed and developed by experts persons on Research and "
+"Technology Development: <ul><li style='margin: 0 0 0 -20px; color: "
+"inherit'><a href='https://sites.google.com/site/pilarpozosparra/' "
+"target='_blank' style='color: white; text-decoration:underline'>Maria del "
+"Pilar Pozos Parra</a>, Ph. D. in Computer Science, field of Artificial "
+"Intelligence (AI) from the École Nationale Supérieure de l'Aéronautique et "
+"de l'Espace, France</li><li "
+"style='margin: 0 0 0 -20px; color: inherit'><a href='javascript:void(0)' "
+"style='color: white; text-decoration:underline'>Edgar Darío Ramírez de León</"
+"a>, M.Sc. in Computer Science and currently pursuing the Ph. D. in Computer "
+"Science, also in the field of AI.</li></ul>"
+
+#: templates/site/snippets/about.html:115
+msgctxt "about section"
+msgid "Hi-Tech Engineering title"
+msgstr "Hi-Tech Engineering"
+
+#: templates/site/snippets/about.html:123
+msgctxt "about section"
+msgid "Hi-Tech Engineering content"
+msgstr ""
+"ADAN&reg; is being designed and developed with the highest science and technology, "
+"elements, components used by greatest companies and organizations "
+"like Google, NASA, Pinterest, Instagram, Mozilla Firefox, among others."
+
+#: templates/site/snippets/about.html:135
+msgctxt "about section"
+msgid "Outstanding Results title"
+msgstr "Outstanding Results"
+
+#: templates/site/snippets/about.html:143
+msgctxt "about section"
+msgid "Outstanding Results content"
+msgstr ""
+"Our firsts tests throw competitive results in comparison with the "
+"\"traditional\" algorithms, techniques, tools and everything else in "
+"the field of Machine Learning and Deep Learning, and we will continue "
+"our research towards the eXplainable Artificial Intelligence (XAI)."
+
+#: templates/site/snippets/contact.html:12
+msgctxt "contact section"
+msgid "ADAN title"
+msgstr ""
+
+#: templates/site/snippets/contact.html:16
+msgctxt "contact section"
+msgid "ADAN subtitle"
+msgstr ""
+
+#: templates/site/snippets/contact.html:21
+msgctxt "contact section"
+msgid "ADAN content"
+msgstr ""
+
+#: templates/site/snippets/contact.html:27
+msgctxt "contact section"
+msgid "ADAN phone"
+msgstr ""
+
+#: templates/site/snippets/contact.html:33
+msgctxt "contact section"
+msgid "ADAN email"
+msgstr ""
+
+#: templates/site/snippets/contact.html:75
+msgctxt "contact section"
+msgid "DeliTech title"
+msgstr ""
+
+#: templates/site/snippets/contact.html:79
+msgctxt "contact section"
+msgid "DeliTech subtitle"
+msgstr ""
+
+#: templates/site/snippets/contact.html:84
+msgctxt "contact section"
+msgid "DeliTech content"
+msgstr ""
+
+#: templates/site/snippets/contact.html:90
+msgctxt "contact section"
+msgid "DeliTech phone"
+msgstr ""
+
+#: templates/site/snippets/contact.html:96
+msgctxt "contact section"
+msgid "DeliTech email"
+msgstr ""
+
+#: templates/site/snippets/footer.html:19
+#: templates/site/snippets/header.html:91
+msgid "About"
+msgstr ""
+
+#: templates/site/snippets/footer.html:25
+#: templates/site/snippets/header.html:103
+msgid "Pricing"
+msgstr ""
+
+#: templates/site/snippets/footer.html:31
+#: templates/site/snippets/header.html:124
+msgid "Contact"
+msgstr ""
+
+#: templates/site/snippets/footer.html:71
+msgid "Subscribe to Our Newsletter"
+msgstr ""
+
+#: templates/site/snippets/footer.html:77
+msgid "Privacy Policy"
+msgstr ""
+
+#: templates/site/snippets/footer.html:83
+msgid "Terms and Conditions"
+msgstr ""
+
+#: templates/site/snippets/header.html:97
+msgid "Projects"
+msgstr ""
+
+#: templates/site/snippets/header.html:110
+msgid "Partners"
+msgstr ""
+
+#: templates/site/snippets/partners.html:10
+msgctxt "partners section"
+msgid "Partners title"
+msgstr ""
+
+#: templates/site/snippets/partners.html:14
+msgctxt "partners section"
+msgid "Partners content"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:14
+msgctxt "pricing section"
+msgid "Free edition title"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:20
+msgctxt "pricing section"
+msgid "Free edition content"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:26
+msgctxt "pricing section"
+msgid "Free edition feature 1"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:30
+msgctxt "pricing section"
+msgid "Free edition feature 2"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:34
+msgctxt "pricing section"
+msgid "Free edition feature 3"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:39
+#: templates/site/snippets/pricing.html:77
+#: templates/site/snippets/pricing.html:114
+msgid "Start Now"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:52
+msgctxt "pricing section"
+msgid "Limited edition title"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:58
+msgctxt "pricing section"
+msgid "Limited edition content"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:64
+msgctxt "pricing section"
+msgid "Limited edition feature 1"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:68
+msgctxt "pricing section"
+msgid "Limited edition feature 2"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:72
+msgctxt "pricing section"
+msgid "Limited edition feature 3"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:90
+msgctxt "pricing section"
+msgid "Unlimited edition title"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:95
+msgctxt "pricing section"
+msgid "Unlimited edition content"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:101
+msgctxt "pricing section"
+msgid "Full edition feature 1"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:105
+msgctxt "pricing section"
+msgid "Full edition feature 2"
+msgstr ""
+
+#: templates/site/snippets/pricing.html:109
+msgctxt "pricing section"
+msgid "Full edition feature 3"
+msgstr ""
+
+#: templates/site/snippets/projects.html:16
+msgctxt "projects section"
+msgid "Projects title"
+msgstr "Projects"
+
+#: templates/site/snippets/projects.html:20
+msgctxt "projects section"
+msgid "Projects content"
+msgstr ""
+"ADAN&reg;'s design, development, modular architecture, his "
+"reusables elements or components, gives us the chance "
+"to build other products and services with our strongest belief that "
+"they are the cheapest in the market. You will find, among others:"
+
+#: templates/site/snippets/projects.html:35
+msgctxt "projects section"
+msgid "Project 1 title"
+msgstr "MiNegocito v1.0"
+
+#: templates/site/snippets/projects.html:39
+msgctxt "projects section"
+msgid "Project 1 subtitle"
+msgstr "Point of Sale"
+
+#: templates/site/snippets/projects.html:44
+msgctxt "projects section"
+msgid "Project 1 description"
+msgstr ""
+"<p>With the modules: stores, warehouses, customers, shops, inventories, brands, "
+"products, providers, users, sales, stats and more."
+"</p><p>MiNegocito is different from the products of his class thanks "
+"to his simplicity and usability, without any quality's sacrifice.</p>"
+"<p>General users (not registered) can search in any of the "
+"registered stores in the app.</p>"
+
+#: templates/site/snippets/projects.html:48
+#: templates/site/snippets/projects.html:75
+#: templates/site/snippets/projects.html:102
+msgid "Visit"
+msgstr ""
+
+#: templates/site/snippets/projects.html:62
+msgctxt "projects section"
+msgid "Project 2 title"
+msgstr "LabPP v1.0"
+
+#: templates/site/snippets/projects.html:66
+msgctxt "projects section"
+msgid "Project 2 subtitle"
+msgstr "Clinical analysis laboratories"
+
+#: templates/site/snippets/projects.html:71
+msgctxt "projects section"
+msgid "Project 2 content"
+msgstr ""
+"<p>With LabPP the laboratories will be able to:</"
+"p><ol><li>save patients' data and display their stats "
+"</li><li>Save tests' and tests groups' data. "
+"</li><li>The labs' customers will be able to make appointments "
+", consultar disponibilidad de sus resultados y "
+"más opciones.</li></ol>"
+
+#: templates/site/snippets/projects.html:89
+msgctxt "projects section"
+msgid "Project 3 title"
+msgstr ""
+
+#: templates/site/snippets/projects.html:93
+msgctxt "projects section"
+msgid "Project 3 subtitle"
+msgstr ""
+
+#: templates/site/snippets/projects.html:98
+msgctxt "projects section"
+msgid "Project 3 content"
+msgstr ""
+
+#: templates/site/snippets/slider.html:22
+msgctxt "slider section"
+msgid "AI eXplainable title"
+msgstr "Artificial Intelligence (AI) for everyone"
+
+#: templates/site/snippets/slider.html:26
+msgctxt "slider section"
+msgid "AI eXplainable content"
+msgstr ""
+"The AI is leaving us behind; we must understand what and how the machines "
+"are learning and be able to explain their intelligence."
+
+#: templates/site/snippets/slider.html:31
+msgid "Read more"
+msgstr ""
+
+#: templates/site/snippets/slider.html:45
+msgctxt "slider section"
+msgid "For Humans title"
+msgstr "AI for humans"
+
+#: templates/site/snippets/slider.html:49
+msgctxt "slider section"
+msgid "For Humans content"
+msgstr ""
+"The AI has suffered for a long time the \"black box\" effect: our "
+"knowdledge about the machines is not good enough to<br /> discover "
+"what they are learning, the why and how about their conclusions "
+"still keeps a little of uncertainty for us, the humans..."
+
+#: templates/site/snippets/slider.html:54
+msgid "Watch video"
+msgstr ""
+
+#: users/models.py:28
+msgctxt "users model"
+msgid "Mothers last name"
+msgstr ""
+
+#: users/models.py:29
+msgctxt "users model"
+msgid "Middle name"
+msgstr ""
+
+#: users/models.py:65
+msgctxt "users model"
+msgid "Profile picture"
+msgstr ""
+
+#: users/models.py:67
+msgctxt "users model"
+msgid "Gender"
+msgstr ""
+
+#: users/models.py:68
+msgctxt "users model"
+msgid "Date of birth"
+msgstr ""
+
+#: users/models.py:69
+msgctxt "users model"
+msgid "FB account"
+msgstr ""
+
+#: users/models.py:70
+msgctxt "users model"
+msgid "Twitter account"
+msgstr ""
+
+#: users/models.py:71
+msgctxt "users model"
+msgid "Instagram account"
+msgstr ""
+
+#: users/models.py:119
+msgctxt "users model"
+msgid "User"
+msgstr ""
+
+#: users/models.py:120
+msgctxt "users model"
+msgid "Users"
+msgstr ""
+
+#: users/models.py:123
+msgid "User"
+msgstr ""
+
+#: users/views.py:154 users/views.py:191
+msgid "You do not have permission to perform this request"
+msgstr ""
+
+#: users/views.py:183 users/views.py:184
+msgid "Thank you so much for your comments and for rate the app"
+msgstr ""
+
+#: users/views.py:187
+msgid "The user you are trying to update does not exist"
+msgstr ""
+
+#: users/views.py:189
+msgid "The user has been updated successfully"
+msgstr ""
+
+#: users/views.py:203 users/views.py:285
+msgctxt "stripe donations"
+msgid "The amount is missed"
+msgstr ""
+
+#: users/views.py:210 users/views.py:290
+msgctxt "stripe donations"
+msgid "The expiration month is missed"
+msgstr ""
+
+#: users/views.py:215 users/views.py:295
+msgctxt "stripe donations"
+msgid "The expiration year is missed"
+msgstr ""
+
+#: users/views.py:220 users/views.py:300
+msgctxt "stripe donations"
+msgid "The address zip is missed"
+msgstr ""
+
+#: users/views.py:369
+msgid "User account does not exist"
+msgstr ""
+
+#: users/views.py:373
+msgid "The email address is not confirmed yet"
+msgstr ""
+
+#: users/views.py:377
+msgid "The email address is not approved yet"
+msgstr ""
+
+#: users/views.py:384
+msgid "Your free version has expired"
+msgstr ""
+
+#: utils/utils.py:6
+msgid "Prefer not to say"
+msgstr ""
+
+#: utils/utils.py:38
+msgid "reCAPTCHA validation has failed"
+msgstr ""
+
+#: utils/utils.py:39
+msgid ""
+"Retry, and if the problem persist get in touch with the system administrator "
+"and report"
+msgstr ""
+
+#: utils/utils.py:43
+msgid "The secret parameter is invalid or malformed"
+msgstr ""
+
+#: utils/utils.py:46
+msgid "The secret parameter is missing"
+msgstr ""
+
+#: utils/utils.py:49
+msgid "The response parameter is missing"
+msgstr ""
+
+#: utils/utils.py:52
+msgid "The response parameter is invalid or malformed"
+msgstr ""
+
+#: utils/utils.py:55
+msgid "The request is invalid or malformed"
+msgstr ""

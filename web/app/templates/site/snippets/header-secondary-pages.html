@@ -1,0 +1,132 @@
+{% load i18n static %}
+
+<header class="header navbar-fixed-top">
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<div class="menu-container js_nav-item">
+				<button type="button" class="navbar-toggle" 
+				data-toggle="collapse" data-target=".nav-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="toggle-icon"></span>
+				</button>
+
+				<div class="logo">
+					<a class="logo-wrap" href="#body">
+						<img class="logo-img logo-img-main" alt="ADAN Logo"
+						src="{% static 'site/img/logo.png' %}" />
+						<img class="logo-img logo-img-active" alt="ADAN Dark Logo"
+						src="{% static 'site/img/logo-dark.png' %}" />
+					</a>
+				</div>
+			</div>
+
+			<div class="collapse navbar-collapse nav-collapse">
+				<div class="language-switcher">
+					<form action="{% url 'set_language' %}" method="post">
+				    {% csrf_token %}
+				    <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+				    <ul class="nav navbar-nav navbar-right language menu">
+				        {% get_current_language as LANGUAGE_CODE %}
+				        {% get_available_languages as LANGUAGES %}
+				        {% get_language_info_list for LANGUAGES as languages %}
+				        {% for language in languages %}
+				            <li>
+				                <button type="submit"
+				                        name="language"
+				                        value="{{ language.code }}"
+				                        class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+				                    {{ language.name_local }}
+				                </button>
+				            </li>
+				        {% endfor %}
+				    </ul>
+					</form>
+
+						<form action="{% url 'set_language' %}" method="post" id="frmLanguageSelector">
+						<!--<form action="/i18n/" method="post" id="frmLanguageSelector">-->
+							{% csrf_token %}
+							<input name="language" id="language" />
+							<ul class="nav-lang">
+							<!--<ul class="nav navbar-nav navbar-right language menu">-->
+								{% get_current_language as LANGUAGE_CODE %}
+								{% get_available_languages as LANGUAGES %}
+								{% get_language_info_list for LANGUAGES as languages %}
+								{% for language in languages %}
+								<li>
+									<a href="javascript:void(0)" style="text-transform: uppercase;" 
+									class="{% if language.code == LANGUAGE_CODE %}active{% endif %}"
+									lang="{{language.code}}" 
+									onclick="$('#frmLanguageSelector #language').val('{{language.code|upper}}'); $('#frmLanguageSelector').submit()">
+										{{ language.code|upper }}
+									</a>
+
+								
+								</li>
+							{% endfor %}
+							</ul>
+						</form>
+
+						<!--
+						<li>
+							<a href="#">DE</a>
+						</li>
+
+						<li>
+							<a href="#">FR</a>
+						</li>
+						-->
+					
+				</div>
+
+				<div class="menu-container">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li class="js_nav-item nav-item">
+							<a class="nav-item-child nav-item-hover" href="/#body">
+								{% trans 'Home' %}
+							</a>
+						</li>
+
+						<li class="js_nav-item nav-item">
+							<a class="nav-item-child nav-item-hover" href="/#about">
+								{% trans 'About' %}
+							</a>
+						</li>
+
+						<li class="js_nav-item nav-item">
+							<a class="nav-item-child nav-item-hover" href="/#projects">
+								{% trans 'Projects' %}
+							</a>
+						</li>
+
+						<li class="js_nav-item nav-item">
+							<a class="nav-item-child nav-item-hover" href="/#pricing">
+								{% trans 'Pricing' %}
+							</a>
+						</li>
+
+						<li class="js_nav-item nav-item">
+							<a class="nav-item-child nav-item-hover" href="/#partners">
+								{#% trans 'Company' %#}
+								{% trans 'Partners' %}
+							</a>
+						</li>
+
+						<!--
+						<li class="js_nav-item nav-item">
+							<a class="nav-item-child nav-item-hover" href="#services">
+								{#% trans 'Services' %#}
+							</a>
+						</li>
+						-->
+
+						<li class="js_nav-item nav-item">
+							<a class="nav-item-child nav-item-hover" href="/#contact">
+								{% trans 'Contact' %}
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

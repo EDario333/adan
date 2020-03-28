@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style></style>
+    <!--
+    	https://github.com/teddziuba/django-sslserver
+    	pip install django-sslserver
+    	django-sslserver==0.22
+    -->
+  </head>
+
+  <body>
+  	<script>
+			function init() {
+				FB.api(
+					"/644499029653018/feed",
+					"POST",
+					{
+						"fields": "publish_to_groups"
+					},
+
+					{
+						"message": "This is a test message"
+					},
+					function (response) {
+						if (response && !response.error) {
+							/* handle the result */
+						}
+						console.log(response);
+					}
+				);
+			}
+
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId            : '165690468075251',
+		      autoLogAppEvents : true,
+		      xfbml            : true,
+		      version          : 'v5.0'
+		    });
+
+		    init();
+		  };
+
+		  (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+		</script>
+
+		<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+		<!--<script async defer src="https://connect.facebook.net/es_LA/sdk.js"></script>-->
+
+  	<script type="text/javascript">
+  		
+  	</script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+{% load i18n static %}
+
+<footer class="footer">
+	<!-- Links -->
+	<div class="section-seperator">
+		<div class="content-md container">
+			<div class="row">
+				<div class="col-sm-2 sm-margin-b-30">
+					<!-- List -->
+					<ul class="list-unstyled footer-list">
+						<li class="footer-list-item">
+							<a href="#body">
+								{% trans 'Home' %}
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="#about">
+								{% trans 'About' %}
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="#pricing">
+								{% trans 'Pricing' %}
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="#contact">
+								{% trans 'Contact' %}
+							</a>
+						</li>
+					</ul> <!-- End List -->
+				</div>
+
+				<div class="col-sm-2 sm-margin-b-30">
+					<!-- List -->
+					<ul class="list-unstyled footer-list">
+						<li class="footer-list-item">
+							<a href="#" class="to-implement">
+								Twitter
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="#" class="to-implement">
+								Facebook
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="#" class="to-implement">
+								Instagram
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="#" class="to-implement">
+								YouTube
+							</a>
+						</li>
+					</ul> <!-- End List -->
+				</div>
+
+				<div class="col-sm-3">
+					<!-- List -->
+					<ul class="list-unstyled footer-list">
+						<li class="footer-list-item">
+							<a href="/legal/terms-conditions/">
+								{% trans 'Terms and Conditions' %}
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="/legal/privacy/">
+								{% trans 'Privacy notice' %}
+							</a>
+						</li>
+
+						<li class="footer-list-item">
+							<a href="/legal/license/">
+								{% trans 'License' %}
+							</a>
+						</li>
+					</ul> <!-- End List -->
+				</div>
+			</div> <!--// end row -->
+		</div>
+	</div>
+	<!-- End Links -->
+
+	<!-- Copyright -->
+	<div class="content container">
+		<div class="row">
+			<div class="col-xs-6">
+				<img class="footer-logo" src="{% static 'site/img/logo-dark.png' %}" alt="flameonepage Logo" />
+			</div>
+
+			<div class="col-xs-6 text-right">
+				<p class="margin-b-0">
+					<a class="fweight-700" href="#">
+						ADAN
+					</a>
+
+					Theme Powered by:
+					<a class="fweight-700" href="http://ft-seo.ch/">
+						FairTech Studio
+					</a>
+				</p>
+			</div>
+		</div>
+		<!--// end row -->
+	</div> <!-- End Copyright -->
+</footer>
+
+<script type="text/javascript">
+	$(".to-implement").click(function() {
+		alert("Por implementar...");
+		return false;
+	})
+</script>

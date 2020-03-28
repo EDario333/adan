@@ -1,0 +1,129 @@
+{% load i18n %}
+
+<style type="text/css">
+	.pricing .pricing-list-item {
+		color: #515769;
+	}
+</style>
+
+<div id="pricing">
+	<div class="bg-color-sky-light">
+		<div class="content-lg container">
+			<div class="row row-space-1">
+				<div class="col-sm-4 sm-margin-b-2">
+					<!-- Pricing -->
+					<div class="pricing">
+						<div class="margin-b-30">
+							<i class="pricing-icon icon-chemistry"></i>
+
+							<h3>
+								{% trans 'Free edition title' context 'pricing section' %}
+								<br />
+								<span>$</span>&nbsp;0.00
+							</h3>
+
+							<p>
+								{% trans 'Free edition content' context 'pricing section' %}
+							</p>
+						</div>
+
+						<ul class="list-unstyled pricing-list margin-b-50">
+							<li class="pricing-list-item">
+								{% trans 'Free edition feature 1' context 'pricing section' %}
+							</li>
+
+							<li class="pricing-list-item">
+								{% trans 'Free edition feature 2' context 'pricing section' %}
+							</li>
+
+							<li class="pricing-list-item">
+								{% trans 'Free edition feature 3' context 'pricing section' %}
+							</li>
+						</ul>
+
+						<a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">
+							{% trans 'Start Now' %}
+						</a>
+					</div>
+					<!-- End Pricing -->
+				</div>
+
+				<div class="col-sm-4 sm-margin-b-2">
+					<!-- Pricing -->
+					<div class="pricing pricing-active">
+						<div class="margin-b-30">
+							<i class="pricing-icon icon-badge"></i>
+
+							<h3>
+								{% trans 'Limited edition title' context 'pricing section' %}
+								<br />
+								<span>$</span>&nbsp;99.99&nbsp;{% trans 'each day' %}
+							</h3>
+
+							<p>
+								{% trans 'Limited edition content' context 'pricing section' %}
+							</p>
+						</div>
+
+						<ul class="list-unstyled pricing-list margin-b-50">
+							<li class="pricing-list-item">
+								{% trans 'Limited edition feature 1' context 'pricing section' %}
+							</li>
+
+							<li class="pricing-list-item">
+								{% trans 'Limited edition feature 2' context 'pricing section' %}
+							</li>
+
+							<li class="pricing-list-item">
+								{% trans 'Limited edition feature 3' context 'pricing section' %}
+							</li>
+						</ul>
+
+						<a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">
+							{% trans 'Start Now' %}
+						</a>
+					</div>
+					<!-- End Pricing -->
+				</div>
+
+				<div class="col-sm-4">
+					<!-- Pricing -->
+					<div class="pricing">
+						<div class="margin-b-30">
+							<i class="pricing-icon icon-shield"></i>
+
+							<h3>
+								{% trans 'Unlimited edition title' context 'pricing section' %}
+								<br />
+								<span>$</span>&nbsp;101.75&nbsp;{% trans 'each day' %}
+							</h3>
+
+							<p>
+								{% trans 'Unlimited edition content' context 'pricing section' %}
+							</p>
+						</div>
+
+						<ul class="list-unstyled pricing-list margin-b-50">
+							<li class="pricing-list-item">
+								{% trans 'Full edition feature 1' context 'pricing section' %}
+							</li>
+
+							<li class="pricing-list-item">
+								{% trans 'Full edition feature 2' context 'pricing section' %}
+							</li>
+
+							<li class="pricing-list-item">
+								{% trans 'Full edition feature 3' context 'pricing section' %}
+							</li>
+						</ul>
+
+						<a href="pricing.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">
+							{% trans 'Start Now' %}
+						</a>
+					</div>
+					<!-- End Pricing -->
+				</div>
+			</div> <!--// end row -->
+		</div>
+	</div>
+</div>

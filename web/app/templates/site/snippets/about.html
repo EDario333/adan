@@ -1,0 +1,153 @@
+{% load i18n static %}
+
+<div id="about">
+	<div class="content-lg container">
+		<!-- Masonry Grid -->
+		<div class="masonry-grid row">
+			<div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+
+			<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
+				<div class="margin-b-60">
+					<h2>
+						{% trans 'About title 1' context 'about section' %}
+					</h2>
+
+					<p>
+						{% trans 'About content 1' context 'about section' %}
+					</p>
+				</div>
+
+				<img class="full-width img-responsive wow fadeInUp" 
+				src="{% static 'site/img/500x500/01.jpg' %}" 
+				alt="Portfolio Image" data-wow-duration=".3" 
+				data-wow-delay=".2s" />
+			</div>
+
+			<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+				<div class="margin-b-60">
+					<h2>
+						{% trans 'About title 2' context 'about section' %}
+					</h2>
+
+					<p>
+						{% trans 'About content 2' context 'about section' %}
+					</p>
+				</div>
+
+				<img class="full-width img-responsive wow fadeInUp" 
+				src="{% static 'site/img/500x500/02.jpg' %}" 
+				alt="Portfolio Image" data-wow-duration=".3" 
+				data-wow-delay=".3s" />
+			</div>
+
+			<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+				<div class="margin-t-60 margin-b-60">
+					<h2>
+						{% trans 'About title 3' context 'about section' %}
+					</h2>
+
+					<p>
+						{% trans 'About content 3' context 'about section' %}
+					</p>
+				</div>
+
+				<img class="full-width img-responsive wow fadeInUp" 
+				src="{% static 'site/img/500x500/03.jpg' %}" 
+				alt="Portfolio Image" data-wow-duration=".3" 
+				data-wow-delay=".4s" />
+			</div>
+		</div>
+		<!-- End Masonry Grid -->
+	</div>
+
+	<div class="bg-color-sky-light">
+		<div class="content-lg container">
+			<div class="row">
+				<div class="col-md-5 col-sm-5 md-margin-b-60">
+					<div class="margin-t-50 margin-b-30">
+						<h2>
+							{% trans 'Why ADAN title' context 'about section' %}
+						</h2>
+
+						<p>
+							{% trans 'Why ADAN content' context 'about section' %}
+						</p>
+					</div>
+
+					<a href="#" onclick="alert('Poner ref a paper ya publicado')" 
+					class="btn-theme btn-theme-sm btn-white-bg text-uppercase">
+						{% trans 'Tech paper' %}
+					</a>
+				</div>
+
+				<div class="col-md-5 col-sm-7 col-md-offset-2">
+					<!-- Accordion -->
+					<div class="accordion">
+						<div class="panel-group" id="accordion" 
+						role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingOne">
+									<h4 class="panel-title">
+										<a class="panel-title-child" role="button" 
+										data-toggle="collapse" data-parent="#accordion" 
+										href="#collapseOne" aria-expanded="true" 
+										aria-controls="collapseOne">
+											{% trans 'Experts Research title' context 'about section' %}
+										</a>
+									</h4>
+								</div>
+
+								<div id="collapseOne" class="panel-collapse collapse in" 
+								role="tabpanel" aria-labelledby="headingOne">
+									<div class="panel-body">
+										{% trans 'Experts Research content' context 'about section' %}
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingTwo">
+									<h4 class="panel-title">
+										<a class="collapsed panel-title-child" 
+										role="button" data-toggle="collapse" 
+										data-parent="#accordion" href="#collapseTwo" 
+										aria-expanded="false" aria-controls="collapseTwo">
+											{% trans 'Hi-Tech Engineering title' context 'about section' %}
+										</a>
+									</h4>
+								</div>
+
+								<div id="collapseTwo" class="panel-collapse collapse" 
+								role="tabpanel" aria-labelledby="headingTwo">
+									<div class="panel-body">
+										{% trans 'Hi-Tech Engineering content' context 'about section' %}
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingThree">
+									<h4 class="panel-title">
+										<a class="collapsed panel-title-child" 
+										role="button" data-toggle="collapse" 
+										data-parent="#accordion" href="#collapseThree" 
+										aria-expanded="false" aria-controls="collapseThree">
+											{% trans 'Outstanding Results title' context 'about section' %}
+										</a>
+									</h4>
+								</div>
+
+								<div id="collapseThree" class="panel-collapse collapse" 
+								role="tabpanel" aria-labelledby="headingThree">
+									<div class="panel-body">
+										{% trans 'Outstanding Results content' context 'about section' %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- End Accodrion -->
+				</div>
+			</div> <!--// end row -->
+		</div>
+	</div>
+</div>

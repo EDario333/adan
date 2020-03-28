@@ -1,0 +1,348 @@
+{% load i18n static %}
+
+<style type="text/css">
+	.link::after {
+	/*, .pricing .pricing-list-item::before {*/
+		/*content: "+";*/
+		content: "";
+	}
+</style>
+
+<div id="projects">
+	<div class="content-lg container">
+		<div class="row margin-b-40">
+			<div class="col-sm-12">
+				<h2>
+					{% trans 'Projects title' context 'projects section' %}
+				</h2>
+
+				<p>
+					{% trans 'Projects content' context 'projects section' %}
+				</p>
+			</div>
+		</div> <!--// end row -->
+
+		<div class="row">
+			<!-- Latest Products -->
+			<div class="col-sm-4 sm-margin-b-50">
+				<div class="margin-b-20">
+					<div class="work work-popup-trigger">
+						<div class="work-overlay">
+							<img class="full-width img-responsive" 
+							src="{% static 'site/img/products/minegocito.jpg' %}" 
+							alt="MiNegocito" style="height: 260px" />
+						</div>
+
+						<div class="work-popup-overlay">
+							<div class="work-popup-content">
+								<a href="javascript:void(0);" class="work-popup-close">
+									{% trans 'Close' %}
+								</a>
+
+								<div class="margin-b-30">
+									<h3 class="margin-b-5">
+										{% trans 'Project 1 title' context 'projects section' %}
+									</h3>
+
+									<span>
+										{% trans 'Project 1 subtitle' context 'projects section' %}
+									</span>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+										<div class="margin-t-10 sm-margin-t-0">
+											{% trans 'Project 1 full description' context 'projects section' %}
+
+											<!--
+											<ul class="list-inline work-popup-tag">
+												<li class="work-popup-tag-item">
+													<a class="work-popup-tag-link" href="#">
+														Strategy,
+													</a>
+												</li>
+
+												<li class="work-popup-tag-item">
+													<a class="work-popup-tag-link" href="#">
+														Implementation,
+													</a>
+												</li>
+
+												<li class="work-popup-tag-item">
+													<a class="work-popup-tag-link" href="#">
+														Credentials
+													</a>
+												</li>
+											</ul>
+											-->
+
+											<a href="#" onclick="alert('Colocar ref a PDF'); return false" 
+											class="btn-theme btn-theme-sm btn-white-bg text-uppercase">
+												{% trans 'Watch press' %}
+											</a>
+										</div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="margin-t-10 sm-margin-t-0">
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Project Manager' %}:
+												</strong> 
+
+												XYZ
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Executive' %}:
+												</strong> 
+
+												ABC
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Software Architect' %}:
+												</strong>
+
+												JKL
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Lead Developer' %}:
+												</strong>
+
+												PPQ
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h4>
+					<a href="#">
+						{% trans 'Project 1 title' context 'projects section' %}
+					</a> 
+
+					<span class="text-uppercase margin-l-20">
+						{% trans 'Project 1 subtitle' context 'projects section' %}
+					</span>
+				</h4>
+
+				<p>
+					{% trans 'Project 1 short description' context 'projects section' %}
+				</p>
+
+				<a class="link" href="#" onclick="alert('Colocar ref a app'); return false">
+					{% trans 'Visit' %}
+				</a>
+			</div>
+			<!-- End Latest Products -->
+
+			<!-- Latest Products -->
+			<div class="col-sm-4 sm-margin-b-50">
+				<div class="margin-b-20">
+					<div class="work work-popup-trigger">
+						<div class="work-overlay">
+							<img class="img-responsive" alt="LabPP"
+							src="{% static 'site/img/products/labpp.jpg' %}" />
+						</div>
+
+						<div class="work-popup-overlay">
+							<div class="work-popup-content">
+								<a href="javascript:void(0);" class="work-popup-close">
+									{% trans 'Close' %}
+								</a>
+
+								<div class="margin-b-30">
+									<h3 class="margin-b-5">
+										{% trans 'Project 2 title' context 'projects section' %}
+									</h3>
+
+									<span>
+										{% trans 'Project 2 subtitle' context 'projects section' %}
+									</span>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+										<div class="margin-t-10 sm-margin-t-0">
+											{% trans 'Project 2 full description' context 'projects section' %}
+
+											<a href="#" onclick="alert('Colocar ref a PDF'); return false" 
+											class="btn-theme btn-theme-sm btn-white-bg text-uppercase">
+												{% trans 'Watch press' %}
+											</a>
+										</div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="margin-t-10 sm-margin-t-0">
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Project Manager' %}:
+												</strong> 
+
+												XYZ
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Executive' %}:
+												</strong> 
+
+												ABC
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Software Architect' %}:
+												</strong>
+
+												JKL
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Lead Developer' %}:
+												</strong>
+
+												PPQ
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<h4>
+					<a href="#">
+						{% trans 'Project 2 title' context 'projects section' %}
+					</a> 
+
+					<span class="text-uppercase margin-l-20">
+						{% trans 'Project 2 subtitle' context 'projects section' %}
+					</span>
+				</h4>
+
+				<p>
+					{% trans 'Project 2 short description' context 'projects section' %}
+				</p>
+
+				<a class="link" href="#" onclick="alert('Colocar ref a app'); return false">
+					{% trans 'Visit' %}
+				</a>
+			</div>
+			<!-- End Latest Products -->
+
+			<!-- Latest Products -->
+			<div class="col-sm-4 sm-margin-b-50">
+				<div class="margin-b-20">
+					<div class="work work-popup-trigger">
+						<div class="work-overlay">
+							<img class="img-responsive" alt="iBuilder"
+							style="height: 260px"
+							src="{% static 'site/img/products/ibuilder.jpg' %}" />
+						</div>
+
+						<div class="work-popup-overlay">
+							<div class="work-popup-content">
+								<a href="javascript:void(0);" class="work-popup-close">
+									{% trans 'Close' %}
+								</a>
+
+								<div class="margin-b-30">
+									<h3 class="margin-b-5">
+										{% trans 'Project 3 title' context 'projects section' %}
+									</h3>
+
+									<span>
+										{% trans 'Project 3 subtitle' context 'projects section' %}
+									</span>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+										<div class="margin-t-10 sm-margin-t-0">
+											{% trans 'Project 3 full description' context 'projects section' %}
+
+											<a href="#" onclick="alert('Colocar ref a PDF'); return false" 
+											class="btn-theme btn-theme-sm btn-white-bg text-uppercase">
+												{% trans 'Watch press' %}
+											</a>
+										</div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="margin-t-10 sm-margin-t-0">
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Project Manager' %}:
+												</strong> 
+
+												XYZ
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Executive' %}:
+												</strong> 
+
+												ABC
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Software Architect' %}:
+												</strong>
+
+												JKL
+											</p>
+
+											<p class="margin-b-5">
+												<strong>
+													{% trans 'Lead Developer' %}:
+												</strong>
+
+												PPQ
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h4>
+					<a href="#">
+						{% trans 'Project 3 title' context 'projects section' %}
+					</a> 
+
+					<span class="text-uppercase margin-l-20">
+						{% trans 'Project 3 subtitle' context 'projects section' %}
+					</span>
+				</h4>
+
+				<p>
+					{% trans 'Project 3 short description' context 'projects section' %}
+				</p>
+
+				<a class="link" href="#" onclick="alert('Colocar ref a app'); return false">
+					{% trans 'Visit' %}
+				</a>
+			</div>
+			<!-- End Latest Products -->
+		</div><!--// end row -->
+	</div>
+</div>
