@@ -1,0 +1,18 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% trans 'Default offline template' %}
+	</title>
+	<link href="{% static '/css/django-pwa-app.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<h1>
+		{% trans 'You are currently not connected to any networks' %}.
+	</h1>
+</body>
+</html>

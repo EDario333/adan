@@ -1,0 +1,36 @@
+{% extends '../site/base.html' %}
+
+{% load i18n static %}
+
+{% block page_name %}
+  {% trans 'License EULA title' %}
+{% endblock %}
+
+{% block content %}
+  <style type="text/css">
+    .navbar-fixed-top {
+      background-image: url("{% static 'site/img/bg-header-secondary-pages.jpg' %}");
+    }
+  </style>
+
+  {% include '../site/snippets/header-secondary-pages.html' %}
+
+  <div class="content-lg container">
+    <div class="row margin-t-40">
+      <div class="col-sm-12">
+        <h2 class="breadcumb-title">
+          {% trans 'License EULA title' %}
+        </h2>
+
+        {% trans 'License EULA content' %}
+
+        <p>
+          <button class="btn south-btn mt-50" 
+          id="btnDownloadLicense">
+            {% trans 'Download license' %}
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

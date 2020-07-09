@@ -1,0 +1,76 @@
+{% load i18n static %}
+
+<style type="text/css">
+	.content-lg {
+		padding-top: 0;
+	}
+
+	.content-md {
+		padding-bottom: 0;
+	}
+</style>
+
+<!-- Work -->
+<div id="partners">
+	<div class="section-seperator">
+		<div class="content-md container">
+			<div class="row margin-b-40">
+				<div class="col-sm-12">
+					<h2>
+						{% trans 'Partners title' context 'partners section' %}
+					</h2>
+
+					<p>
+						{% trans 'Partners content' context 'partners section' %}
+					</p>
+				</div>
+			</div> <!--// end row -->
+
+			<!-- Masonry Grid -->
+		</div>
+	</div>
+
+	<div class="content-lg container">
+		<!-- Swiper Clients -->
+		<div class="swiper-slider swiper-clients">
+			<!-- Swiper Wrapper -->
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img class="swiper-clients-img" alt="Python"
+					src="{% static 'site/img/partners/python.png' %}" />
+				</div>
+
+				<div class="swiper-slide">
+					<img class="swiper-clients-img" alt="pandas"
+					style="height: 74px; width: 250px" 
+					src="{% static 'site/img/partners/pandas.png' %}" />
+				</div>
+
+				<div class="swiper-slide" style="margin-left: 70px;">
+					<img class="swiper-clients-img" alt="NumPy"
+					src="{% static 'site/img/partners/numpy2.png' %}" />
+				</div>
+
+				<div class="swiper-slide">
+					<img class="swiper-clients-img" alt="Google"
+					src="{% static 'site/img/partners/google.png' %}" />
+				</div>
+
+				<div class="swiper-slide">
+					<img class="swiper-clients-img" alt="TensorFlow"
+					src="{% static 'site/img/partners/tensorflow2.png' %}" />
+				</div>
+
+				<div class="swiper-slide">
+					<img class="swiper-clients-img" alt="django"
+					src="{% static 'site/img/partners/django1.png' %}" />
+				</div>
+
+				<div class="swiper-slide">
+					<img class="swiper-clients-img" alt="PWA"
+					src="{% static 'site/img/partners/pwa.png' %}" />
+				</div>
+			</div> <!-- End Swiper Wrapper -->
+		</div> <!-- End Swiper Clients -->
+	</div> <!-- End Clients -->
+</div> <!-- End Work -->

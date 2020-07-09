@@ -1,0 +1,1922 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-29 04:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: catalogues/models.py:40
+msgid "Created by"
+msgstr ""
+
+#: catalogues/models.py:47
+msgid "Specify the reason to disable this product"
+msgstr ""
+
+#: catalogues/models.py:52
+msgid "Specify the reason to drop this object"
+msgstr ""
+
+#: catalogues/models.py:86 catalogues/models.py:94
+msgid "Description"
+msgstr "Descripción"
+
+#: catalogues/models.py:87 catalogues/models.py:101
+msgid "Notes"
+msgstr "Notas"
+
+#: catalogues/models.py:88 catalogues/models.py:107 users/models.py:125
+msgid "Comments"
+msgstr "Comentarios"
+
+#: catalogues/models.py:113
+msgctxt "person model"
+msgid "Last name"
+msgstr "Apellido paterno"
+
+#: catalogues/models.py:114
+msgctxt "person model"
+msgid "Mothers last name"
+msgstr "Apellido materno"
+
+#: catalogues/models.py:115
+msgctxt "person model"
+msgid "First name"
+msgstr "Primer nombre"
+
+#: catalogues/models.py:116
+msgctxt "person model"
+msgid "Middle name"
+msgstr "Segundo nombre"
+
+#: catalogues/models.py:118
+msgctxt "person model"
+msgid "Gender"
+msgstr "Género"
+
+#: catalogues/models.py:119
+msgctxt "person model"
+msgid "Date of birth"
+msgstr "Fecha de nacimiento"
+
+#: catalogues/models.py:121 catalogues/models.py:199
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: catalogues/models.py:124 catalogues/models.py:196
+msgid "Address line 1"
+msgstr "Domicilio"
+
+#: catalogues/models.py:125 catalogues/models.py:197
+msgid "Address line 2"
+msgstr "Datos adicionales del domicilio"
+
+#: catalogues/models.py:127 catalogues/models.py:200
+msgid "Cell phone"
+msgstr "Teléfono celular"
+
+#: catalogues/models.py:128 catalogues/models.py:201
+msgid "Home phone"
+msgstr "Teléfono de casa"
+
+#: catalogues/models.py:129 catalogues/models.py:202
+msgid "Other phone"
+msgstr "Otro teléfono"
+
+#: catalogues/models.py:144 utils/utils.py:10
+msgid "Male"
+msgstr "Masculino"
+
+#: catalogues/models.py:145 utils/utils.py:11
+msgid "Female"
+msgstr "Femenino"
+
+#: catalogues/models.py:161
+msgctxt "person model"
+msgid "Age"
+msgstr "Edad"
+
+#: cfg/i18n.py:7
+msgid "English"
+msgstr ""
+
+#: cfg/i18n.py:8
+msgid "Spanish"
+msgstr ""
+
+#: templates/legal/license.html:6 templates/legal/license.html:22
+msgid "License EULA title"
+msgstr "Acuerdo de licencia para el usuario final (EULA)"
+
+#: templates/legal/license.html:25
+msgid "License EULA content"
+msgstr ""
+"<p><strong>IMPORTANTE:</strong> Lea los términos y las condiciones del "
+"producto de aplicación que se especifican abajo antes de descargarlo, "
+"instalarlo, copiarlo o usarlo. </strong>CON LA DESCARGA, INSTALACIÓN, COPIA "
+"O UTILIZACIÓN DEL SOFTWARE, USTED DECLARA SU CONSENTIMIENTO CON LOS TÉRMINOS "
+"Y CONDICIONES.</strong></p><h3>Acuerdo de licencia de usuario final del "
+"Software</h3><p>Bajo los términos de este Acuerdo de licencia de usuario "
+"final de Software (en adelante, \"el Acuerdo\") celebrado por y entre Edgar "
+"Darío Ramírez de León, con domicilio conocido y cédula de identificación "
+"profesional 7796523 (en adelante, \"Edgar\", \"Darío\" o \"el Proveedor\") y "
+"Usted, una persona física o jurídica, (en adelante \"Usted\" o el \"Usuario "
+"final\"), le da derecho a utilizar el Software definido en el artículo 1 del "
+"presente Acuerdo. El Software definido en el artículo 1 del presente Acuerdo "
+"puede almacenarse en un soporte digital, enviarse mediante correo "
+"electrónico, descargarse de Internet, descargarse de servidores del "
+"Proveedor u obtenerse de otras fuentes bajo los términos y condiciones "
+"mencionados más adelante.</p><p>ESTO ES UN ACUERDO SOBRE LOS DERECHOS DEL "
+"USUARIO FINAL; NO UN CONTRATO DE VENTA. El Proveedor sigue siendo el "
+"propietario de la copia del Software y del soporte físico en el que el "
+"Software se suministra en paquete comercial, así como de todas las demás "
+"copias que el Usuario final está autorizado a realizar en virtud de este "
+"Acuerdo.</p><p>Si no acepta todos los términos y condiciones de este "
+"Acuerdo, no descargue, instale, copie, utilice, distribuya, o cualquier otra "
+"actividad relacionada con el Software. Cancele toda  instalación o descarga, "
+"destruya o devuelva el software, el soporte de instalación, la documentación "
+"adjunta al lugar donde haya adquirido el Software.</p><p>USTED ACEPTA QUE LA "
+"UTILIZACIÓN DEL SOFTWARE INDICA QUE HA LEÍDO ESTE ACUERDO, QUE LO COMPRENDE "
+"Y QUE CONSIENTE OBLIGARSE POR SUS TÉRMINOS Y CONDICIONES.</p><p>&nbsp;&nbsp;"
+"&nbsp;&nbsp;1. <strong>Software</strong>. En este acuerdo, el término "
+"\"Software\" se refiere a: (i) el programa informático y todos sus "
+"componentes; (ii) todo el contenido de los discos, CD-ROM, DVD, mensajes de "
+"correo electrónico y documentos adjuntos, o cualquier otro soporte que esté "
+"vinculado a este acuerdo, incluido el código objeto del Software "
+"proporcionado en un soporte de datos, por correo electrónico o descargado de "
+"Internet; (iii) todas las instrucciones escritas y toda la documentación "
+"relacionada con el Software, especialmente todas las descripciones del "
+"mismo, sus especificaciones, todas las descripciones de las propiedades o el "
+"funcionamiento del Software, todas las descripciones del entorno operativo "
+"donde se utiliza, las instrucciones de uso o instalación del Software o "
+"todas las descripciones de uso del mismo (de aquí en adelante, la "
+"\"Documentación\"); (iv) copias, reparaciones de posibles errores, "
+"adiciones, extensiones y versiones modificadas del Software, así como "
+"actualizaciones de sus componentes, si las hay, para las que el proveedor le "
+"haya concedido una licencia en virtud del artículo 3 de este acuerdo. El "
+"Software se proporciona únicamente en forma de código objeto ejecutable.</"
+"p><p>&nbsp;&nbsp;&nbsp;&nbsp;2. <strong>Instalación</strong>. El Software "
+"suministrado en un soporte digital, enviado por correo electrónico, "
+"descargado de Internet, descargado de los servidores del Proveedor u "
+"obtenido de otras fuentes requiere su instalación. Debe instalar el Software "
+"en un equipo correctamente configurado que cumpla, como mínimo, con los "
+"requisitos especificados en la Documentación. La metodología de instalación "
+"se describe en la Documentación. Ningún programa informático o hardware que "
+"pueda afectar desfavorablemente al Software puede estar instalado en el "
+"equipo en el que instala el Software.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;3. "
+"<strong>Licencia</strong>. Siempre que haya aceptado los términos de este "
+"Acuerdo y cumpla con todos los términos y condiciones aquí especificados, el "
+"Proveedor le concederá los siguientes derechos (la \"Licencia\"):</"
+"p><p>&nbsp;&nbsp;&nbsp;&nbsp;a) <strong>Instalación y uso</strong>. Usted "
+"tendrá el derecho no exclusivo y no transferible de instalar el Software en "
+"el disco rígido de un equipo o soporte similar para un almacenamiento "
+"permanente de datos, instalar y almacenar el Software en la memoria de un "
+"sistema informático e implementar, almacenar y mostrar el Software.</p><p>b) "
+"<strong>Disposición sobre la cantidad de licencias</strong>. El derecho a "
+"utilizar el Software estará sujeto a la cantidad de Usuarios finales. Un "
+"Usuario final se refiere a la instalación del Software en un sistema "
+"informático. No debe utilizar la misma Licencia al mismo tiempo en más de un "
+"equipo.</p><p>c) <strong>Duración de la licencia</strong>. Tiene derecho a "
+"utilizar el software durante un período de tiempo ilimitado, siempre y "
+"cuando respete los términos y demás previstos en esta Licencia, así como que "
+"el Proveedor no decida retirar su licencia de uso.</p><p>d) <strong>Vigencia "
+"de la Licencia</strong>. La Licencia se terminará si no cumple algunas de "
+"las disposiciones de este Acuerdo, el Proveedor podrá cancelarlo sin "
+"perjuicio de los derechos o soluciones legales que tenga a su disposición "
+"para estos casos. En caso de cancelación de la Licencia, el usuario debe "
+"eliminar, destruir o devolver (a sus expensas) el Software y todas las "
+"copias de seguridad del mismo a el Proveedor o al lugar donde lo haya "
+"adquirido. Tras la finalización de la Licencia, el Proveedor también tendrá "
+"derecho de anular el derecho del usuario final de utilizar las funciones del "
+"Software que requieran conexión a los servidores del Proveedor o de terceros."
+"</p><p>&nbsp;&nbsp;&nbsp;&nbsp;4. <strong>Ejercicio de los derechos del "
+"Usuario final</strong>. Debe ejercer los derechos del Usuario final en "
+"persona o a través de sus empleados. Tiene derecho a utilizar el Software "
+"solamente para asegurar sus operaciones y proteger los sistemas informáticos "
+"para los que ha obtenido una Licencia.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;5. "
+"<strong>Restricciones de los derechos</strong>. No puede copiar, distribuir, "
+"extraer componentes o crear versiones derivadas del Software. Al usar el "
+"Software, Usted tiene la obligación de cumplir con las siguientes "
+"restricciones:</p><p>(a) Puede crear una copia del Software en un soporte de "
+"almacenamiento permanente de datos como una copia de seguridad para "
+"archivar, siempre que su copia de seguridad para archivar no esté instalada "
+"ni se utilice en ningún equipo. Cualquier otra copia que realice del "
+"Software constituirá un incumplimiento de este Acuerdo.</p><p>(b) No puede "
+"utilizar, modificar, traducir ni reproducir el Software, ni transferir los "
+"derechos de uso del Software o copias del mismo de ninguna forma que no se "
+"haya establecido expresamente en este Acuerdo.</p><p>(c) No puede vender, "
+"sublicenciar, arrendar o alquilar el Software, ni usarlo para suministrar "
+"servicios comerciales.</p><p>(d) No puede aplicar técnicas de ingeniería "
+"inversa, descompilar o desmontar el Software, ni intentar obtener el código "
+"fuente del Software de ninguna otra forma, salvo en la medida en que esta "
+"restricción esté explícitamente prohibida por la ley.</p><p>(e) Usted acepta "
+"que solo usará el Software de forma que se cumplan todas las leyes "
+"aplicables en la jurisdicción en la que lo utilice, incluyendo, pero sin "
+"limitarse a, las restricciones aplicables relacionadas con el copyright y "
+"otros derechos de propiedad intelectual.</p><p>(f) Usted acepta que "
+"solamente usará el Software y sus funciones de una manera que no limite las "
+"posibilidades de otros Usuarios finales para acceder a estos servicios. El "
+"Proveedor se reserva el derecho de limitar el alcance de los servicios "
+"proporcionados a Usuarios finales individuales, para activar el uso de los "
+"servicios por parte de la mayor cantidad posible de Usuarios finales. La "
+"limitación del alcance de los servicios también significará la terminación "
+"completa de la posibilidad de usar cualquiera de las funciones del Software "
+"y la eliminación de los Datos y de la información de los servidores de los "
+"Proveedores o de los servidores de terceros relacionados con una función "
+"específica del Software.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;6. <strong>Copyright</"
+"strong>. El Software y todos los derechos, incluyendo, pero sin limitarse a, "
+"los derechos de propiedad y los derechos de propiedad intelectual, son "
+"propiedad del Proveedor y/o sus licenciatarios. Están protegidos por las "
+"disposiciones de tratados internacionales y por todas las demás leyes "
+"nacionales aplicables del país en el que se utiliza el Software. La "
+"estructura, la organización y el código del Software son valiosos secretos "
+"comerciales e información confidencial del Proveedor y/o sus licenciatarios. "
+"No puede copiar el Software, a excepción de lo especificado en el artículo 5 "
+"(a). Todas las copias que este Acuerdo le permita hacer deberán incluir el "
+"mismo copyright y los demás avisos legales de propiedad que aparezcan en el "
+"Software. Si aplica técnicas de ingeniería inversa, descompila o desmonta el "
+"Software, o intenta obtener el código fuente del Software de alguna otra "
+"forma, en incumplimiento de las disposiciones de este Acuerdo, por este "
+"medio Usted acepta que toda la información obtenida de ese modo se "
+"considerará automática e irrevocablemente transferida al Proveedor o poseída "
+"por el Proveedor de forma completa desde el momento de su origen, más allá "
+"de los derechos del Proveedor en relación con el incumplimiento de este "
+"Acuerdo.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;7. <strong>Reserva de derechos</"
+"strong>. Por este medio, el Proveedor se reserva todos los derechos del "
+"Software, a excepción de los derechos concedidos expresamente bajo los "
+"términos de este Acuerdo a Usted como el Usuario final del Software.</"
+"p><p>&nbsp;&nbsp;&nbsp;&nbsp;8. <strong>Versiones de varios idiomas, "
+"software en soportes duales, varias copias</strong>. En caso de que el "
+"Software sea compatible con varias plataformas o idiomas, o si Usted obtuvo "
+"varias copias del Software, solo puede usar el Software para la cantidad de "
+"sistemas informáticos y para las versiones correspondientes a la Licencia "
+"adquirida. No puede vender, arrendar, alquilar, sublicenciar, prestar o "
+"transferir ninguna versión o copias del Software no utilizado por Usted.</"
+"p><p>&nbsp;&nbsp;&nbsp;&nbsp;9. <strong>Comienzo y rescisión del Acuerdo</"
+"strong>. Este Acuerdo es efectivo desde la fecha en que Usted acepta los "
+"términos del mismo. Puede poner fin a este Acuerdo en cualquier momento. "
+"Para ello, desinstale, destruya permanentemente o devuelva por cuenta propia "
+"el Software, todas las copias de seguridad y todos los materiales "
+"relacionados suministrados por el Proveedor o sus socios comerciales. Más "
+"allá de la forma de rescisión de este Acuerdo, las disposiciones de los "
+"artículos 6, 7, 10, 12, 19 y 21 seguirán siendo aplicables durante tiempo "
+"ilimitado.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;10. <strong>DECLARACIONES DEL "
+"USUARIO FINAL</strong>. COMO USUARIO FINAL, USTED RECONOCE QUE EL SOFTWARE "
+"SE SUMINISTRA EN UNA CONDICIÓN \"TAL CUAL ES\", SIN UNA GARANTÍA EXPRESA O "
+"IMPLÍCITA DE NINGÚN TIPO Y HASTA EL ALCANCE MÁXIMO PERMITIDO POR LAS LEYES "
+"APLICABLES. NI EL PROVEEDOR, SUS LICENCIATARIOS, SUS AFILIADOS NI LOS "
+"TITULARES DEL COPYRIGHT PUEDEN HACER NINGUNA REPRESENTACIÓN O GARANTÍA "
+"EXPRESA O IMPLÍCITA, INCLUYENDO, PERO SIN LIMITARSE A, LAS GARANTÍAS DE "
+"COMERCIABILIDAD O ADECUACIÓN PARA UN FIN ESPECÍFICO O GARANTÍAS DE QUE EL "
+"SOFTWARE NO INFRINGIRÁ UNA PATENTE, DERECHOS DE PROPIEDAD INTELECTUAL, "
+"MARCAS COMERCIALES U OTROS DERECHOS. NO EXISTE NINGUNA GARANTÍA DEL "
+"PROVEEDOR NI DE NINGUNA OTRA PARTE DE QUE LAS FUNCIONES CONTENIDAS EN EL "
+"SOFTWARE CUMPLIRÁN CON SUS REQUISITOS O DE QUE EL FUNCIONAMIENTO DEL "
+"SOFTWARE SERÁ ININTERRUMPIDO O ESTARÁ LIBRE DE ERRORES. USTED ASUME TODA LA "
+"RESPONSABILIDAD Y EL RIESGO POR LA ELECCIÓN DEL SOFTWARE PARA LOGRAR SUS "
+"RESULTADOS DESEADOS Y POR LA INSTALACIÓN, EL USO Y LOS RESULTADOS QUE "
+"OBTENGA DEL MISMO.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;11. <strong>Sin más "
+"obligaciones</strong>. Este Acuerdo no crea obligaciones en el Proveedor y "
+"sus licenciatarios, excepto las obligaciones específicamente indicadas en "
+"este Acuerdo.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;12. <strong>LIMITACIÓN DE "
+"RESPONSABILIDAD</strong>. HASTA EL ALCANCE MÁXIMO PERMITIDO POR LAS LEYES "
+"APLICABLES, EN NINGÚN CASO EL PROVEEDOR, SUS EMPLEADOS O SUS LICENCIATARIOS "
+"SERÁN RESPONSABLES DE PÉRDIDAS DE BENEFICIOS, INGRESOS O VENTAS O POR "
+"PÉRDIDAS DE DATOS O COSTES SOPORTADOS PARA OBTENER PRODUCTOS O SERVICIOS DE "
+"SUSTITUCIÓN, POR DAÑOS A LA PROPIEDAD, DAÑOS PERSONALES, INTERRUPCIÓN DEL "
+"NEGOCIO, PÉRDIDA DE INFORMACIÓN COMERCIAL O POR DAÑOS ESPECIALES, DIRECTOS, "
+"INDIRECTOS, ACCIDENTALES, ECONÓMICOS, DE COBERTURA, CRIMINALES, ESPECIALES O "
+"SUCESIVOS CAUSADOS DE CUALQUIER MODO, YA SEA A CAUSA DE UN CONTRATO, "
+"AGRAVIO, NEGLIGENCIA U OTRO HECHO QUE ESTABLEZCA LA OCURRENCIA DE "
+"RESPONSABILIDAD, SOPORTADOS DEBIDO A LA UTILIZACIÓN O LA INCAPACIDAD DE "
+"UTILIZACIÓN DEL SOFTWARE, INCLUSO EN EL CASO DE QUE EL PROVEEDOR, SUS "
+"LICENCIATARIOS O SUS AFILIADOS HAYAN SIDO NOTIFICADOS SOBRE LA POSIBILIDAD "
+"DE DICHOS DAÑOS. DADO QUE DETERMINADOS PAÍSES Y JURISDICCIONES NO PERMITEN "
+"LA EXCLUSIÓN DE RESPONSABILIDAD, PERO PUEDEN PERMITIR LA LIMITACIÓN DE "
+"RESPONSABILIDAD, EN DICHOS CASOS, LA RESPONSABILIDAD DEL PROVEEDOR, SUS "
+"EMPLEADOS, LICENCIATARIOS O AFILIADOS SE LIMITARÁ AL PRECIO QUE USTED PAGÓ "
+"POR LA LICENCIA.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;13. Nada de lo contenido en "
+"este Acuerdo perjudicará los derechos estatutarios de ninguna parte que "
+"actúe en calidad de consumidor si infringe dicho Acuerdo.</p><p>&nbsp;&nbsp;"
+"&nbsp;&nbsp;14. <strong>Soporte técnico</strong>. El Proveedor o los "
+"terceros autorizados por el Proveedor podrán suministrar (más no se ven a "
+"obligado a esto) soporte técnico a discreción propia, sin ninguna garantía "
+"ni declaración. El Usuario final deberá crear una copia de seguridad de "
+"todos los datos existentes, software y prestaciones de los programas de "
+"forma previa al suministro de soporte técnico. El Proveedor y/o los terceros "
+"autorizados por el Proveedor no pueden aceptar la responsabilidad por el "
+"daño o pérdida de datos, propiedad, software o hardware, o pérdida de "
+"beneficios debido al suministro de soporte técnico. El Proveedor y/o los "
+"terceros autorizados por el Proveedor se reservan el derecho de decidir si "
+"la solución del problema excede el alcance del soporte técnico. El Proveedor "
+"se reserva el derecho de rechazar, suspender o dar por finalizado el "
+"suministro de soporte técnico a discreción propia.</p><p>&nbsp;&nbsp;&nbsp;"
+"&nbsp;15. <strong>Transferencia de la Licencia</strong>. El Software puede "
+"transferirse de un sistema informático a otro, a menos que esta acción "
+"infrinja los términos del presente Acuerdo. Si no infringe los términos del "
+"Acuerdo, el Usuario final solamente tendrá derecho a transferir de forma "
+"permanente la Licencia y todos los derechos derivados de este Acuerdo a otro "
+"Usuario final con el consentimiento del Proveedor, sujeto a las siguientes "
+"condiciones: (i) que el Usuario final original no se quede con ninguna copia "
+"del Software; (ii) que la transferencia de los derechos sea directa, es "
+"decir, del Usuario final original al nuevo Usuario final; (iii) que el nuevo "
+"Usuario final asuma todos los derechos y obligaciones pertinentes del "
+"Usuario final original bajo los términos de este Acuerdo; (iv) que el "
+"Usuario final original le proporcione al nuevo Usuario final la "
+"Documentación que habilita la verificación de la autenticidad del Software, "
+"como se especifica en el artículo 16.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;16. "
+"<strong>Verificación de la autenticidad del Software</strong>. El Usuario "
+"final puede demostrar su derecho a usar el Software de una de las siguientes "
+"maneras: (i) a través de un certificado de licencia emitido por el Proveedor "
+"o por un tercero designado por el Proveedor; (ii) a través de un acuerdo de "
+"licencia por escrito, en caso que se haya establecido dicho acuerdo; (iii) a "
+"través de la presentación de un correo electrónico enviado al Proveedor "
+"donde se incluyan los detalles de la Licencia (nombre de usuario y "
+"contraseña).</p><p>&nbsp;&nbsp;&nbsp;&nbsp;17. <strong>Licencias para "
+"autoridades públicas y el gobierno de los Estados Unidos Mexicanos</strong>. "
+"Se deberá suministrar el Software a las autoridades públicas, incluyendo el "
+"gobierno de los Estados Unidos Mexicanos, con los derechos de la Licencia y "
+"las restricciones descritos en este Acuerdo.</p><p>&nbsp;&nbsp;&nbsp;"
+"&nbsp;18. <strong>Control de exportación y reexportación</strong>. El "
+"Software, la Documentación o sus componentes, incluyendo la información "
+"sobre el Software y sus componentes, están sujetos a los controles de "
+"importación y exportación bajo las normas legales que se emitan por los "
+"gobiernos responsables para la emisión de los mismos según la legislación "
+"aplicable, incluyendo la legislación de la administración de exportación de "
+"los Estados Unidos Mexicanos, así como las restricciones sobre usuarios "
+"finales, usos finales y destinos impuestas por el gobierno de los Estados "
+"Unidos Mexicanos y por otros gobiernos. Acepta cumplir estrictamente con "
+"todas las normas de importación y exportación y reconoce que será "
+"responsable de obtener todas las licencias necesarias de exportación, "
+"reexportación, transferencia o importación del Software.</p><p>&nbsp;&nbsp;"
+"&nbsp;&nbsp;19. <strong>Avisos</strong>. Todos los avisos, la devolución del "
+"Software y la Documentación deben enviarse a: <a href='mailto:ram.le."
+"dario@gmail.com?subject=Aviso' target='_blank'>ram.le.dario@gmail.com</a>.</"
+"p><p>&nbsp;&nbsp;&nbsp;&nbsp;20. <strong>Legislación aplicable</strong>. "
+"Este Acuerdo se regirá e interpretará conforme a la legislación de los "
+"Estados Unidos Mexicanos. En el presente Acuerdo, el Usuario final y el "
+"Proveedor aceptan que los principios del conflicto de leyes y la Convención "
+"de las Naciones Unidas sobre los Contratos de Venta Internacional de Bienes "
+"no serán aplicables. Acepta expresamente que cualquier disputa o demanda "
+"derivada del presente Acuerdo con respecto al Proveedor o relativa al uso "
+"del Software deberá resolverse por el Tribunal correspondiente, siendo "
+"prioritario, el de la jurisprudencia de la ubicación actual del Proveedor, "
+"seguido por las Leyes Federales de los Estados Unidos Mexicanos y "
+"finalmente, la jurisprudencia del Usuario; asimismo, Usted acepta "
+"expresamente el ejercicio de la jurisdicción de los Tribunales mencionados y "
+"su orden.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;21. <strong>Disposiciones generales</"
+"strong>. Si alguna disposición de este Acuerdo no es válida o aplicable, no "
+"afectará a la validez de las demás disposiciones del Acuerdo, que seguirán "
+"siendo válidas y ejecutables bajo las condiciones aquí estipuladas. Las "
+"revisiones de este Acuerdo pueden realizarse únicamente por escrito y "
+"deberán estar firmadas ya sea por un representante autorizado por el "
+"Proveedor o por una persona expresamente autorizada para actuar en su nombre "
+"según lo establezcan las disposiciones de un poder notarial.</p><p>Este es "
+"el Acuerdo completo entre el Proveedor y Usted en relación con el Software y "
+"sustituye a cualquier representación, discusión, emprendimiento, "
+"comunicación o publicidad previos relacionados con el Software.</p>"
+
+#: templates/legal/license.html:30
+msgid "Download license"
+msgstr "Descargar"
+
+#: templates/legal/privacy.html:6 templates/legal/privacy.html:22
+msgctxt "legals"
+msgid "Privacy notice"
+msgstr "Aviso de Privacidad y Cookies"
+
+#: templates/legal/privacy.html:25
+msgctxt "privacy page"
+msgid "Privacy notice content"
+msgstr ""
+"<h3>Políticas de publicación en ADAN y sus productos asociados</h3><p>Los "
+"sitios, aplicaciones web y productos de <strong>ADAN</strong> tienen como "
+"objetivo presentar contenidos dirigidos hacia sus clientes actuales así como "
+"a los potenciales y público en general. A fin de asegurar el logro de este "
+"objetivo, se han definido los siguientes lineamientos generales para la "
+"publicación de los primeros mencionados:</p><ol start='1' type='1'><li>Toda "
+"la información será verificada por los propietarios de ADAN y sus productos "
+"para garantizar su veracidad, oportunidad y exactitud antes y durante su "
+"publicación.</li><li>La información publicada en el sitio deberá ser de "
+"utilidad para el público general y siempre buscará destacar los aspectos que "
+"favorezcan la buena imagen de ADAN, el respeto de los derechos humanos, el "
+"fomento de la cultura de la legalidad y bienestar de la sociedad.</"
+"li><li>Este sitio será un espacio de expresión democrática de nuestros "
+"clientes y público en general, por lo que siempre se privilegiará la "
+"difusión de opiniones plurales que se hagan dentro de un marco de respeto, "
+"tolerancia e imparcialidad.</li><li>No se podrá hacer ningún tipo de "
+"proselitismo de ideas políticas o gremiales, así como no están permitidos "
+"los contenidos que promuevan violencia, sectarismo, intolerancia, racismo, "
+"vicios o cualquier acto ilícito.</li><li>Se tiene prohibida la "
+"comercialización de los espacios dentro de este sitio web y todos los "
+"productos de la Compañía ADAN. Si fuese necesario publicar algún contenido "
+"especial por una institución externa a la Compañía, deberá solicitarse de "
+"manera formal a los propietarios de la misma, donde deberán especificar las "
+"características y duración de dicha publicación. Ningún acuerdo de "
+"publicación con una entidad externa podrá ser vitalicio.</li><li>Toda "
+"petición de publicación en este sitio, que provenga de las diferentes "
+"entidades de la Compañía, deberá solicitarse de manera formal a los "
+"propietarios del sitio. Cada solicitud de publicación deberá incluir los "
+"siguientes datos.</li></ol><ul style='list-style-type: circle; margin: 0 0 "
+"20px 50px'><li>Nombre completo y cargo de quien lo solicita.</"
+"li><li>Dependencia a la que se encuentra adscrito.</li><li>Nombre del "
+"evento, actividad, así como una breve descripción de un párrafo.</"
+"li><li>Duración y vigencia de su publicación.</li></ul><ol start='7' "
+"type='1'><li>Estas políticas de publicación son susceptibles de actualizarse "
+"para mejorar los servicios que ofrecemos, por lo que se recomienda "
+"revisarlas periódicamente en esta misma dirección.</li></ol><hr "
+"><h3>Política de privacidad y confidencialidad</h3><p>Este documento enuncia "
+"a la política de privacidad y confidencialidad de ADAN, sus productos y "
+"demás derivados.</p><p>Esta política de privacidad y confidencialidad "
+"establece los datos que obtenemos de los usuarios de nuestros espacios (Web "
+"o no) así como de nuestros productos y sus derivados; la manera en que "
+"protege la información personal que el usuario proporciona al momento en que "
+"hace uso de ellos y, también le permite conocer cómo se procesa y utiliza "
+"esta información.</p><p>ADAN y sus derivados se comprometen a garantizar, "
+"hasta el punto en que nuestras tecnologías y medios de comunicación nos lo "
+"permitan, que su privacidad será protegida cuando visita nuestros espacios "
+"web y/o haga uso de nuestros productos. Si por alguna razón le solicitamos a "
+"un usuario que proporcione cierta información, será para poder identificarlo "
+"y brindar el servicio que solicite; puede estar seguro que la información es "
+"manejada de acuerdo a esta declaración de privacidad y confidencialidad, la "
+"cual le sugerimos leer para entender el tratamiento de su información "
+"personal.</p><h4>Información que recolecta ADAN y sus derivados</h4><p>Los "
+"datos que ADAN, sus productos, servicios y demás derivados pueden recopilar "
+"son:</p><ul style='list-style-type: circle; margin: 0 0 20px "
+"20px'><li>Información técnica del equipo con que accede a las apps. "
+"(Dirección IP, navegador que emplea, versión, entre otros).</"
+"li><li>Información estadística de la navegación del usuario (archivos del "
+"sitio solicitados, palabras claves utilizadas en motores de búsqueda, etc.)."
+"</li><li>Información pertinente para el uso de encuestas o sondeos de "
+"opinión en nuestros espacios (Web o no).</li><li>Información de contacto "
+"cuando el usuario desee comunicarse con los administradores y/o propietarios "
+"de la Compañía y/o sus productos (correo electrónico, nombre, asunto, "
+"teléfono o mensaje).</li></ul><h4>¿Qué se hace con la información que se "
+"recolecta?</h4><p>La información que se recolecta en este espacio y todos "
+"sus derivados se emplea para entender las necesidades de los usuarios y de "
+"esta forma proveer un mejor servicio; y de manera particular se emplea para:"
+"</p><ul style='list-style-type: circle; margin: 0 0 20px 20px'><li>Registro "
+"de actividad en los servidores.</li><li>Atención de problemas específicos de "
+"la Compañía, sus productos, servicios y demás relacionados para su "
+"corrección.</li><li>Identificación y seguimiento de comentarios que se "
+"reciban a través de las formas de contacto y correos electrónicos.</"
+"li><li>Utilizar la información para mejorar los servicios que ofrecen ADAN, "
+"sus productos, servicios y demás derivados.</li></ul><h4>Tecnología "
+"empleada: Cookies</h4><p>Una cookie permite almacenar un dato que es enviado "
+"por un sitio o aplicación web a su navegador. Las cookies se almacenan en el "
+"disco duro de su equipo y se utilizan para determinar sus preferencias "
+"cuando se conecta a los servicios que ofrece un espacio en la Web, así como "
+"para rastrear determinados comportamientos o actividades llevadas a cabo por "
+"usted dentro de los mismos.</p><p>Las cookies permiten que los servicios que "
+"se ofrecen en la web, puedan adaptar su funcionamiento para que respondan a "
+"Usted como un usuario diferente del resto que visitan cada espacio Web y que "
+"esta identificación se refleje en que cada usuario tenga una experiencia "
+"personalizada al visitar el espacio.</p><p>ADAN, sus productos, servicios y "
+"demás derivados pueden usar cookies de registro del tráfico para identificar "
+"qué páginas se están visitando. Esto nos ayuda a analizar datos sobre el "
+"tráfico de la página web y mejorar la calidad de la Compañía para adaptarlo "
+"y ajustar la información a las necesidades de nuestros clientes y público en "
+"general. </p><p>En general, las cookies ayudan a brindarle una mejor "
+"experiencia de navegación al momento de visitar los espacios en la Web. Una "
+"cookie de ninguna manera otorga acceso a su computadora o a cualquier "
+"información sobre usted, excepto los datos que usted decida compartir.</"
+"p><p>Como usuario siempre puede elegir entre aceptar o rechazar las cookies. "
+"La mayoría de los navegadores web están configurados para aceptar "
+"automáticamente las cookies, pero cada usuario puede modificar este permiso "
+"en su explorador Web para rechazar las cookies si así lo prefiere, aunque "
+"esto puede afectar la manera en que funcionan los espacios que visite en la "
+"Web.</p><h4>Enlaces a otros espacios en la Web y correo electrónico</"
+"h4><p>Los espacios en la Web pueden tener enlaces a otros espacios de la "
+"misma o correos electrónicos ajenos al espacio que visita. Sin embargo, una "
+"vez que haya utilizado estos enlaces para salir de nuestros espacios, debe "
+"tener en cuenta que los administradores y/o propietarios de la Compañía, de "
+"sus productos, servicios y demás relacionados no tienen ningún control sobre "
+"estos nuevos espacios Web. Por lo tanto, no podemos ser responsables de la "
+"protección y la privacidad de cualquier información confidencial o no "
+"confidencial que los usuarios proporcionen al visitar los mismos, ya que "
+"quedarán sujeto a las políticas de privacidad y manejo de datos de estos "
+"últimos.</p><p>ADAN, sus productos, servicios y demás derivados no se hacen "
+"responsables cuando el usuario proporcione información de cualquier tipo, a "
+"los enlaces y/o correos electrónicos publicados diferentes al de los "
+"administradores y/o propietarios de los primeros, incluyendo funcionarios y "
+"dependencias de la Compañía; el manejo de esta información quedará bajo la "
+"responsabilidad y propio riesgo del usuario.</p><h4>Seguridad de la "
+"información</h4><p>De conformidad con los artículos 25, fracciones XV, XVII, "
+"XIX, XX y 26, fracción IV de la Ley de Transparencia y Acceso a la "
+"información pública del estado de Jalisco y sus municipios, estamos "
+"comprometidos a asegurar que su información personal esté protegida.</"
+"p><h4>Confidencialidad de datos personales</h4><p>Cuando se encuentre "
+"haciendo uso de los productos, servicios y demás derivados de ADAN y le sean "
+"solicitados datos personales, Usted compartirá esta información sólo con la "
+"Compañía, ya que ésta no compartirá la información confidencial con terceras "
+"personas, salvo que sea requerida por orden judicial o que Usted de manera "
+"expresa lo autorice de conformidad con la ley en la materia.</p><p>ADAN, sus "
+"productos, servicios y demás derivados pueden difundir las estadísticas de "
+"acceso a sus espacios (Web o no) del conjunto de sus usuarios para describir "
+"nuestros servicios y para otros propósitos lícitos en los casos que marque "
+"la ley.</p><p>En todo momento, la Compañía está atenta a las inquietudes que "
+"manifiesten sus usuarios respecto al manejo de la información que "
+"proporcionen para los diversos procesos.</p><p style='margin: 0 0 20px "
+"0'>ADAN, sus productos, servicios y demás derivados se reservan el derecho "
+"de realizar actualizaciones a esta política de privacidad por lo que le "
+"recomendamos revisar este documento periódicamente para estar enterado de "
+"estos cambios.</p><hr /><h3>Declaración del límite de responsabilidad</"
+"h3><p><strong>Acerca del origen de los contenidos. </strong>Los contenidos "
+"publicados en este espacio Web de ADAN y sus demás derivados son "
+"exclusivamente de carácter informativo.</p><p><strong>Acerca de la veracidad "
+"y exactitud de la información.</strong> Los responsables de la Compañía y "
+"demás derivados, se encargan de verificar la veracidad y exactitud de la "
+"información que se presente. En los casos en que exista alguna corrección u "
+"observación de los contenidos de nuestros espacios se deberá enviar a través "
+"de uno de los métodos que son mencionados en la página de <strong>Contacto</"
+"strong> de cada uno de nuestros espacios Web, para su verificación y en su "
+"caso, la corrección.</p><p><strong>Acerca de los enlaces a sitios ajenos</"
+"strong>. A través de este espacio web se pueden encontrar enlaces hacia "
+"otros espacios del mismo que no están bajo el control de la Compañía ni sus "
+"derivados, por lo que el contenido presentado en ellos o su disponibilidad "
+"depende de sus responsables. En los casos en que el enlace referencie a un "
+"evento, actividad, convocatoria o promoción, son sus organizadores los "
+"responsables de la exactitud y fiabilidad de la información, así como de "
+"todo lo relacionado a la ejecución.</p><p><strong>Acerca de la "
+"disponibilidad del servicio.</strong> ADAN, sus productos, servicios y demás "
+"derivados se comprometen a hacer todo lo posible para tener siempre "
+"disponible sus productos, servicios y demás derivados al público, sin "
+"embargo no nos hacemos responsables de problemas técnicos fuera de nuestro "
+"control que ocasionen fallas temporales.</p><p style='margin: 0 0 20px "
+"0'>ADAN y sus derivados se reservan el derecho de realizar actualizaciones a "
+"esta declaración del límite de responsabilidad por lo que le recomendamos "
+"revisar este documento periódicamente para estar enterado de estos cambios.</"
+"p></div></div></div></div>"
+
+#: templates/legal/terms-conditions.html:6
+#: templates/legal/terms-conditions.html:22
+msgid "Service conditions"
+msgstr "Términos y Condiciones"
+
+#: templates/legal/terms-conditions.html:26
+msgid "App Terms of Service"
+msgstr "ADAN, Condiciones del Servicio"
+
+#: templates/legal/terms-conditions.html:30
+msgid "App Terms of Service content"
+msgstr ""
+"Gracias por usar ADAN, y el resto de sus servicios desarrollados, así como "
+"software asociado (llamados, en conjunto, Aplicaciones o \"APPs\"). Al "
+"acceder a las APPs, está aceptando los siguientes términos y condiciones. Si "
+"existiese algún conflicto entre estos términos y términos adicionales "
+"aplicables a alguna APP, los términos adicionales controlarán el conflicto. "
+"De manera colectiva, nos referimos a los siguientes términos, cualquier "
+"término adicional, términos que acompañen a la documentación de las APPs, y "
+"cualquier otra política y guías de uso como los \"Términos\". Usted acepta "
+"cumplir con los Términos y que los Términos controlan su relación con "
+"nosotros. Así que por favor lea cuidadosamente todos los Términos. Si usted "
+"usa la APP como una interface a, o en conjunción con otros de nuestros "
+"productos o servicios, entonces los términos para esos productos o servicios "
+"también aplican."
+
+#: templates/legal/terms-conditions.html:34
+#: templates/legal/terms-conditions.html:71
+#: templates/legal/terms-conditions.html:140
+#: templates/legal/terms-conditions.html:177
+#: templates/legal/terms-conditions.html:198
+#: templates/legal/terms-conditions.html:243
+#: templates/legal/terms-conditions.html:280
+#: templates/legal/terms-conditions.html:293
+#: templates/legal/terms-conditions.html:322
+#: templates/legal/terms-conditions.html:351
+msgid "Section"
+msgstr "Sección"
+
+#: templates/legal/terms-conditions.html:35
+msgid "Account and registration header"
+msgstr "Registro y Cuentas de Usuarios"
+
+#: templates/legal/terms-conditions.html:39
+msgid "Accepting the Terms header"
+msgstr "Aceptación de los Términos"
+
+#: templates/legal/terms-conditions.html:43
+msgid "Accepting the Terms content"
+msgstr ""
+"<p>No debe usar las APPs ni aceptar sus términos si:</p><p>a) Legalmente no "
+"es mayor de edad y por lo tanto no hay obligación alguna ni podemos contraer "
+"contrato entre ambas partes, o</p><p>b) Es una persona excluida del uso o "
+"recepción de las APPs bajo las leyes aplicables de los Estados Unidos "
+"Mexicanos u otro países incluyendo el país en el que usted reside o desde el "
+"cual usa las APPs.</p>"
+
+#: templates/legal/terms-conditions.html:47
+msgid "Entity Level Acceptance header"
+msgstr "Aceptación a nivel organizacional o de alguna otra entidad"
+
+#: templates/legal/terms-conditions.html:51
+msgid "Entity Level Acceptance content"
+msgstr ""
+"Si usted está usando las APPs en representación de alguna organización "
+"(lucrativa o no) o entidad, usted representa, asegura y garantiza que tiene "
+"la autoridad suficiente para vincular a su organización o entidad a los "
+"Términos y, al aceptar los Términos, lo está haciendo en representación de "
+"su organización o entidad (y en todas las referencias a \"usted\" en los "
+"Términos que se refieren a su organización o entidad)."
+
+#: templates/legal/terms-conditions.html:55
+msgid "Registration header"
+msgstr "Registro y Creación de Cuentas de Usuario"
+
+#: templates/legal/terms-conditions.html:59
+msgid "Registration content"
+msgstr ""
+"Para poder acceder a las APPs puede que se le solicite proveer cierta "
+"información (tales como su identificación o nombre o detalles de contacto) "
+"como parte del proceso de registro para las APIs, o como parte del uso "
+"continuo de las APPs. Cualquier dato de registro que proporcione deberá ser "
+"siempre preciso y actual y deberá informar de manera inmediata acerca de "
+"cualquier actualización o cambio en sus datos."
+
+#: templates/legal/terms-conditions.html:63
+msgid "Subsidiaries and Affiliates header"
+msgstr "Subsidiarias y Afiliados"
+
+#: templates/legal/terms-conditions.html:67
+msgid "Subsidiaries and Affiliates content"
+msgstr ""
+"Contamos con organizaciones y entidades subsidiarias y afiliados alrededor "
+"del mundo. Estas organizaciones puede que le provean las APPs en nuestra "
+"representación y los Términos también regirán su relación con estas "
+"organizaciones."
+
+#: templates/legal/terms-conditions.html:72
+msgid "Using Our Apps header"
+msgstr "Uso de las APPs"
+
+#: templates/legal/terms-conditions.html:76
+msgid "Your End Users header"
+msgstr "(Sus) Usuarios Finales"
+
+#: templates/legal/terms-conditions.html:80
+msgid "Your End Users content"
+msgstr ""
+"Los Usuarios Finales (así como los Usuarios que usted mismo cree para el uso "
+"y que aún, sin usted saberlo, les permita el incumplimiento de alguno de los "
+"Términos) de nuestras APPs deberán cumplir con la Ley aplicable, regulación "
+"y los Términos."
+
+#: templates/legal/terms-conditions.html:84
+msgid "Compliance with Law Third Party Rights and Terms of Service header"
+msgstr "Cumplimiento con las Leyes de Terceros y Términos de Servicio"
+
+#: templates/legal/terms-conditions.html:88
+msgid ""
+"Compliance with Law Third Party Rights and Terms of Service header content"
+msgstr ""
+"Usted deberá cumplir con todas las leyes, regulaciones y derechos de "
+"terceros aplicables (incluyendo sin limitación las leyes relativas a la "
+"importación o exportación de datos o software, privacidad y leyes locales). "
+"No usará nuestras APPs para incentivar o promocionar actividad(es) "
+"ilegal(es) o la violación de derechos de terceros. No deberá violar "
+"cualquier otro término de servicio con nosotros (nuestras subsidiarias o o "
+"afiliados)."
+
+#: templates/legal/terms-conditions.html:92
+msgid "Permitted Access header"
+msgstr "Permiso de Acceso"
+
+#: templates/legal/terms-conditions.html:96
+msgid "Permitted Access content"
+msgstr ""
+"Solamente accederá (o intentará acceder) a cualquiera de nuestras APPs por "
+"los medios descritos en la documentación de cada una de ellas. Si le "
+"asignamos algún identificador (por ejemplo número de cliente), debe usarlo "
+"con la(s) APP(s) aplicable. No hará mal uso o enmascarar su identidad o "
+"cualquier otro identificador cuando use nuestras APPs."
+
+#: templates/legal/terms-conditions.html:100
+msgid "Limitations header"
+msgstr "Limitaciones"
+
+#: templates/legal/terms-conditions.html:104
+msgid "Limitations content"
+msgstr ""
+"Procuramos establer y forzar límites en el uso de nuestras APPs (por ejemplo "
+"limitar el número de cuentas de usuario que usted puede crear), a nuestra "
+"discreción y consideración. Usted acepta, y no intentará evitar o violar "
+"tales limitaciones documentadas en cada una de nuestras APPs. Si desea usar "
+"cualquiera de nuestras APPs más allá de estos límites, debe obtener nuestro "
+"consentimiento expreso (y nosotros podemos rechazar tal petición o "
+"aceptación de condición en el acuerdo a términos adicionales y/o a cargos "
+"para tal uso). Para tal aprobación, póngase en contacto a la dirección de "
+"correo electrónico adan@gmail.com."
+
+#: templates/legal/terms-conditions.html:108
+msgid "Open Source Software header"
+msgstr "Software Libre"
+
+#: templates/legal/terms-conditions.html:112
+msgid "Open Source Software content"
+msgstr ""
+"Algunos de los programas o aplicaciones (software en todo caso) requeridos "
+"por o incluidos en nuestras APPs pueden ser ofrecidos bajo licencias de "
+"Software Libre. Las Licencias de Software Libre constituyen acuerdos "
+"escritos por separado. Para ciertas APPs, el software libre se lista en la  "
+"documentación o se muestran en su(s) interfaz/interfaces públicas. En su "
+"justa medida, las licencias de software libre reemplazan expresamente los "
+"Términos, así, las licencias de software libre establecen su acuerdo con "
+"nosotros para todo aquel software libre que aplique."
+
+#: templates/legal/terms-conditions.html:116
+msgid "Communication with Us header"
+msgstr "Comunicación con Nosotros"
+
+#: templates/legal/terms-conditions.html:120
+msgid "Communication with Us content"
+msgstr ""
+"Puede que le contactemos en relación con/a el uso de nuestras APPs. Por "
+"favor revise la documentación de cada APP para detalles acerca de establecer "
+"ciertos tipos de comunicaciones."
+
+#: templates/legal/terms-conditions.html:124
+msgid "Feedback header"
+msgstr "Retroalimentación"
+
+#: templates/legal/terms-conditions.html:128
+msgid "Feedback content"
+msgstr ""
+"Si provee retroalimentación o sugerencias acerca de nuestras APPs, entonces "
+"nosotros (y a quienes le permitamos) podemos usar tales datos sin obligación "
+"alguna con usted."
+
+#: templates/legal/terms-conditions.html:132
+msgid "Non-Exclusivity header"
+msgstr "No Exclusividad"
+
+#: templates/legal/terms-conditions.html:136
+msgid "Non-Exclusivity content"
+msgstr ""
+"Los Términos son no exclusivos. Usted reconoce que podemos desarrollar "
+"productos o servicios que pueden competir con otras APPs o cualquier otro "
+"producto o servicio."
+
+#: templates/legal/terms-conditions.html:141
+msgid "Your Users header"
+msgstr "Su(s) Usuario(s)"
+
+#: templates/legal/terms-conditions.html:145
+msgid "Users and Monitoring header"
+msgstr "Usuario(s) y Monitoreo"
+
+#: templates/legal/terms-conditions.html:149
+msgid "Users and Monitoring content"
+msgstr ""
+"USTED ACEPTA QUE PODEMOS MONITOREAR EL USO DE NUESTRAS APPs PARA ASEGURAR LA "
+"CALIDAD, MEJORAR NUESTROS PRODUCTOS Y SERVICIOS, Y VERIFICAR SU CUMPLIMIENTO "
+"CON LOS TÉRMINOS. Este monitoreo puede incluir el acceso a sus datos "
+"proporcionados y nuestros identificadores otorgados, por ejemplo para "
+"identificar detalles o situaciones de seguridad que pudieran afectar a "
+"nuestras APPs o sus servicios. No deberá interferir con este monitoreo. En "
+"caso contrario, podemos utilizar cualquier medio técnico para eliminar tal "
+"interferencia. Podemos además, suspenderle el acceso a nuestras APPs, "
+"productos y/o servicios sin notificación alguna si creemos razonablemente "
+"que está incumpliendo alguno de nuestros Términos."
+
+#: templates/legal/terms-conditions.html:153
+msgid "Security header"
+msgstr "Seguridad"
+
+#: templates/legal/terms-conditions.html:157
+msgid "Security content"
+msgstr ""
+"Usará sus esfuerzos comerciales razonables para proteger los datos de su(s) "
+"usuario(s) para la obtención y almacenamiento de los mismos, para evitar su "
+"uso o accesos no autorizados y deberá notificar inmediatamente a su(s) "
+"usuario(s) de cualquier accceso no autorizado o del uso de sus datos en la "
+"medida requerida por las leyes aplicables."
+
+#: templates/legal/terms-conditions.html:161
+msgid "Ownership header"
+msgstr "Propiedad Comercial"
+
+#: templates/legal/terms-conditions.html:165
+msgid "Ownership content"
+msgstr ""
+"No adquirimos propiedad sobre su(s) usuario(s), y al usar nuestras APPs, "
+"usted no adquiere propiedad de algún derecho en nuestras APPs o el contenido "
+"que es accedido a través de las mismas."
+
+#: templates/legal/terms-conditions.html:169
+msgid "User Privacy header"
+msgstr "Privacidad del Usuario"
+
+#: templates/legal/terms-conditions.html:173
+msgid "User Privacy content"
+msgstr ""
+"Deberá cumplir con todas las leyes de privacidad aplicables. Deberá, además, "
+"de proveer y respetar una política de privacidad para su(s) usuario(s) que "
+"les describa de manera clara y precisa qué datos son los que está "
+"almacenando y cómo usa y comparte tales datos (incluyendo datos y mecanismos "
+"de publicidad) con nosotros y nuestras subsidiarias y afiliados."
+
+#: templates/legal/terms-conditions.html:178
+msgid "Prohibitions and Confidentiality header"
+msgstr "Confidencialidad y Prohibiciones"
+
+#: templates/legal/terms-conditions.html:182
+msgid "Prohibitions header"
+msgstr "Prohibiciones"
+
+#: templates/legal/terms-conditions.html:186
+msgid "Prohibitions content"
+msgstr ""
+"<p>Cuando use nuestras APPs, no puede (o permitir a aquellos que actúan en "
+"representación suya):</p><ol><li>Conceder licencia a terceros. "
+"Consecuentemente, no podrá crear mecanismos software de extracción de datos "
+"o comportamiento y cuyo funcionamiento sea sustancialmente el mismo que el "
+"de nuestras APPs y ofrecerlo para su uso a terceros.</li><li>Realizar alguna "
+"acción con la intención de introducir a nuestros productos y servicios "
+"cualquier virus, gusano, defectos, caballos de Troya, <i>malware</i>, o "
+"cualquier otro elemento de naturaleza destructiva.</li><li>Difamar, abusar, "
+"acosar, molestar, amenazar o intimidar a otros. Interferir con o interrumpir "
+"las APPs, servidores o redes que proveen nuestras APPs.</li><li>Promocionar "
+"o facilitar apuestas en línea ilegales o anuncios o mensajes comerciales "
+"disruptivos.</li><li>Realizar ingeniería inversa o intentar extraer el "
+"código fuente de cualquier de nuestras APPs o cualquier software "
+"relacionado, excepto en la medida en que esta restricción esté expresamente "
+"prohibida por la ley aplicable.</li><li>Usar las APPs para cualquier "
+"actividad donde el uso o posible fallo de nuestras APPs pudiera conducir a "
+"la muerte, daños o lesiones personales, o daño ambiental (tal como la "
+"operación de instalaciones nucleares, control de tráfico aéreo, o sistemas "
+"de soporte vital).</li><li>Usar las APPs para procesar o almacenar cualquier "
+"dato que esté sujeto al Reglamento de Tráfico Internacional de Armas "
+"(<i>International Traffic in Arms Regulations</i>) del Departamento de "
+"Estado de los Estados Unidos de América.</li><li>Remover, ocultar, o alterar "
+"cualquiera de nuestros Términos de Servicio o cualquier enlace a o de "
+"noticias de los Términos.</li></ol><p>Al menos que se especifique por "
+"escrito, no tenemos ningún intento de usar nuestras APPs para crear "
+"obligaciones bajo cualquier ley de salud o aseguramiento de la misma, y de "
+"ninguna manera nuestras APPs satisfacen los requerimientos de alguna de "
+"ellas. Si usted es (o pretende ser) una entidad o \"asociado de negocios\" "
+"de alguna ley de salud, no deberá usar nuestras APPs para ningún propósito o "
+"de cualquier manera que involucre la  transmisión (protegida o no) de datos "
+"de salud al menos que haya recibido previo consentimiento de tal uso por "
+"parte de nosotros.</p>"
+
+#: templates/legal/terms-conditions.html:190
+msgid "Confidentiality header"
+msgstr "Confidencialidad"
+
+#: templates/legal/terms-conditions.html:194
+msgid "Confidentiality content"
+msgstr ""
+"<ol><li>Los identificadores o credenciales de usuario (tales como "
+"direcciones de correo electrónico, identificador de cliente) son para uso "
+"exclusivo suyo y para identificarse en nuestras APPs. Deberá mantener estos "
+"datos confidenciales y realizar esfuerzos razonables para prevenir y evitar "
+"que otras APPs utilicen sus credenciales y/o identificadores. Además, los "
+"identificadores o credenciales de usuario no deben ser embebidos en "
+"proyectos de software libre.</li><li>Nuestras comunicaciones con usted y "
+"entre nuestras APPs pueden contener datos confidenciales. Estos datos "
+"confidenciales incluyen cualquier material, comunicaciones e información que "
+"estén marcados como tales o que normalmente deberían ser considerados como "
+"confidenciales dadas las circunstancias. Si usted recibe cualquiera de esos "
+"datos no deberá revelarlos y/o proveerlos a un tercero sin nuestro previo "
+"consentimiento por escrito. Nuestros datos confidenciales no incluyen "
+"aquellos que independientemente haya desarrollado, que de manera legítima "
+"les fueron otorgado por un tercero sin obligación de confidencialidad, o que "
+"sean o se conviertan en públicos sin que sea su responsabilidad. Puede "
+"revelar datos confidenciales cuando se lo solicite alguna autoridad "
+"competente si nos lo notifica previamente, al menos que una corte o "
+"autoridad ordene el que no recibamos notificación alguna.</ol>"
+
+#: templates/legal/terms-conditions.html:199
+msgid "Content header"
+msgstr "Contenido"
+
+#: templates/legal/terms-conditions.html:203
+msgid "Content Accessible Through our APPs header"
+msgstr "Contenido Accesible a través de nuestras APPs"
+
+#: templates/legal/terms-conditions.html:207
+msgid "Content Accessible Through our APPs content"
+msgstr ""
+"Nuestras APPs pueden contener contenido de terceros (tales como texto, "
+"imágenes, videos, audio, o software). Este contenido es de total "
+"responsabilidad de la persona que lo hace disponible. En ocasiones podemos "
+"revisar el contenido para determinar si se trata de material ilegal o viola "
+"nuestras políticas o Términos, y podemos eliminar o reusarnos a mostrar el "
+"contenido. Por último, el contenido accesible a través de nuestras APPs "
+"puede estar sujeto a derechos de propiedad intelectual, y, si es el caso, "
+"usted no podrá usarlo al menos que cuente con los permisos (o licencia) para "
+"ello otorgados por el propietario del contenido o algún otro permitido por "
+"la ley. Su acceso al contenido proporcionado por la APP puede estar "
+"restringido, limitado, o filtrado en concordancia con las regulaciones, "
+"políticas y leyes aplicables."
+
+#: templates/legal/terms-conditions.html:211
+msgid "Submission of Content header"
+msgstr "Envío de Contenido"
+
+#: templates/legal/terms-conditions.html:219
+msgid "Retrieval of content header"
+msgstr "Recuperación de contenido"
+
+#: templates/legal/terms-conditions.html:223
+msgid "Retrieval of content content"
+msgstr ""
+"Cuando el cotenido privado (o no público) de un usuario es obtenido a través "
+"de nuestras APPs, usted no deberá mostrar o exponer dicho contenido a otros "
+"usuarios o a terceras partes sin el consentimiento explícito del usuario."
+
+#: templates/legal/terms-conditions.html:227
+msgid "Data Portability header"
+msgstr "Portabilidad de Datos"
+
+#: templates/legal/terms-conditions.html:231
+msgid "Data Portability content"
+msgstr ""
+"Portabilidad de DatosSoportamos la portabilidad de datos. Durante el tiempo "
+"que use o almacene cualquier dato de usuario (suyo o de su(s) usuario(s) "
+"final(es)) que haya obtenido a través de nuestras APPs, usted acepta y está "
+"de acuerdo en permitirle a su(s) usuario(s) el exportar sus datos a otros "
+"servicios o aplicaciones de su elección, sujeto a las leyes aplicables, y "
+"acepta que no hará disponible los datos a terceras partes quienes no cumplan "
+"también con esta obligación."
+
+#: templates/legal/terms-conditions.html:235
+msgid "Prohibitions on Content header"
+msgstr "Prohibiciones en el Contenido"
+
+#: templates/legal/terms-conditions.html:239
+msgid "Prohibitions on Content content"
+msgstr ""
+"<p>Al menos que se permita de manera expresa por el propietario del "
+"contenido o por las leyes aplicables, usted no hará, ni deberá permitir a "
+"su(s) usuario(s) final(es) o a otro(s) actuando en representación suya, "
+"realizar lo siguiente con el contenido de (obtenido, compartido, mostrado y "
+"demás) nuestras APPs:</p><ol><li>Dañar, inspeccionar o construir bases de "
+"datos, u otros medios de copias permanente de tales contenido, o mantener "
+"copias en caché más tiempo del permitido por nuestras APPs (a través del "
+"encabezado de caché);</li><li>Copiar, trasladar, modificar, crear un trabajo "
+"derivado de, vender, rentar, prestar, transmitir, distribuir, mostrar "
+"públicamente, u otorgar licencias derivadas (<i>sublicense</i>) a cualquier "
+"tercero;</li><li>Falsificar la fuente, propiedad o propietario; o</"
+"li><li>Eliminar, desvanecer, o alterar cualquier aviso o leyenda de derechos "
+"reservados, marca(s) registrada(s), o cualquier otro tipo de propiedad "
+"intelectual; o falsificar o eliminar cualquier atribución de autor, avisos "
+"legales, u otras etiquetas acerca del origen o fuente del material.</li></ol>"
+
+#: templates/legal/terms-conditions.html:244
+msgid "Our Brand header"
+msgstr "Nuestra Marca"
+
+#: templates/legal/terms-conditions.html:248
+msgid "Brand Features header"
+msgstr "Nuestra Marca y Alcances"
+
+#: templates/legal/terms-conditions.html:252
+msgid "Brand Features content"
+msgstr ""
+"Al referirnos a \"Nuestra Marca\" hablamos de marcas comerciales, marcas "
+"registradas, marcas de servicios, logotipos, nombres de dominios, y otras "
+"características distintivas de las marcas de cada parte. Excepto en las "
+"partes donde se exprese explícitamente, los Términos no otorgan a ninguna de "
+"las partes ningún derecho, título, o interes en o a otra de las partes de "
+"Nuestra Marca. Cualquier uso que usted haga de Nuestra Marca (incluyendo "
+"cualquiera buena volutad asociada con ella) deberá ser en beneficio de "
+"Nosotros y Nuestra Marca."
+
+#: templates/legal/terms-conditions.html:256
+msgid "Attribution header"
+msgstr "Atribuciones"
+
+#: templates/legal/terms-conditions.html:260
+msgid "Attribution content"
+msgstr ""
+"Usted está de acuerdo en mostrar cualquier atribución(es) requirida por "
+"nosotros tal como se describe en la documentación de cada una de nuestras "
+"APPs. Así, le otorgamos una licencia no transferible, sin la posibilidad de "
+"concederla a terceros, y no exclusiva mientras que los Términos estén en "
+"efecto para mostrar Nuestra Marca y Alcances con el propósito de promocionar "
+"o notificar el uso de nuestras APPs. Usted sólo podrá usar Nuestra Marca en "
+"concordancia con los Términos y con el propósito de cumplir con sus "
+"obligaciones expresadas en esta Sección. Al usar Nuestra Marca, usted debe "
+"respetar los Términos. Usted entiende y acepta que a discreción Nuestra "
+"podemos determinar si sus attribucion(es) y uso de Nuestra Marca y Alcances "
+"están en concordancia con los requiremientos y Términos."
+
+#: templates/legal/terms-conditions.html:264
+msgid "Publicity header"
+msgstr "Publicidad"
+
+#: templates/legal/terms-conditions.html:268
+msgid "Publicity content"
+msgstr ""
+"No deberá hacer ninguna afirmación o comentario a pesar del uso de nuestras "
+"APPs que sugieran asociación con, patrocinio, o aprobación de Nosotros, "
+"Nuestra Marca y/o sus subsidiarias y afiliados, sin Nuestro consentimiento "
+"previo por escrito."
+
+#: templates/legal/terms-conditions.html:272
+msgid "Promotional and Marketing Use header"
+msgstr "Uso Promocional y de Mercadeo"
+
+#: templates/legal/terms-conditions.html:276
+msgid "Promotional and Marketing Use content"
+msgstr ""
+"Durante los eventos de promoción, mercadeo o demostración de las APPs que "
+"usted está usando así como de Nuestros productos y/o servicios, puede que "
+"produzcamos, distribuyamos y/o mostremos representaciones incidentales, "
+"incluyendo capturas de pantallas, videos, fotos u otro contenido de usted y/"
+"o de su uso de nuestras APPs, y puede que usemos su organización (con o sin "
+"fines de lucro), entidad o nombre(s) de producto(s) y/o servicio(s). Usted "
+"nos otorga todos los permisos necesarios para estos propósitos mencionados."
+
+#: templates/legal/terms-conditions.html:281
+msgid "Privacy and Copyright Protection header"
+msgstr "Protección de Derechos Reservados y Privacidad"
+
+#: templates/legal/terms-conditions.html:285
+msgid "Privacy Policies header"
+msgstr "Políticas de Privacidad"
+
+#: templates/legal/terms-conditions.html:294
+#: templates/legal/terms-conditions.html:298
+msgid "Termination header"
+msgstr "Terminación"
+
+#: templates/legal/terms-conditions.html:302
+msgid "Termination content"
+msgstr ""
+"Usted puede dejar de usar nuestras APPs en cualquier momento con o sin su "
+"aviso. Si desea terminar con los Términos, debe hacérnoslo saber por escrito "
+"y una vez terminadas nuestras obligaciones y derechos, cesar el uso de "
+"nuestras APPs en cuestión. Nos reservamos el derecho de terminar los "
+"Términos con usted o descontinuar las APPs o cualquier porción o "
+"característica de ella(s) o su acceso, por cualquier razón y en cualquier "
+"momento sin responsabilidad u obligación alguna con usted."
+
+#: templates/legal/terms-conditions.html:306
+msgid "Your Obligations Post-Termination header"
+msgstr "Sus Obligaciones después de nuestra Terminación"
+
+#: templates/legal/terms-conditions.html:310
+msgid "Your Obligations Post-Termination content"
+msgstr ""
+"Una vez dada cualquier terminación de los Términos o descontinuación de su "
+"acceso a alguna de nuestras APPs, de manera inmediata deberá dejar de usar "
+"la APP, cesar todo uso de Nuestra Marca y Alcances, y eliminar cualquier "
+"contenido almacenado o en caché tal como se indica en la Sección 5. De "
+"manera independiente, Nosotros podemos comunicarnos con cualquier "
+"propietario de cuenta cuyo(s) dato(s) esté(n) asociado(s) con usted y/o con "
+"su(s) identificador(es) para notificar la terminación de su derecho para "
+"usar nuestra(s) APP(s)."
+
+#: templates/legal/terms-conditions.html:314
+msgid "Surviving Provisions header"
+msgstr "Condiciones que se mantienen"
+
+#: templates/legal/terms-conditions.html:318
+msgid "Surviving Provisions content"
+msgstr ""
+"Cuando los Términos lleguen a su fin, aquellos que por su naturaleza están "
+"destinados a continuar de manera indefinida deberán continuar aplicándose, "
+"incluyendo pero no limitado a: Sección 4.2, 5, 8, 9, y 10."
+
+#: templates/legal/terms-conditions.html:323
+msgid "Liability for our APPs header"
+msgstr "Responsabilidad de nuestras APPs"
+
+#: templates/legal/terms-conditions.html:327
+msgid "Warranties header"
+msgstr "Garantías"
+
+#: templates/legal/terms-conditions.html:331
+msgid "Warranties content"
+msgstr ""
+"<p>EXCEPTO COMO SEA EXPRESADO EXPLÍCITAMENTE EN LOS TÉRMINOS, NOSOTROS NI "
+"NINGUNO DE NUESTROS PROVEEDORES, DISTRIBUIDORES, SUBSIDIARIAS Y/O AFILIADOS "
+"HACEMOS ALGUNA PROMESA ESPECÍFICA DE NUESTRAS APPS. POR EJEMPLO, NO HACEMOS "
+"NINGÚN COMPROMISO ACERCA DEL CONTENIDO ACCEDIDO A TRAVÉS DE NUESTRAS APPs, "
+"SUS FUNCIONES ESPECÍFICAS, SU CONFIABILIDAD, DISPONIBILIDAD, O HABILIDAD DE "
+"AJUSTARSE Y/O CUMPLIR CON SUS NECESIDADES Y/O REQUERIMIENTOS. EN ÚLTIMA "
+"INSTANCIA, PROVEEMOS NUESTRAS APPs \"TAL CUAL\".</p><p>ALGUNAS "
+"JURISDICCIONES PROVEEN CIERTAS GARANTÍAS, COMO LA GARANTÍA IMPLICADA DE "
+"COMERCIABILIDAD, CUMPLIMIENTO DE ALGÚN PROPÓSITO EN PARTICULAR, Y DE NO "
+"INFRACCIÓN. EXCEPTO COMO SEA EXPRESADO EXPLÍCITAMENTE EN LOS TÉRMINOS, EN LA "
+"MEDIDA PERMITIDA POR LA(S) LEY(ES), EXCLUÍMOS TODA AFIRMACIÓN, GARANTÍA, "
+"CONDICIONES, REPRESENTACIONES, COMPROMISOS O ASUNCIONES.</p>"
+
+#: templates/legal/terms-conditions.html:335
+msgid "Limitation Of Liability header"
+msgstr "Limitación de Responsabilidad"
+
+#: templates/legal/terms-conditions.html:339
+msgid "Limitation Of Liability content"
+msgstr ""
+"<p>CUANDO Y EN LA MEDIDA QUE SEA PERMITIDO POR LA(S) LEY(ES), NOSOTROS, "
+"NUESTROS PROVEEDORES, DISTRIBUIDORES, SUBSIDIARIOS Y/O AFILIADOS NO SEREMOS "
+"RESPONSABLES POR BENEFICIOS PERDIDOS, INGRESOS, O DATOS; PÉRDIDAS "
+"FINANCIERAS; O DAÑOS PUNITIVOS, INDIRECTOS, ESPECIALES, CONSECUENTES, O "
+"EJEMPLARES.</p><p>EN LA MEDIDA PERMITIDA POR LA(S) LEY(ES), NUESTRA "
+"RESPONSABILIDAD TOTAL, LA DE NUESTROS PROVEEDORES, DISTRIBUIDORES, "
+"SUBSIDIARIOS Y/O AFILIADOS, POR CUALQUIER RECLAMO DE O BAJO NUESTROS "
+"TÉRMINOS, INCLUYENDO CUALQUIER GARANTÍA IMPLICADA, SE ENCUENTRA LIMITADO AL "
+"MONTO QUE NOS HAYA PAGADO PARA EL USO DE NUESTRAS APPs QUE APLIQUEN (O, SI "
+"ASÍ LO DECIDIMOS, DE PROVEERLE NUEVAMENTE NUESTRA(S) APP(s)) DURANTE LOS "
+"TRES MESES PREVIOS AL EVENTO RECLAMADO.</p><p>EN TODOS LOS CASOS, NOSOTROS, "
+"NUESTROS PROVEEDORES, DISTRIBUIDORES, SUBSIDIARIOS Y/O AFILIADOS, NO SEREMOS "
+"RESPONSABLES DE CUALQUIER GASTO, PÉRDIDA, O DAÑO QUE NO SEA RAZONABLEMENTE "
+"PREVISIBLE.</p>"
+
+#: templates/legal/terms-conditions.html:343
+msgid "Indemnification header"
+msgstr "Indemnificación"
+
+#: templates/legal/terms-conditions.html:347
+msgid "Indemnification content"
+msgstr ""
+"<p>Al menos que esté prohibido por la(s) ley(es) aplicable(s), si usted es "
+"una organización o entidad con fines de lucro, deberá defendernos e "
+"indemnizarnos, así como a nuestros proveedores, distribuidores, "
+"subsidiarios, afiliados, directores, trabajadores y usuarios, contra todas "
+"las obligaciones, daños, pérdidas, costos, cuotas (incluyendo cuotas "
+"legales) y gastos relacionados ante cualquier reclamo o alegato de algún "
+"tercero involucrado legalmente de acuerdo con lo siguiente:</p><ol><li>El "
+"mal uso de usted o de su(s) usuario(s) final(es) de las APPs;</li><li>El "
+"incumplimiento de los Términos de parte suya o de cualquiera de su(s) "
+"usuario(s) final(es); o</li><li>El contenido o datos dirigido desde/hacia "
+"usted por nuestras APPs, que usted haya realizado o cualquiera de su(s) "
+"usuario(s) final(es) o quien actúe en representación suya.</li></ol>"
+
+#: templates/legal/terms-conditions.html:352
+msgid "General Provisions header"
+msgstr "Provisiones Generales"
+
+#: templates/legal/terms-conditions.html:356
+msgid "Modification header"
+msgstr "Modificación"
+
+#: templates/legal/terms-conditions.html:360
+msgid "Modification content"
+msgstr ""
+"Podemos modificar los Términos o cualquier fragmento de ellos, para, por "
+"ejemplo, reflejar cambios en la(s) ley(es) o cambios en nuestras APPs. Le "
+"recomendamos consultar de manera regular nuestros Términos. Publicaremos, en "
+"la medida de nuestras posibilidades, avisos de modificaciones a los Términos "
+"en la documentación de cada una de nuestras APPs según aplique y se "
+"requiera, en este sitio web, y/o en cualquier otro medio del que dispongamos "
+"y consideremos pertinente (correo electrónico, por ejemplo). Los cambios o "
+"modificaciones no se aplicarán de manera retroactiva y tendrán efecto no "
+"antes del día 30 después de su publicación. No obstante, los cambios "
+"relacionados con nuevas funciones para una APP o cambios realizados por "
+"razones legales serán efectivos de manera inmediata. Si usted no llégase a "
+"estar de acuerdo con los Términos modificados para alguna APP en particular, "
+"deberá descontinuar el uso de la APP. El uso continuo de nuestras APPs "
+"constituye su aceptación de los términos modificados."
+
+#: templates/legal/terms-conditions.html:364
+msgid "Mexico Federal Agency Entities header"
+msgstr "Entidades Federales Mexicanas"
+
+#: templates/legal/terms-conditions.html:368
+msgid "Mexico Federal Agency Entities content"
+msgstr ""
+"Nuestras APPs han sido desarrolladas únicamente a expensas privadas y son "
+"programas de cómputo (software) comerciales y junto con su documentación "
+"relacionada se encuentran protegidas por el/los marco(s) de la(s) Ley(es) "
+"Federal(es) Mexicana(s) competentes y relacionadas."
+
+#: templates/legal/terms-conditions.html:372
+msgid "General Legal Terms header"
+msgstr "Términos Legales Generales"
+
+#: templates/legal/terms-conditions.html:376
+msgid "General Legal Terms content"
+msgstr ""
+"<p>Cada una de las partes acepta el contrato en el idioma Español. Si "
+"llegáramos a proveer alguna traducción de los Términos, lo haremos "
+"únicamente para su comodidad y los Términos en Español serán los que sigan "
+"aplicándose en nuestra relación. Los Términos no crean ningún derecho sobre "
+"algún tercero beneficiario o cualquier agencia, asociación, o proyecto "
+"conjunto. Nada en los Términos limitarán la habilidad de terceros de buscar "
+"medidas cautelares. No somos responsables por fallos o retrasos en el "
+"desempeño en los efectos o medidas causadas más allá de nuestro control "
+"razonable. Si usted no cumple con los Términos, y Nosotros no ejercemos "
+"acción alguna de manera inmediata, esto no significa que hemos renunciado a "
+"cualquier derecho que podamos tener (tal como el de ejercer acción alguna en "
+"el futuro). Si resulta que algún término en particular no es ejecutable o "
+"realizable, este efecto no afectará a ningún otro término. Los Términos son "
+"de total acuerdo entre Usted y Nosotros relacionados a la materia y "
+"reemplaza cualquier acuerdo previo o contemporáneo de la materia. Para "
+"detalles acerca de cómo contactarnos, por favor visite nuestra página de "
+"Contacto.</p><p>Excepto como se indica a continuación:</p><ol><li>Las leyes "
+"de los Estados Unidos de México, en primera instancia, y en última "
+"instancia, las leyes del estado o lugar desde donde utilice nuestras APPs, "
+"se aplicarán a cualquier disputa que se deriven o que estén relacionadas con "
+"los Términos o nuestras APPs y</li><li>TODOS LOS ASUNTOS O RECLAMOS "
+"DERIVADOS DE O RELACIONADOS CON LOS TÉRMINOS O NUESTRAS APPs SERÁN LITIGADOS "
+"EXCLUSIVAMENTE EN LAS CORTES FEDERALES O ESTATALES SEGÚN CORRESPONDAN, Y "
+"TANTO USTED COMO NOSOTROS OTORGAMOS NUESTRO CONSENTIMIENTO A LA JURISDICCIÓN "
+"PERSONAL EN DICHAS CORTES.</li><p>Si usted está aceptando los Términos en "
+"representación de una entidad u organización del Gobierno Federal de los "
+"Estados Unidos de México, entonces se aplica lo siguiente en lugar del "
+"párrafo anterior: las leyes de los Estados Unidos de México se aplicarán a "
+"cualquier disputa derivada de o relacionada con los Términos o nuestras "
+"APPs. Sólo en la medida permitida por la Ley de los Estados Unidos de México:"
+"</p><ol><li>Las Leyes de los Estados Unidos de México se aplicarán en la "
+"ausencia de alguna ley local; y</li><li>PARA TODOS LOS RECLAMOS DERIVADOS DE "
+"O RELACIONADOS CON LOS TÉRMINOS O NUESTRAS APPs, LAS PARTES INVOLUCRADAS "
+"OTORGAN CONSENTIMIENTO A LA JURISDICCIÓN LOCAL CORRESPONDIENTE, AL LUGAR "
+"EXCLUSIVO DESDE EL CUAL USTED USE NUESTRA(S) APPs.</li></ol><p>Si usted está "
+"aceptando los Términos en representación de una ciudad, estado o entidad "
+"gubernamental, entonces se aplicará lo siguiente en lugar del párrafo "
+"anterior: las partes acuerdan permanecer en silencio en relación con la ley "
+"y el lugar de gobierno.</p>"
+
+#: templates/offline.html:8
+msgid "Default offline template"
+msgstr ""
+
+#: templates/offline.html:15
+msgid "You are currently not connected to any networks"
+msgstr ""
+
+#: templates/site/base.html:11 users/views.py:250 users/views.py:251
+msgid "App name"
+msgstr "ADAN"
+
+#: templates/site/base.html:15 templates/site/snippets/footer.html:13
+#: templates/site/snippets/header-secondary-pages.html:85
+#: templates/site/snippets/header.html:65
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/site/base.html:21
+msgid "App description"
+msgstr ""
+"Algoritmo de Descubrimiento Adaptativo basado en redes Neuronales (ADAN)"
+
+#: templates/site/snippets/about.html:12
+msgctxt "about section"
+msgid "About title 1"
+msgstr "Ciencia para no científicos"
+
+#: templates/site/snippets/about.html:16
+msgctxt "about section"
+msgid "About content 1"
+msgstr ""
+"La mayoría de los avances científicos y tecnológicos, y qué decir de las "
+"últimas innovaciones aún desconocidas por el resto del mundo, son solamente "
+"alcanzables y comprensibles para un muy reducido porcentaje de la comunidad "
+"científica. Los esfuerzos de ADAN&reg; se basan en encapsular sino toda, "
+"gran parte de esa complejidad, para que cualquier humano pueda hacer uso de "
+"la plataforma para el análisis y predicción de los datos que desee."
+
+#: templates/site/snippets/about.html:29
+msgctxt "about section"
+msgid "About title 2"
+msgstr "Innovación científica y tecnológica"
+
+#: templates/site/snippets/about.html:33
+msgctxt "about section"
+msgid "About content 2"
+msgstr ""
+"ADAN&reg; está diseñado y construido sobre sólidos fundamentos científicos y "
+"tecnológicos, todos ellos innovadores, verificados, validados y empleados "
+"por las compañías y organizaciones más grandes e importantes a nivel mundial."
+
+#: templates/site/snippets/about.html:46
+msgctxt "about section"
+msgid "About title 3"
+msgstr "Verificado y validado"
+
+#: templates/site/snippets/about.html:50
+msgctxt "about section"
+msgid "About content 3"
+msgstr ""
+"ADAN&reg; ha sido verificado y validado por un comité de especialistas y "
+"expertos en el tema de Inteligencia Artificial por lo que se trata de una "
+"construcción sólida, aceptada y válida."
+
+#: templates/site/snippets/about.html:69
+msgctxt "about section"
+msgid "Why ADAN title"
+msgstr "¿Por qué ADAN&reg;?"
+
+#: templates/site/snippets/about.html:73
+msgctxt "about section"
+msgid "Why ADAN content"
+msgstr ""
+"ADAN&reg;, su filosofía y todo lo que le rodea, incluyendo la compañía que "
+"lo respalda, buscan el principio de término medio, que de acuerdo con "
+"Aristóteles es donde se encuentran las virtudes: entre dos extremos que "
+"serían vicios."
+
+#: templates/site/snippets/about.html:79
+msgid "Tech paper"
+msgstr "Leer artículo"
+
+#: templates/site/snippets/about.html:95
+msgctxt "about section"
+msgid "Experts Research title"
+msgstr "Expertos en Investigación"
+
+#: templates/site/snippets/about.html:103
+msgctxt "about section"
+msgid "Experts Research content"
+msgstr ""
+"Concebido, diseñado y desarrollado por personas expertas en Investigación y "
+"Desarrollo Tecnológico: <ul><li style='margin: 0 0 0 -20px; color: "
+"inherit'><a href='https://sites.google.com/site/pilarpozosparra/' "
+"target='_blank' style='color: white; text-decoration:underline'>María del "
+"Pilar Pozos Parra</a>, Dra. en Ciencias Computacionales, especialidad de "
+"Inteligencia Artificial (IA) de la École Nationale Supérieure de "
+"l'Aéronautique et de l'Espace, Francia</li><li style='margin: 0 0 0 -20px; "
+"color: inherit'><a href='javascript:void(0)' style='color: white; text-"
+"decoration:underline'>Edgar Darío Ramírez de León</a>, Mtro. en Sistemas "
+"Computacionales y Doctorante en Ciencias de la Ingeniería, especialidad en "
+"IA.</li></ul>"
+
+#: templates/site/snippets/about.html:115
+msgctxt "about section"
+msgid "Hi-Tech Engineering title"
+msgstr "Ingeniería de alta Tecnología"
+
+#: templates/site/snippets/about.html:123
+msgctxt "about section"
+msgid "Hi-Tech Engineering content"
+msgstr ""
+"ADAN&reg; está diseñado y construido con la más alta ciencia y tecnología, "
+"elementos o componentes utilizados por grandes Compañías y Organizaciones "
+"como Google, NASA, Pinterest, Instagram, Mozilla Firefox, entre otras."
+
+#: templates/site/snippets/about.html:135
+msgctxt "about section"
+msgid "Outstanding Results title"
+msgstr "Resultados sorprendentes"
+
+#: templates/site/snippets/about.html:143
+msgctxt "about section"
+msgid "Outstanding Results content"
+msgstr ""
+"Nuestras primeras pruebas demuestran resultados comparativos con los "
+"algoritmos, técnicas, herramientas y demás de Aprendizaje Automático "
+"(<i>Machine Learning</i>), Aprendizaje Profundo (<i>Deep Learning</i>) y "
+"continuaremos con nuestra incursión en la Inteligencia Artificial Explicable "
+"(<i>eXplainable Artificial Intelligence</i>: XAI)."
+
+#: templates/site/snippets/contact.html:18
+msgctxt "contact section"
+msgid "ADAN title"
+msgstr "Proyecto ADAN&reg;"
+
+#: templates/site/snippets/contact.html:22
+msgctxt "contact section"
+msgid "ADAN subtitle"
+msgstr "IA para todos"
+
+#: templates/site/snippets/contact.html:27
+msgctxt "contact section"
+msgid "ADAN content"
+msgstr ""
+"El proyecto ADAN&reg; es un proyecto mundial fundado, coordinado e "
+"inicialmente soportado por ADAN&reg;."
+
+#: templates/site/snippets/contact.html:33
+msgctxt "contact section"
+msgid "ADAN phone"
+msgstr "+521 1234567890"
+
+#: templates/site/snippets/contact.html:39
+msgctxt "contact section"
+msgid "ADAN email"
+msgstr "adan@ADAN.com"
+
+#: templates/site/snippets/contact.html:81
+msgctxt "contact section"
+msgid "DeliTech title"
+msgstr "ADAN&reg;"
+
+#: templates/site/snippets/contact.html:85
+msgctxt "contact section"
+msgid "DeliTech subtitle"
+msgstr ""
+
+#: templates/site/snippets/contact.html:90
+msgctxt "contact section"
+msgid "DeliTech content"
+msgstr ""
+"Ofrecemos una serie de productos que estamos convencidos, son de los costos "
+"más bajos para los servicios que ofrecen."
+
+#: templates/site/snippets/contact.html:96
+msgctxt "contact section"
+msgid "DeliTech phone"
+msgstr "+521 1234567890"
+
+#: templates/site/snippets/contact.html:102
+msgctxt "contact section"
+msgid "DeliTech email"
+msgstr "contact@delitech.com"
+
+#: templates/site/snippets/footer.html:19
+#: templates/site/snippets/header-secondary-pages.html:91
+#: templates/site/snippets/header.html:71
+msgid "About"
+msgstr "Acerca"
+
+#: templates/site/snippets/footer.html:25
+#: templates/site/snippets/header-secondary-pages.html:103
+#: templates/site/snippets/header.html:83
+msgid "Pricing"
+msgstr "Precios"
+
+#: templates/site/snippets/footer.html:31
+#: templates/site/snippets/header-secondary-pages.html:124
+#: templates/site/snippets/header.html:104
+msgid "Contact"
+msgstr "Contacto"
+
+#: templates/site/snippets/footer.html:71
+msgid "Terms and Conditions"
+msgstr "Términos y Condiciones"
+
+#: templates/site/snippets/footer.html:77
+msgid "Privacy notice"
+msgstr "Aviso de Privacidad y Cookies"
+
+#: templates/site/snippets/footer.html:83
+msgid "License"
+msgstr "Licencia de software"
+
+#: templates/site/snippets/header-secondary-pages.html:97
+#: templates/site/snippets/header.html:77
+msgid "Projects"
+msgstr "Proyectos"
+
+#: templates/site/snippets/header-secondary-pages.html:110
+#: templates/site/snippets/header.html:90
+msgid "Partners"
+msgstr "Vinculaciones"
+
+#: templates/site/snippets/partners.html:20
+msgctxt "partners section"
+msgid "Partners title"
+msgstr "Vinculaciones"
+
+#: templates/site/snippets/partners.html:24
+msgctxt "partners section"
+msgid "Partners content"
+msgstr ""
+"<p>ADAN&reg; mantiene vínculos con elementos o componentes desarrollados "
+"con, para o por organizaciones transnacionales, y prácticamente todos sus "
+"vínculos son con organizaciones sin fines de lucro, que al igual que "
+"ADAN&reg;, mantenemos un enfoque y creencia de sobrevivencia organizacional "
+"pero fuertemente convencidos que nuestros esfuerzos deben encaminarse hacia "
+"la mejora del medio que nos rodea y llevar impactos positivos a zonas menos "
+"favorecidas.</p><p>Algunos de los vínculos de ADAN&reg; son:</p>"
+
+#: templates/site/snippets/pricing.html:20
+msgctxt "pricing section"
+msgid "Free edition title"
+msgstr "Edición gratuita"
+
+#: templates/site/snippets/pricing.html:26
+msgctxt "pricing section"
+msgid "Free edition content"
+msgstr "Conozca los resultados de ADAN&reg; con los datos que usted desee"
+
+#: templates/site/snippets/pricing.html:32
+msgctxt "pricing section"
+msgid "Free edition feature 1"
+msgstr "Hasta 1,000 registros de procesamiento"
+
+#: templates/site/snippets/pricing.html:36
+msgctxt "pricing section"
+msgid "Free edition feature 2"
+msgstr "Una ejecución del algoritmo por día"
+
+#: templates/site/snippets/pricing.html:40
+msgctxt "pricing section"
+msgid "Free edition feature 3"
+msgstr "Período de 15 días de prueba"
+
+#: templates/site/snippets/pricing.html:45
+#: templates/site/snippets/pricing.html:83
+#: templates/site/snippets/pricing.html:121
+msgid "Start Now"
+msgstr "Empezar ahora"
+
+#: templates/site/snippets/pricing.html:58
+msgctxt "pricing section"
+msgid "Limited edition title"
+msgstr "Plan inicial"
+
+#: templates/site/snippets/pricing.html:60
+#: templates/site/snippets/pricing.html:98
+msgid "each day"
+msgstr "c/día"
+
+#: templates/site/snippets/pricing.html:64
+msgctxt "pricing section"
+msgid "Limited edition content"
+msgstr "Sigamos creciendo juntos y conozca más a fondo el proyecto"
+
+#: templates/site/snippets/pricing.html:70
+msgctxt "pricing section"
+msgid "Limited edition feature 1"
+msgstr "Hasta 1,000 registros de procesamiento"
+
+#: templates/site/snippets/pricing.html:74
+msgctxt "pricing section"
+msgid "Limited edition feature 2"
+msgstr "Hasta diez ejecuciones del algoritmo por día"
+
+#: templates/site/snippets/pricing.html:78
+msgctxt "pricing section"
+msgid "Limited edition feature 3"
+msgstr "<span style='color: red'>Pendiente</span>"
+
+#: templates/site/snippets/pricing.html:96
+msgctxt "pricing section"
+msgid "Unlimited edition title"
+msgstr "Plan intermedio"
+
+#: templates/site/snippets/pricing.html:102
+msgctxt "pricing section"
+msgid "Unlimited edition content"
+msgstr ""
+"Sea uno de nuestros socios o colaboradores y deje su huella en el mundo"
+
+#: templates/site/snippets/pricing.html:108
+msgctxt "pricing section"
+msgid "Full edition feature 1"
+msgstr "Sin límites de registros de procesamiento"
+
+#: templates/site/snippets/pricing.html:112
+msgctxt "pricing section"
+msgid "Full edition feature 2"
+msgstr "Hasta 30 ejecuciones del algoritmo por día"
+
+#: templates/site/snippets/pricing.html:116
+msgctxt "pricing section"
+msgid "Full edition feature 3"
+msgstr "<span style='color: red'>Pendiente</span>"
+
+#: templates/site/snippets/projects.html:16
+msgctxt "projects section"
+msgid "Projects title"
+msgstr "Proyectos"
+
+#: templates/site/snippets/projects.html:20
+msgctxt "projects section"
+msgid "Projects content"
+msgstr ""
+"El diseño y desarrollo de ADAN&reg; así como su arquitectura modular y "
+"escalable, sus elementos o componentes reusables, nos han permitido "
+"construir otros productos y servicios que ofrecemos a precios que estamos "
+"convencidos que son de los más bajos del mercado. Entre otros productos "
+"podrá encontrar:"
+
+#: templates/site/snippets/projects.html:39
+#: templates/site/snippets/projects.html:160
+#: templates/site/snippets/projects.html:260
+msgid "Close"
+msgstr ""
+
+#: templates/site/snippets/projects.html:44
+#: templates/site/snippets/projects.html:130
+msgctxt "projects section"
+msgid "Project 1 title"
+msgstr "MiNegocito v1.0"
+
+#: templates/site/snippets/projects.html:48
+#: templates/site/snippets/projects.html:134
+msgctxt "projects section"
+msgid "Project 1 subtitle"
+msgstr "Punto de Venta"
+
+#: templates/site/snippets/projects.html:55
+msgctxt "projects section"
+msgid "Project 1 full description"
+msgstr ""
+"<p>Cuenta con módulos de: almacenes, clientes, compras, inventarios, marcas, "
+"productos, proveedores, tiendas, usuarios, ventas y hasta estadísticas.</"
+"p><p>MiNegocito se distingue de los demás productos de su clase gracias a su "
+"sencillez y usabilidad, sin que esto represente una disminución en la "
+"calidad de nuestro producto.</p><p>El público también podrá buscar en "
+"cualquiera de las Tiendas registradas en la aplicación.</p>"
+
+#: templates/site/snippets/projects.html:81
+#: templates/site/snippets/projects.html:180
+#: templates/site/snippets/projects.html:280
+msgid "Watch press"
+msgstr "Ver vídeo"
+
+#: templates/site/snippets/projects.html:91
+#: templates/site/snippets/projects.html:190
+#: templates/site/snippets/projects.html:290
+msgid "Project Manager"
+msgstr "Administrador del proyecto"
+
+#: templates/site/snippets/projects.html:99
+#: templates/site/snippets/projects.html:198
+#: templates/site/snippets/projects.html:298
+msgid "Executive"
+msgstr "Ejecutivo"
+
+#: templates/site/snippets/projects.html:107
+#: templates/site/snippets/projects.html:206
+#: templates/site/snippets/projects.html:306
+msgid "Software Architect"
+msgstr "Arquitecto de Software"
+
+#: templates/site/snippets/projects.html:115
+#: templates/site/snippets/projects.html:214
+#: templates/site/snippets/projects.html:314
+msgid "Lead Developer"
+msgstr "Programador Líder"
+
+#: templates/site/snippets/projects.html:139
+msgctxt "projects section"
+msgid "Project 1 short description"
+msgstr ""
+"<p>Se trata de un Punto de Venta para micros, pequeños y hasta medianos "
+"negocios.</p>"
+
+#: templates/site/snippets/projects.html:143
+#: templates/site/snippets/projects.html:242
+#: templates/site/snippets/projects.html:342
+msgid "Visit"
+msgstr "Visitar"
+
+#: templates/site/snippets/projects.html:165
+#: templates/site/snippets/projects.html:229
+msgctxt "projects section"
+msgid "Project 2 title"
+msgstr "LabPP v1.0"
+
+#: templates/site/snippets/projects.html:169
+#: templates/site/snippets/projects.html:233
+msgctxt "projects section"
+msgid "Project 2 subtitle"
+msgstr "Laboratorios de análisis clínicos"
+
+#: templates/site/snippets/projects.html:176
+msgctxt "projects section"
+msgid "Project 2 full description"
+msgstr ""
+"<p>Con LabPP los laboratorios de análisis clínicos podrán:</"
+"p><ol><li>Capturar y almacenar datos de sus clientes y visualizar "
+"estadísticas de los mismos.</li><li>Capturar y almacenar datos de pruebas y "
+"conjuntos de pruebas.</li><li>Los clientes de los laboratorios de análisis "
+"clínicos podrán agendar citas, consultar disponibilidad de sus resultados y "
+"más opciones.</li></ol>"
+
+#: templates/site/snippets/projects.html:238
+msgctxt "projects section"
+msgid "Project 2 short description"
+msgstr ""
+"<p>Servicios informáticos a los laboratorios de análisis clínicos y a sus "
+"clientes.</p>"
+
+#: templates/site/snippets/projects.html:265
+#: templates/site/snippets/projects.html:329
+msgctxt "projects section"
+msgid "Project 3 title"
+msgstr "iBuilder"
+
+#: templates/site/snippets/projects.html:269
+#: templates/site/snippets/projects.html:333
+msgctxt "projects section"
+msgid "Project 3 subtitle"
+msgstr "Administración de inmuebles"
+
+#: templates/site/snippets/projects.html:276
+msgctxt "projects section"
+msgid "Project 3 full description"
+msgstr ""
+"<p>Entre otros aspectos, iBuilder funciona de la siguiente manera:</"
+"p><ol><li>La app gira en torno al concepto de unidades: edificios, "
+"restaurantes, hoteles, clínicas, etc.</li><li>Cada unidad puede dividirse "
+"en: áreas, zonas, torres, alas, pisos, estacionamientos, azoteas, etc.</"
+"li><li>Las divisiones de las unidades podrán tener equipos y/o materiales: "
+"bombas, tinacos, extintores, mangueras contraincendios, aspersores, etc.</"
+"li></ol>"
+
+#: templates/site/snippets/projects.html:338
+msgctxt "projects section"
+msgid "Project 3 short description"
+msgstr ""
+"<p>Administración de inmuebles y sus espacios. El público general podrá "
+"realizar búsquedas.</p>"
+
+#: templates/site/snippets/slider.html:22
+msgctxt "slider section"
+msgid "AI eXplainable title"
+msgstr "Inteligencia Artificial (IA) para todos"
+
+#: templates/site/snippets/slider.html:26
+msgctxt "slider section"
+msgid "AI eXplainable content"
+msgstr ""
+"La IA nos está rebasando; debemos comprender qué y cómo aprenden las<br /"
+">máquinas y ser capaces de explicar su inteligencia."
+
+#: templates/site/snippets/slider.html:31
+msgid "Read more"
+msgstr "Leer más"
+
+#: templates/site/snippets/slider.html:45
+msgctxt "slider section"
+msgid "For Humans title"
+msgstr "IA para humanos"
+
+#: templates/site/snippets/slider.html:49
+msgctxt "slider section"
+msgid "For Humans content"
+msgstr ""
+"La IA ha padecido por mucho tiempo el efecto de \"caja negra\": nuestro "
+"desconocimiento de lo que las máquinas<br />están aprendiendo, el por qué y "
+"cómo de sus conclusiones es, hasta cierto punto, desconocido para los "
+"humanos..."
+
+#: templates/site/snippets/slider.html:54
+msgid "Watch video"
+msgstr "Ver vídeo"
+
+#: users/models.py:28
+msgctxt "users model"
+msgid "Mothers last name"
+msgstr "Apellido materno"
+
+#: users/models.py:29
+msgctxt "users model"
+msgid "Middle name"
+msgstr "Segundo nombre"
+
+#: users/models.py:65
+msgctxt "users model"
+msgid "Profile picture"
+msgstr "Foto de perfil"
+
+#: users/models.py:67
+msgctxt "users model"
+msgid "Gender"
+msgstr "Género"
+
+#: users/models.py:68
+msgctxt "users model"
+msgid "Date of birth"
+msgstr "Fecha de nacimiento"
+
+#: users/models.py:69
+msgctxt "users model"
+msgid "FB account"
+msgstr "Cuenta de Facebook"
+
+#: users/models.py:70
+msgctxt "users model"
+msgid "Twitter account"
+msgstr "Cuenta de twitter"
+
+#: users/models.py:71
+msgctxt "users model"
+msgid "Instagram account"
+msgstr "Cuenta de instagram"
+
+#: users/models.py:119
+msgctxt "users model"
+msgid "User"
+msgstr "Usuario"
+
+#: users/models.py:120
+msgctxt "users model"
+msgid "Users"
+msgstr "Usuarios"
+
+#: users/models.py:123
+msgid "User"
+msgstr "Usuario"
+
+#: users/views.py:154 users/views.py:191
+msgid "You do not have permission to perform this request"
+msgstr "No tiene permiso para realizar esta acción"
+
+#: users/views.py:183 users/views.py:184
+msgid "Thank you so much for your comments and for rate the app"
+msgstr "Muchas gracias por su retroalimentación"
+
+#: users/views.py:187
+msgid "The user you are trying to update does not exist"
+msgstr "El usuario que está tratando de actualizar no existe"
+
+#: users/views.py:189
+msgid "The user has been updated successfully"
+msgstr "El usuario ha sido actualizado exitosamente"
+
+#: users/views.py:203 users/views.py:285
+msgctxt "stripe donations"
+msgid "The amount is missed"
+msgstr "Monto no indicado"
+
+#: users/views.py:210 users/views.py:290
+msgctxt "stripe donations"
+msgid "The expiration month is missed"
+msgstr "Mes de vencimiento de la tarjeta no indicado"
+
+#: users/views.py:215 users/views.py:295
+msgctxt "stripe donations"
+msgid "The expiration year is missed"
+msgstr "Año de vencimiento de la tarjeta no indicado"
+
+#: users/views.py:220 users/views.py:300
+msgctxt "stripe donations"
+msgid "The address zip is missed"
+msgstr "Código postal no indicado"
+
+#: users/views.py:369
+msgid "User account does not exist"
+msgstr "La cuenta de usuario no existe"
+
+#: users/views.py:373
+msgid "The email address is not confirmed yet"
+msgstr "La dirección de correo electrónico aún no ha sido confirmada"
+
+#: users/views.py:377
+msgid "The email address is not approved yet"
+msgstr "La dirección de correo electrónico aún no ha sido aprobada"
+
+#: users/views.py:384
+msgid "Your free version has expired"
+msgstr "Su periodo gratuito de prueba ha expirado"
+
+#: utils/utils.py:6
+msgid "Prefer not to say"
+msgstr "Prefiero no decir"
+
+#: utils/utils.py:38
+msgid "reCAPTCHA validation has failed"
+msgstr "La validación reCAPTCHA ha fallado"
+
+#: utils/utils.py:39
+msgid ""
+"Retry, and if the problem persist get in touch with the system administrator "
+"and report"
+msgstr ""
+"Reintente, y si el problema persiste póngase en contacto con el "
+"administrador del sistema y reporte"
+
+#: utils/utils.py:43
+msgid "The secret parameter is invalid or malformed"
+msgstr "El parámetro secreto es inválido"
+
+#: utils/utils.py:46
+msgid "The secret parameter is missing"
+msgstr "Falta el parámetro secreto"
+
+#: utils/utils.py:49
+msgid "The response parameter is missing"
+msgstr "Falta el parámetro de respuesta"
+
+#: utils/utils.py:52
+msgid "The response parameter is invalid or malformed"
+msgstr "El parámetro de respuesta es inválido"
+
+#: utils/utils.py:55
+msgid "The request is invalid or malformed"
+msgstr "La petición es inválida"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Política de Privacidad"
+
+#~ msgid "Subscribe to Our Newsletter"
+#~ msgstr "Boletín de noticias"
+
+#~ msgctxt "projects section"
+#~ msgid "Project 2 content"
+#~ msgstr ""
+#~ "<p>Servicios informáticos a los laboratorios de análisis clínicos y a sus "
+#~ "clientes. Con LabPP los laboratorios de análisis clínicos podrán:</"
+#~ "p><ol><li>1. Registrar sus clientes y visualizar estadísticas de los "
+#~ "mismos.</li><li>2. Registrar pruebas y conjuntos de pruebas.</li><li>3. "
+#~ "Los clientes de los laboratorios de análisis clínicos podrán agendar "
+#~ "citas, consultar disponibilidad de sus resultados y más opciones.</li></"
+#~ "ol>"
+
+#~ msgid "Services"
+#~ msgstr "Servicios"
+
+#~ msgid "Company"
+#~ msgstr "Compañía"

@@ -1,0 +1,5 @@
+d1 = True Positive
+dw1 = False Negative
+d0 = True Negative
+dw0 = False Positive
+d_or = ¿?
